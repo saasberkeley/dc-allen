@@ -127,7 +127,8 @@ data/
 │   └── 692644-20230907-v001.nwb    (16.52 GB)
 └── code/
     ├── read_Templeton_NWB.ipynb    (607 KB)
-    └── read_Templeton_NWB.html     (898 KB)
+    ├── read_Templeton_NWB.html     (898 KB)
+    └── SmoothEnv.m, butterfilter.m, getMotifs.m   (Mishler MATLAB code)
 ```
 
 The `data/` folder is git-ignored. **Never commit the data files.**
@@ -151,25 +152,88 @@ The recording files are very large. Reading them with `pynwb` loads data lazily,
 
 ---
 
-## 5. Repo layout
+## 5. The Mishler MATLAB reference code
+
+Dr. Mishler (first author of the motif paper) shared the original MATLAB implementation. It has **not** been ported to Python yet, and porting it is our D2 task. The files are in `data/code/`:
+
+| File | Role |
+|---|---|
+| `SmoothEnv.m` | Preprocessing. Turns one raw LFP/EEG trace into smoothed, z-scored band-amplitude envelopes. |
+| `butterfilter.m` | Helper for `SmoothEnv`. Designs a 6th-order Butterworth bandpass filter. |
+| `getMotifs.m` | The motif-finding algorithm. |
+
+### How to run it (per Mishler)
+1. For each animal/session, call `SmoothEnv(LFP, LFPfs, freqBands)`.
+2. Store the resulting matrices in a **column cell array**, one cell per animal/session.
+3. Pass that cell array and the sampling rate to `getMotifs(LFPIn, LFPfs)`.
+
+```matlab
+freqBands = [1 4; 3 6; ...];             % N x 2, [low high] in Hz. Bands should overlap.
+LFPIn = cell(nSessions, 1);
+for k = 1:nSessions
+    LFPIn{k} = SmoothEnv(lfp{k}, fs, freqBands)';   % NOTE the transpose, see below
+end
+finalMotifs = getMotifs(LFPIn, fs);      % bands x (2 * number of motifs)
+```
+
+### Step 1: `SmoothEnv(LFP, LFPfs, freqBands)`
+Input is one continuous trace and an `N x 2` matrix of band edges. Steps:
+1. **Bandpass** the trace into each band (6th-order Butterworth, zero-phase `filtfilt`).
+2. **Envelope.** Take the Hilbert transform and keep its magnitude, which is the instantaneous amplitude of each band.
+3. **Smooth** each envelope with a Gaussian window of about 5 s, applied forward and backward.
+4. **Trim edges.** The first and last 10 s are set to `NaN` to hide filter edge artifacts.
+5. **Z-score** each band over time, ignoring the `NaN`s.
+
+Output is **time x bands**. Positive means the band is stronger than its own session average, and negative means weaker.
+
+### Step 2: `getMotifs(LFPIn, LFPfs)`
+Input is a column cell array. Each cell is **bands x time**. All sessions need the same bands in the same order, but durations can differ. Output is a **bands x motifs** matrix. The first half are the motifs, and the second half are their exact sign-flipped opposites. This is the "opposing pairs" idea from the paper.
+
+What it does:
+1. **Subsample** to about 1 sample per second and concatenate all sessions.
+2. **Binarize.** Take `sign()` of every band, so each time point becomes a +/- pattern across bands. Only *which bands are above or below average* matters, not by how much.
+3. **Drop trivial points** where every band has the same sign (all high or all low).
+4. **Cluster.** Compute correlation distance between all pairs of time points, then run average-linkage hierarchical clustering.
+5. **Merge branches.** Walk up the tree. Two sibling clusters merge if their *expression over time* is correlated at or above a threshold `r`. Here, expression means the dot product of every time point with the cluster's mean pattern. Re-cluster the merged templates and repeat until the number of motifs stops changing.
+6. **Repeat for thresholds** `r = 0.4, 0.5, 0.6, 0.7, 0.8`.
+7. **Build null data.** Do steps 1-6 again on 20 shuffled copies. In each copy, every band is circularly shifted by a different multiple of 20 s. This breaks the relationships between bands but keeps each band's own structure.
+8. **Keep only significant motifs.** A real motif must (a) have more time points than the largest motif found in any null at that threshold, and (b) appear in **every** session.
+9. **Remove duplicates across thresholds** with uncentered PCA. Keep components that at least 2 candidate motifs map to.
+10. **Re-estimate final templates** from the original data. Average the time points that express each axis, with the opposite pole sign-flipped. Then append the negated copies.
+
+### Things to know before porting
+- **Orientation mismatch.** `SmoothEnv` returns time x bands, but `getMotifs` expects bands x time per cell. You must transpose in between (the example above does).
+- **`NaN` edges.** `SmoothEnv` leaves 10 s of `NaN` at each end, and `getMotifs` has no `NaN` handling. We expect you need to trim those samples before calling `getMotifs`. **This is unconfirmed, so ask Mishler.**
+- **Randomness.** The null shifts use `randperm` with no fixed seed, so results vary a little between runs. Set a seed in the Python port.
+- **Slow.** The tree-walking loops are plain MATLAB loops over every time point and are written for clarity, not speed. A Python version will likely need `scipy.cluster.hierarchy` plus some vectorizing.
+- **Toolboxes.** `butterfilter.m` uses `fdesign.bandpass` (Filter Design / DSP System Toolbox). `getMotifs.m` uses `pdist`, `linkage` and `pca` (Statistics Toolbox). The Python equivalents are `scipy.signal.butter(..., output='sos')` with `sosfiltfilt`, `scipy.signal.hilbert`, and `scipy.cluster.hierarchy` / `sklearn.decomposition.PCA`.
+- **Gaussian window.** `gausswin(N,1)` means the window spans only +/-1 standard deviation, which is wider than a typical "5 s Gaussian". Match this exactly in Python (for example `scipy.signal.windows.gaussian` with `std = (N-1)/2`) when checking against the MATLAB output.
+- **Chosen parameters.** The band edges (`freqBands`) are not specified in the code. Take them from the paper.
+- **All-sessions rule.** A motif must appear in every session, so with only two NWB recordings this is a strict filter.
+- **Validation target.** D2 requires reproducing a published result first. Ask Mishler for a small example input and output to compare against.
+
+---
+
+## 6. Repo layout
 
 ```
 assets/                 Project proposal (sow.pdf)
 data/                   Downloaded data (git-ignored)
   raw/                  .nwb recordings
-  code/                 Reference notebook and HTML
+  code/                 Reference notebook, HTML, and Mishler MATLAB code (.m)
 src/scripts/
   download_dropbox_data.py   Downloads the data
 .env.example            Template for your local .env (copy to .env)
 ```
 
-## 6. Reading to get up to speed (in order)
+## 7. Reading to get up to speed (in order)
 
 1. [`assets/sow.pdf`](assets/sow.pdf), the project proposal. It is short and explains the goals.
-2. The rendered notebook, `data/code/read_Templeton_NWB.html`. It shows what a session's data looks like.
-3. Mishler et al. (2026), the motif method: <https://www.biorxiv.org/content/10.64898/2026.02.20.707132v1>
-4. Momi et al. (2026), the psilocybin dataset: <https://www.biorxiv.org/content/10.64898/2026.08.14.744865v1>
-5. For deeper neuroscience background, *Principles of Neural Science* (5th ed.) is in the shared Dropbox folder. It is not downloaded by the script and is not in this repo. It is optional, so skim the chapters on neurons and electrical signaling if you're curious.
+2. Section 5 above, and the MATLAB code it describes.
+3. The rendered notebook, `data/code/read_Templeton_NWB.html`. It shows what a session's data looks like.
+4. Mishler et al. (2026), the motif method: <https://www.biorxiv.org/content/10.64898/2026.02.20.707132v1>
+5. Momi et al. (2026), the psilocybin dataset: <https://www.biorxiv.org/content/10.64898/2026.08.14.744865v1>
+6. For deeper neuroscience background, *Principles of Neural Science* (5th ed.) is in the shared Dropbox folder. It is not downloaded by the script and is not in this repo. It is optional, so skim the chapters on neurons and electrical signaling if you're curious.
 
 ## Troubleshooting
 
