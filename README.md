@@ -97,15 +97,9 @@ First, preview what will be downloaded, with sizes:
 python3 -m src.scripts.download_dropbox_data --list
 ```
 
-Then download everything:
+Then download the NWB files (~28.6 GB total):
 ```bash
 python3 -m src.scripts.download_dropbox_data
-```
-
-Or download in pieces:
-```bash
-python3 -m src.scripts.download_dropbox_data --only code   # small: notebook + HTML (about 1.5 MB)
-python3 -m src.scripts.download_dropbox_data --only raw    # large: two .nwb recordings (about 28.6 GB)
 ```
 
 **Notes:**
@@ -113,40 +107,36 @@ python3 -m src.scripts.download_dropbox_data --only raw    # large: two .nwb rec
 - It is safe to stop it (Ctrl+C) and run it again. It resumes where it left off.
 - If a file is already fully downloaded, it is skipped.
 - Partial downloads end in `.part`. Don't open those. They become normal files when finished.
+- Reference notebooks and MATLAB code are already in the repo (no download needed).
 
 ### Step 5: Check that it worked
 ```bash
-ls -lh data/raw data/code
+ls -lh data/raw
 ```
 You should see:
 
 ```
-data/
-├── raw/
-│   ├── 688277-20230921-v001.nwb    (12.11 GB)
-│   └── 692644-20230907-v001.nwb    (16.52 GB)
-└── code/
-    ├── read_Templeton_NWB.ipynb    (607 KB)
-    ├── read_Templeton_NWB.html     (898 KB)
-    └── SmoothEnv.m, butterfilter.m, getMotifs.m   (Mishler MATLAB code)
+data/raw/
+├── 688277-20230921-v001.nwb    (12.11 GB)
+└── 692644-20230907-v001.nwb    (16.52 GB)
 ```
 
-The `data/` folder is git-ignored. **Never commit the data files.**
+The `data/` folder is git-ignored. **Never commit the data files** (they're ~28 GB total).
 
 ---
 
 ## 4. Optional: open the data yourself
 
-The notebook `data/code/read_Templeton_NWB.ipynb` shows how to read these files. To run it, set up a Python environment:
+The notebook `notebooks/read_Templeton_NWB.ipynb` shows how to read these files. To run it, set up a Python environment:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate          # Windows (WSL): same command
 pip install pynwb h5py numpy pandas matplotlib jupyter
-jupyter notebook data/code/read_Templeton_NWB.ipynb
+jupyter notebook notebooks/read_Templeton_NWB.ipynb
 ```
 
-Don't want to run anything? Open `data/code/read_Templeton_NWB.html` in your browser to see the notebook with its outputs.
+Don't want to run anything? Open `notebooks/read_Templeton_NWB.html` in your browser to see the notebook with its outputs.
 
 The recording files are very large. Reading them with `pynwb` loads data lazily, so you can look at small slices without filling up your memory. Avoid commands that copy a whole signal into memory.
 
@@ -154,7 +144,7 @@ The recording files are very large. Reading them with `pynwb` loads data lazily,
 
 ## 5. The Mishler MATLAB reference code
 
-Dr. Mishler (first author of the motif paper) shared the original MATLAB implementation. It has **not** been ported to Python yet, and porting it is our D2 task. The files are in `data/code/`:
+Dr. Mishler (first author of the motif paper) shared the original MATLAB implementation. It has **not** been ported to Python yet, and porting it is our D2 task. The files are in `src/matlab/`:
 
 | File | Role |
 |---|---|
@@ -217,20 +207,31 @@ What it does:
 ## 6. Repo layout
 
 ```
-assets/                 Project proposal (sow.pdf)
-data/                   Downloaded data (git-ignored)
-  raw/                  .nwb recordings
-  code/                 Reference notebook, HTML, and Mishler MATLAB code (.m)
-src/scripts/
-  download_dropbox_data.py   Downloads the data
-.env.example            Template for your local .env (copy to .env)
+assets/                     Project proposal (sow.pdf)
+data/                       Downloaded data (git-ignored)
+  raw/                      .nwb recordings
+docs/
+  papers/                   Background reading PDFs
+notebooks/
+  read_Templeton_NWB.ipynb  Reference notebook (Allen Institute)
+  read_Templeton_NWB.html   Rendered version
+src/
+  matlab/                   Mishler MATLAB reference code
+    SmoothEnv.m             Preprocessing
+    butterfilter.m          Helper for SmoothEnv
+    getMotifs.m             Motif-finding algorithm
+  scripts/
+    download_dropbox_data.py   Downloads the data
+  spectral_motifs/          Python port of MATLAB code
+.env.example                Template for your local .env (copy to .env)
+TASKS.md                    Work session task assignments
 ```
 
 ## 7. Reading to get up to speed (in order)
 
 1. [`assets/sow.pdf`](assets/sow.pdf), the project proposal. It is short and explains the goals.
 2. Section 5 above, and the MATLAB code it describes.
-3. The rendered notebook, `data/code/read_Templeton_NWB.html`. It shows what a session's data looks like.
+3. The rendered notebook, `notebooks/read_Templeton_NWB.html`. It shows what a session's data looks like.
 4. Mishler et al. (2026), the motif method: <https://www.biorxiv.org/content/10.64898/2026.02.20.707132v1>
 5. Momi et al. (2026), the psilocybin dataset: <https://www.biorxiv.org/content/10.64898/2026.08.14.744865v1>
 6. For deeper neuroscience background, *Principles of Neural Science* (5th ed.) is in the shared Dropbox folder. It is not downloaded by the script and is not in this repo. It is optional, so skim the chapters on neurons and electrical signaling if you're curious.

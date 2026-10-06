@@ -1,17 +1,18 @@
 """Download the Allen Institute session files from the shared Dropbox folder.
 
 Layout:
-    data/raw/   <- .nwb recordings
-    data/code/  <- reference notebook (.ipynb) and its rendered .html
+    data/raw/   <- .nwb recordings (large files, ~28 GB total)
+
+Note: Reference notebooks are now in notebooks/ (version controlled).
+      MATLAB code is in src/matlab/ (version controlled).
 
 Files are streamed in fixed-size chunks straight to a ``.part`` file, so memory
 use stays flat regardless of file size. Interrupted downloads resume via HTTP
 Range, and a file is only renamed into place once its size matches the server.
 
 Usage:
-    python -m src.scripts.download_dropbox_data            # everything
-    python -m src.scripts.download_dropbox_data --only code  # just notebook/html
-    python -m src.scripts.download_dropbox_data --list
+    python -m src.scripts.download_dropbox_data            # download .nwb files
+    python -m src.scripts.download_dropbox_data --list     # show file sizes
 """
 
 import argparse
@@ -48,11 +49,10 @@ FOLDER_URL = load_folder_url()
 DATA_DIR = ROOT / "data"
 
 # filename -> destination subdirectory under data/
+# Note: Notebooks and MATLAB code are now version-controlled in the repo
 FILES = {
     "688277-20230921-v001.nwb": "raw",
     "692644-20230907-v001.nwb": "raw",
-    "read_Templeton_NWB.ipynb": "code",
-    "read_Templeton_NWB.html": "code",
 }
 
 CHUNK_SIZE = 8 * 1024 * 1024  # 8 MiB
@@ -145,20 +145,15 @@ def download(name: str, dest_dir: Path) -> Path:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Download Allen Institute data from Dropbox")
-    parser.add_argument(
-        "--only", choices=sorted(set(FILES.values())), help="limit to one destination (raw or code)"
-    )
     parser.add_argument("--list", action="store_true", help="show files and sizes, then exit")
     args = parser.parse_args()
 
-    targets = {n: d for n, d in FILES.items() if not args.only or d == args.only}
-
     if args.list:
-        for name, sub in targets.items():
+        for name, sub in FILES.items():
             print(f"{fmt(remote_size(name)):>10}  data/{sub}/{name}")
         return
 
-    for name, sub in targets.items():
+    for name, sub in FILES.items():
         download(name, DATA_DIR / sub)
 
 
