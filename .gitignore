@@ -1,6 +1,6 @@
 .DS_Store
 .env
-data/
+data/raw
 .venv/
 __pycache__/
 *.pyc
