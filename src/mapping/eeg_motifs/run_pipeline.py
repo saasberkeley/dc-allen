@@ -38,7 +38,7 @@ def main():
     print(f"Results directory:        {results_dir}")
 
     # Hardcoded target for this pipeline run
-    target_electrode = 'Fz' 
+    target_electrode = 'Pz' 
     print(f"\n{'='*60}")
     print(f"STARTING MOTIF DISCOVERY FOR ELECTRODE: {target_electrode}")
     print(f"{'='*60}")
