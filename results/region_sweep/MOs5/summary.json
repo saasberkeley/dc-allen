@@ -1,0 +1,213 @@
+{
+  "params": {
+    "probe": "probeF",
+    "region": "MOs5",
+    "fs": 250.00049785667107,
+    "freq_bands": [
+      [
+        1.0,
+        4.0
+      ],
+      [
+        3.0,
+        6.0
+      ],
+      [
+        5.0,
+        9.0
+      ],
+      [
+        8.0,
+        12.0
+      ],
+      [
+        10.0,
+        15.0
+      ],
+      [
+        13.0,
+        20.0
+      ],
+      [
+        18.0,
+        30.0
+      ],
+      [
+        25.0,
+        40.0
+      ],
+      [
+        35.0,
+        55.0
+      ],
+      [
+        50.0,
+        80.0
+      ]
+    ],
+    "n_null": 20,
+    "seed": 0,
+    "corr_thresholds": [
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8
+    ]
+  },
+  "sessions": [
+    {
+      "file": "688277-20230921-v001.nwb",
+      "subject": "688277",
+      "experiment": "isoflurane",
+      "pharmacology": "isoflurane (inhalation): induction at 5%, maintenance at 1.5%",
+      "probe": "probeF",
+      "region": "MOs5",
+      "channel": 300,
+      "electrode_id": 1098,
+      "fs": 250.00045749324204,
+      "states": [
+        [
+          "awake",
+          319.39348,
+          1990.20594
+        ],
+        [
+          "isoflurane",
+          2780.52522,
+          4451.33563
+        ]
+      ]
+    },
+    {
+      "file": "692644-20230907-v001.nwb",
+      "subject": "692644",
+      "experiment": "psilocybin",
+      "pharmacology": "1st injection: saline (0.01 mL/g, i.p.); 2nd injection: psilocybin (1 mg/kg, i.p.)",
+      "probe": "probeF",
+      "region": "MOs5",
+      "channel": 302,
+      "electrode_id": 1100,
+      "fs": 250.00053822010014,
+      "states": [
+        [
+          "awake",
+          789.75,
+          2460.56249
+        ],
+        [
+          "psilocybin",
+          4043.36793,
+          5714.17847
+        ]
+      ]
+    }
+  ],
+  "n_timepoints_nontrivial": 7894,
+  "per_threshold": [
+    {
+      "corr_thresh": 0.4,
+      "n_candidates": 48,
+      "largest_candidate": 2938,
+      "null_max_size": 3262,
+      "kept_after_null_and_all_sessions": 0
+    },
+    {
+      "corr_thresh": 0.5,
+      "n_candidates": 74,
+      "largest_candidate": 2489,
+      "null_max_size": 2371,
+      "kept_after_null_and_all_sessions": 1
+    },
+    {
+      "corr_thresh": 0.6,
+      "n_candidates": 101,
+      "largest_candidate": 2442,
+      "null_max_size": 1676,
+      "kept_after_null_and_all_sessions": 2
+    },
+    {
+      "corr_thresh": 0.7,
+      "n_candidates": 181,
+      "largest_candidate": 2484,
+      "null_max_size": 1345,
+      "kept_after_null_and_all_sessions": 2
+    },
+    {
+      "corr_thresh": 0.8,
+      "n_candidates": 337,
+      "largest_candidate": 2499,
+      "null_max_size": 757,
+      "kept_after_null_and_all_sessions": 2
+    }
+  ],
+  "n_motif_pairs": 1,
+  "motifs": {
+    "M1+": [
+      -0.6181910311629085,
+      -0.6171776032429693,
+      -0.571066632885736,
+      -0.7567772992145934,
+      -0.8147960476311122,
+      -0.8064352672916139,
+      -0.6584747909804916,
+      -0.40309095515581456,
+      0.04205725867747656,
+      0.42234608563465925
+    ],
+    "M1-": [
+      0.6181910311629085,
+      0.6171776032429693,
+      0.571066632885736,
+      0.7567772992145934,
+      0.8147960476311122,
+      0.8064352672916139,
+      0.6584747909804916,
+      0.40309095515581456,
+      -0.04205725867747656,
+      -0.42234608563465925
+    ]
+  },
+  "occupancy": [
+    {
+      "session": "688277 (isoflurane)",
+      "state": "awake",
+      "n_seconds": 1671,
+      "fraction": {
+        "M1+": 0.6152004787552364,
+        "M1-": 0.20406941950927587,
+        "all-same-sign": 0.18073010173548773
+      }
+    },
+    {
+      "session": "688277 (isoflurane)",
+      "state": "isoflurane",
+      "n_seconds": 1671,
+      "fraction": {
+        "M1+": 0.11789347695990425,
+        "M1-": 0.4524236983842011,
+        "all-same-sign": 0.4296828246558947
+      }
+    },
+    {
+      "session": "692644 (psilocybin)",
+      "state": "awake",
+      "n_seconds": 1671,
+      "fraction": {
+        "M1+": 0.5104727707959306,
+        "M1-": 0.27767803710353084,
+        "all-same-sign": 0.2118491921005386
+      }
+    },
+    {
+      "session": "692644 (psilocybin)",
+      "state": "psilocybin",
+      "n_seconds": 1670,
+      "fraction": {
+        "M1+": 0.33592814371257484,
+        "M1-": 0.4053892215568862,
+        "all-same-sign": 0.25868263473053893
+      }
+    }
+  ]
+}
