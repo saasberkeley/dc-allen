@@ -1,6 +1,8 @@
 .DS_Store
 .env
-data/raw
+data/raw/
+*.nwb
+*.nwb.part
 .venv/
 __pycache__/
 *.pyc
