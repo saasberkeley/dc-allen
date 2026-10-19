@@ -1,6 +1,8 @@
 .DS_Store
 .env
 data/raw
+data/processed
+data/mishler_results
 .venv/
 __pycache__/
 *.pyc

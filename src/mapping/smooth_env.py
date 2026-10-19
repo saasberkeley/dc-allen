@@ -9,8 +9,12 @@ from scipy import signal
 
 # Placeholder bands (same as TASKS.md). Replace with the bands from the Mishler paper once confirmed.
 DEFAULT_FREQ_BANDS = np.array([
-    [1, 4], [3, 6], [5, 9], [8, 12], [10, 15],
-    [13, 20], [18, 30], [25, 40], [35, 55], [50, 80],
+    [1.0, 4.0],
+    [4.0, 8.0],
+    [8.0, 12.0],
+    [12.0, 30.0],
+    [30.0, 60.0],
+    [60.0, 100.0],
 ], dtype=float)
 
 
