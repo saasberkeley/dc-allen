@@ -1,0 +1,180 @@
+{
+  "params": {
+    "probe": "probeD",
+    "region": "SSp-bfd2/3",
+    "fs": 250.00063240310314,
+    "freq_bands": [
+      [
+        1.0,
+        4.0
+      ],
+      [
+        3.0,
+        6.0
+      ],
+      [
+        5.0,
+        9.0
+      ],
+      [
+        8.0,
+        12.0
+      ],
+      [
+        10.0,
+        15.0
+      ],
+      [
+        13.0,
+        20.0
+      ],
+      [
+        18.0,
+        30.0
+      ],
+      [
+        25.0,
+        40.0
+      ],
+      [
+        35.0,
+        55.0
+      ],
+      [
+        50.0,
+        80.0
+      ]
+    ],
+    "n_null": 20,
+    "seed": 0,
+    "corr_thresholds": [
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8
+    ]
+  },
+  "sessions": [
+    {
+      "file": "688277-20230921-v001.nwb",
+      "subject": "688277",
+      "experiment": "isoflurane",
+      "pharmacology": "isoflurane (inhalation): induction at 5%, maintenance at 1.5%",
+      "probe": "probeD",
+      "region": "SSp-bfd2/3",
+      "channel": 345,
+      "electrode_id": 759,
+      "fs": 250.00045749324204,
+      "states": [
+        [
+          "awake",
+          319.39348,
+          1990.20594
+        ],
+        [
+          "isoflurane",
+          2780.52522,
+          4451.33563
+        ]
+      ]
+    },
+    {
+      "file": "692644-20230907-v001.nwb",
+      "subject": "692644",
+      "experiment": "psilocybin",
+      "pharmacology": "1st injection: saline (0.01 mL/g, i.p.); 2nd injection: psilocybin (1 mg/kg, i.p.)",
+      "probe": "probeD",
+      "region": "SSp-bfd2/3",
+      "channel": 340,
+      "electrode_id": 754,
+      "fs": 250.00080731296424,
+      "states": [
+        [
+          "awake",
+          789.75,
+          2460.56249
+        ],
+        [
+          "psilocybin",
+          4043.36793,
+          5714.17847
+        ]
+      ]
+    }
+  ],
+  "n_timepoints_nontrivial": 8343,
+  "per_threshold": [
+    {
+      "corr_thresh": 0.4,
+      "n_candidates": 30,
+      "largest_candidate": 2233,
+      "null_max_size": 4153,
+      "kept_after_null_and_all_sessions": 0
+    },
+    {
+      "corr_thresh": 0.5,
+      "n_candidates": 59,
+      "largest_candidate": 1680,
+      "null_max_size": 3377,
+      "kept_after_null_and_all_sessions": 0
+    },
+    {
+      "corr_thresh": 0.6,
+      "n_candidates": 85,
+      "largest_candidate": 1835,
+      "null_max_size": 2705,
+      "kept_after_null_and_all_sessions": 0
+    },
+    {
+      "corr_thresh": 0.7,
+      "n_candidates": 136,
+      "largest_candidate": 1672,
+      "null_max_size": 2242,
+      "kept_after_null_and_all_sessions": 0
+    },
+    {
+      "corr_thresh": 0.8,
+      "n_candidates": 326,
+      "largest_candidate": 1865,
+      "null_max_size": 1396,
+      "kept_after_null_and_all_sessions": 1
+    }
+  ],
+  "n_motif_pairs": 0,
+  "motifs": {},
+  "occupancy": [
+    {
+      "session": "688277 (isoflurane)",
+      "state": "awake",
+      "n_seconds": 1671,
+      "fraction": {
+        "all-same-sign": 1.0
+      }
+    },
+    {
+      "session": "688277 (isoflurane)",
+      "state": "isoflurane",
+      "n_seconds": 1671,
+      "fraction": {
+        "all-same-sign": 1.0
+      }
+    },
+    {
+      "session": "692644 (psilocybin)",
+      "state": "awake",
+      "n_seconds": 1671,
+      "fraction": {
+        "all-same-sign": 1.0
+      }
+    },
+    {
+      "session": "692644 (psilocybin)",
+      "state": "psilocybin",
+      "n_seconds": 1670,
+      "fraction": {
+        "all-same-sign": 1.0
+      }
+    }
+  ]
+}

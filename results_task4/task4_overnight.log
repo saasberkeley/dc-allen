@@ -1,0 +1,34 @@
+2026-10-19 03:28:07,793 [INFO] Logging initialized. Output dir: results_task4
+2026-10-19 03:28:07,793 [INFO] Starting Task 4 Overnight Execution Pipeline...
+2026-10-19 03:28:07,793 [INFO] Loading reference motifs: /Users/Sam/dc-allen-data-acquire/data/mishler_results/finalGlutLFPMotifs.mat
+2026-10-19 03:28:10,856 [INFO] Loaded 'finalMotifs' with shape: (76, 6)
+2026-10-19 03:28:10,856 [INFO] Loading LFP matrix from: /Users/Sam/dc-allen-data-acquire/data/mishler_results/LFP Data.mat
+2026-10-19 03:28:12,871 [INFO] Loaded 'LFP' matrix with shape: (6, 3). Selecting state col 0.
+2026-10-19 03:28:12,927 [INFO]   Session 0: 2,442,112 samples (162.81 mins)
+2026-10-19 03:28:12,952 [INFO]   Session 1: 2,443,520 samples (162.90 mins)
+2026-10-19 03:28:12,971 [INFO]   Session 2: 2,043,392 samples (136.23 mins)
+2026-10-19 03:28:12,990 [INFO]   Session 3: 2,498,176 samples (166.55 mins)
+2026-10-19 03:28:13,008 [INFO]   Session 4: 2,494,720 samples (166.31 mins)
+2026-10-19 03:28:13,030 [INFO]   Session 5: 2,714,496 samples (180.97 mins)
+2026-10-19 03:28:13,054 [INFO] Starting envelope extraction and z-scoring across sessions...
+2026-10-19 03:28:27,934 [INFO]   Processed Session 1/6: shape (6, 2437112) in 14.9s
+2026-10-19 03:28:36,043 [INFO]   Processed Session 2/6: shape (6, 2438520) in 8.1s
+2026-10-19 03:28:45,342 [INFO]   Processed Session 3/6: shape (6, 2038392) in 9.3s
+2026-10-19 03:29:04,873 [INFO]   Processed Session 4/6: shape (6, 2493176) in 19.5s
+2026-10-19 03:29:15,877 [INFO]   Processed Session 5/6: shape (6, 2489720) in 11.0s
+2026-10-19 03:29:27,496 [INFO]   Processed Session 6/6: shape (6, 2709496) in 11.6s
+2026-10-19 03:29:27,508 [INFO] Launching get_motifs with 20 null iterations (seed=0)...
+2026-10-19 06:18:33,800 [INFO] Motif extraction finished in 169.10 minutes.
+2026-10-19 06:18:33,888 [INFO] Final Discovered Motif Pairs: 2
+2026-10-19 06:18:33,888 [INFO] Discovered motif matrix shape: (6, 4)
+2026-10-19 06:18:33,890 [INFO] Comparing 2 discovered motif pairs (4 total poles) against 76 reference rows...
+2026-10-19 06:18:34,331 [INFO] 
+=== TASK 4 COMPARISON TABLE VS. JONATHAN'S REFERENCE ===
+2026-10-19 06:18:34,645 [INFO] 
+Discovered Pole  Pole Index  Best Ref Row           Alignment  Pearson r  Absolute r  Cosine Similarity           Status
+            M1+           0            17              Direct   0.155017    0.155017           0.118955              LOW
+            M2+           1            57              Direct   0.995514    0.995514           0.995134 HIGH CONCORDANCE
+            M1-           2            17 Inverted (Opponent)  -0.155017    0.155017          -0.118955              LOW
+            M2-           3            57 Inverted (Opponent)  -0.995514    0.995514          -0.995134 HIGH CONCORDANCE
+2026-10-19 06:18:35,708 [INFO] Task 4 completed successfully in 170.47 minutes.
+2026-10-19 06:18:35,709 [INFO] Artifacts saved to: results_task4
