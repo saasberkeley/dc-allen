@@ -1,0 +1,2 @@
+iso_onset_abs_s,rise_threshold_db,sustained_rise_onset_s,pre_drop_peak_time_s,pre_drop_peak_db,first_minute_peak_time_s,first_minute_peak_db,verified_drop_time_s,peak_to_drop_delay_s,rise_to_drop_delay_s,valid_eeg_channels
+2128.6292377364707,4.935239131080892,,144.99966620248802,2.01317375969457,30.99992388185842,1.4118808816490567,268.0,123.00033379751198,,27
