@@ -298,18 +298,14 @@ def smooth_env(
     return envelopes
 
 
-# Example frequency bands (from typical spectral motif papers)
+# Canonical 6 bands from Mishler et al.
 DEFAULT_FREQ_BANDS = np.array([
-    [1, 4],    # delta
-    [3, 6],    # theta-low
-    [5, 9],    # theta-high
-    [8, 12],   # alpha
-    [10, 15],  # beta-low
-    [13, 20],  # beta-mid
-    [18, 30],  # beta-high
-    [25, 40],  # gamma-low
-    [35, 55],  # gamma-mid
-    [50, 80],  # gamma-high
+    [1, 4],      # Delta
+    [4, 8],      # Theta
+    [8, 12],     # Alpha
+    [12, 30],    # Beta
+    [30, 60],    # Low-Gamma
+    [60, 100],   # High-Gamma
 ])
 ```
 

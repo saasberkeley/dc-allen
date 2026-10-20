@@ -1,6 +1,6 @@
 """Cut short, time-aligned windows of EEG, cortex/hippocampus LFP and spikes.
 
-For each NWB session this writes one HDF5 file per window to ``data/windows/``:
+For each NWB session this writes one HDF5 file per window to ``data/probe_samples/``:
 
     {session}_{window}.h5
         attrs   session, window, anchor, window_start_abs, common_start,
@@ -22,9 +22,9 @@ Windows are anchored to experimenter annotations stored in the NWB file
 (isoflurane-level log, injection epochs). If Irene's timestamps differ, edit
 ``WINDOWS`` / ``ANCHORS`` below.
 
-Usage (from the repo root):
-    python -m src.scripts.extract_windows                      # all data/raw/*.nwb
-    python -m src.scripts.extract_windows data/raw/688277-20230921-v001.nwb --fs 250
+Usage (from code/python/):
+    python -m src.extract_windows                      # all data/raw/*.nwb
+    python -m src.extract_windows data/raw/688277-20230921-v001.nwb --fs 250
 """
 
 from __future__ import annotations
@@ -324,7 +324,7 @@ def extract_session(path: Path, out_dir: Path, fs_out=DEFAULT_FS, stride=DEFAULT
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     p.add_argument("nwb", nargs="*", type=Path)
-    p.add_argument("--out", type=Path, default=Path("data/windows"))
+    p.add_argument("--out", type=Path, default=Path("data/probe_samples"))
     p.add_argument("--fs", type=float, default=DEFAULT_FS, help="target sample rate (Hz)")
     p.add_argument("--stride", type=int, default=DEFAULT_CHANNEL_STRIDE,
                    help="keep every Nth LFP channel within each region")

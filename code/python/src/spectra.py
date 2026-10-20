@@ -1,17 +1,17 @@
 """EEG spectra, power-drop timing, V1/cortex band power and aligned LFP + raster figures.
 
-Reads the time-aligned windows written by ``src/scripts/extract_windows.py``
-(``data/windows/*.h5``); the power-drop time course is computed from the
+Reads the time-aligned windows written by ``code/python/src/extract_windows.py``
+(``data/probe_samples/*.h5``); the power-drop time course is computed from the
 continuous NWB recording, because the drop can fall outside a 2-min window.
 
 Outputs (from the repo root: ``python -m src.visualization.spectra``):
 
-    src/visualization/figures/eeg_spectra.png
-    src/visualization/figures/band_power_change.png
-    src/visualization/figures/{session}_eeg_power_timecourse.png
-    src/visualization/figures/{session}_aligned.png
-    src/visualization/results/band_power.csv
-    src/visualization/results/power_drop.csv
+    code/python/src/visualization/figures/eeg_spectra.png
+    code/python/src/visualization/figures/band_power_change.png
+    code/python/src/visualization/figures/{session}_eeg_power_timecourse.png
+    code/python/src/visualization/figures/{session}_aligned.png
+    code/python/src/visualization/results/band_power.csv
+    code/python/src/visualization/results/power_drop.csv
 """
 
 from __future__ import annotations
@@ -27,7 +27,7 @@ from matplotlib.colors import TwoSlopeNorm
 from pynwb import NWBHDF5IO
 from scipy import signal
 
-from src.scripts.extract_windows import ANCHORS, session_type
+from src.extract_windows import ANCHORS, session_type
 
 # 55-65 Hz is skipped: 60 Hz mains noise is visible in the EEG
 BANDS = {
@@ -68,8 +68,8 @@ SITE_GROUPS = [
 QUALITY = {"isi_violations": 0.5, "amplitude_cutoff": 0.1, "presence_ratio": 0.9}
 CORTEX_HIPPO = ("SSp", "MOs", "MOp", "RSP", "VIS", "CA1", "CA2", "CA3", "DG")
 
-FIG_DIR = Path("src/visualization/figures")
-RESULTS_DIR = Path("src/visualization/results")
+FIG_DIR = Path("code/python/src/visualization/figures")
+RESULTS_DIR = Path("code/python/src/visualization/results")
 
 
 # --------------------------------------------------------------------------- #
@@ -511,7 +511,7 @@ def plot_aligned(wins, names, t0=55.0, dur=10.0, max_units=80):
 
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    p.add_argument("--windows", type=Path, default=Path("data/windows"))
+    p.add_argument("--windows", type=Path, default=Path("data/probe_samples"))
     p.add_argument("--raw", type=Path, default=Path("data/raw"))
     p.add_argument("--figures", type=Path, default=FIG_DIR)
     p.add_argument("--results", type=Path, default=RESULTS_DIR)

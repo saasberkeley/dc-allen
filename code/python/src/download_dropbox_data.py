@@ -10,9 +10,9 @@ Files are streamed in fixed-size chunks straight to a ``.part`` file, so memory
 use stays flat regardless of file size. Interrupted downloads resume via HTTP
 Range, and a file is only renamed into place once its size matches the server.
 
-Usage:
-    python -m src.scripts.download_dropbox_data            # download .nwb files
-    python -m src.scripts.download_dropbox_data --list     # show file sizes
+Usage (from code/python/):
+    python -m src.download_dropbox_data            # download .nwb files
+    python -m src.download_dropbox_data --list     # show file sizes
 """
 
 import argparse
@@ -24,7 +24,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]  # code/python/src/ -> repo/
 
 
 def load_folder_url() -> str:

@@ -6,7 +6,7 @@ them (e.g. an awake baseline followed by isoflurane), labelled per trial in
 ``trials.behavioral_epoch``. This module finds those condition windows and plots
 the *same* units in each one so they can be compared side by side.
 
-Quick start (from the repo root)::
+Quick start (from code/python/)::
 
     python -m src.visualization.rasters data/raw/688277-20230921-v001.nwb
 
@@ -344,7 +344,7 @@ def plot_session_rasters(paths, n_units: int = 30, regions=None, unit_ids: dict 
 def main(argv=None):
     p = argparse.ArgumentParser(description="Save side-by-side condition rasters for one or more NWB sessions.")
     p.add_argument("nwb", nargs="+", type=Path)
-    p.add_argument("--out", type=Path, default=Path("src/visualization/figures"))
+    p.add_argument("--out", type=Path, default=Path("code/python/src/visualization/figures"))
     p.add_argument("--n-units", type=int, default=40)
     p.add_argument("--regions", nargs="*", default=None, help="CCF acronym prefixes, e.g. SSp MOs CA3")
     p.add_argument("--units", nargs="*", type=int, default=None, help="explicit unit ids (overrides selection)")

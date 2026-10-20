@@ -89,8 +89,8 @@ def analyze(path: Path, pre: float = 120, post: float = 600) -> tuple[pd.DataFra
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("nwb", type=Path)
-    parser.add_argument("--timecourse", type=Path, default=Path("src/visualization/results/iso_power_timecourse.csv"))
-    parser.add_argument("--summary", type=Path, default=Path("src/visualization/results/iso_initial_rise.csv"))
+    parser.add_argument("--timecourse", type=Path, default=Path("code/python/src/visualization/results/iso_power_timecourse.csv"))
+    parser.add_argument("--summary", type=Path, default=Path("code/python/src/visualization/results/iso_initial_rise.csv"))
     args = parser.parse_args()
     frame, result = analyze(args.nwb)
     args.timecourse.parent.mkdir(parents=True, exist_ok=True)

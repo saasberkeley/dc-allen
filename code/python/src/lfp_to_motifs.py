@@ -5,9 +5,9 @@ run smooth_env (SmoothEnv.m), trim its NaN edges, then pass all sessions to
 get_motifs (getMotifs.m). Finally measure how often each motif pole dominates in
 each labelled brain state (awake / isoflurane / psilocybin ...).
 
-Usage (from the repo root):
+Usage (from code/python/):
     python -m src.mapping.lfp_to_motifs
-    python -m src.mapping.lfp_to_motifs --probe probeF --region MOs5 --out results/lfp_to_motifs
+    python -m src.mapping.lfp_to_motifs --probe probeF --region MOs5 --out data/out/lfp_to_motifs
 """
 
 import argparse
@@ -277,11 +277,11 @@ def main() -> None:
     parser.add_argument("--bands", nargs="+", help="frequency bands as lo-hi, e.g. 1-4 3-6 5-9 (Hz)")
     parser.add_argument("--n-null", type=int, default=20, help="number of shifted null datasets")
     parser.add_argument("--seed", type=int, default=0, help="seed for the null shifts")
-    parser.add_argument("--out", type=Path, default=ROOT / "results" / "lfp_to_motifs", help="output folder")
+    parser.add_argument("--out", type=Path, default=Path("data/out/lfp_to_motifs"), help="output folder")
     args = parser.parse_args()
 
     if not args.nwb:
-        parser.error("no NWB files found in data/raw; run python3 -m src.scripts.download_dropbox_data first")
+        parser.error("no NWB files found in data/raw; run python3 -m src.download_dropbox_data first")
     bands = parse_bands(args.bands) if args.bands else DEFAULT_FREQ_BANDS
     if bands.max() >= args.fs / 2:
         parser.error(f"highest band edge {bands.max():g} Hz must be below Nyquist ({args.fs / 2:g} Hz)")

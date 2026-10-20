@@ -10,3 +10,4 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 assets/textbook.pdf
+LFP Data.mat
