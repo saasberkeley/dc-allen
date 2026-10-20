@@ -1,8 +1,8 @@
 # SAAS x Allen Institute: Brain Recordings Across States
 
-This repo holds the data-acquisition code for a Berkeley SAAS (Student Association for Applied Statistics) project with the Allen Institute. **You don't need any biology or neuroscience background to get started.** This page explains the project in plain language and then walks you through downloading the data.
+This repo holds code for a Berkeley SAAS (Student Association for Applied Statistics) project with the Allen Institute, analyzing neural recordings across different brain states. **You don't need any biology or neuroscience background to get started.**
 
-The full project proposal is in [`assets/sow.pdf`](assets/sow.pdf).
+The full project proposal is in [`docs/sow.pdf`](docs/sow.pdf).
 
 ---
 
@@ -16,30 +16,27 @@ The mice were recorded in different **states**:
 | State | What it is |
 |---|---|
 | **Awake** | Normal, alert baseline. |
-| **Anesthetized** (two different sedatives) | The animal is sedated. |
+| **Anesthetized** (isoflurane) | The animal is sedated. |
 | **Psilocybin** | The animal was given the psychedelic compound found in "magic mushrooms". |
-| **Ketanserin** | A drug that *blocks* the receptor psilocybin acts on. It is the control, to show that psilocybin's effects really come through that receptor. |
+| **Ketanserin** | A drug that *blocks* the receptor psilocybin acts on. It is the control. |
 
 ### What kinds of signals are in the data?
 Each recording contains several streams, all recorded at the same time:
 
-- **Spikes.** Each neuron "fires" brief electrical pulses, called spikes. The data records the time of each spike and which neuron produced it. Think of it as a list of timestamps per neuron.
-- **LFP (local field potential).** This is the smooth, wavy signal you get by averaging the electrical activity near each electrode. It looks like a continuous squiggle and contains rhythms ("brain waves") at different speeds, measured in Hz. Slow waves are roughly 1–4 Hz, and fast ones can be 30 Hz or more.
+- **Spikes.** Each neuron "fires" brief electrical pulses, called spikes. The data records the time of each spike and which neuron produced it.
+- **LFP (local field potential).** The smooth, wavy signal from averaging electrical activity near each electrode. Contains rhythms ("brain waves") at different speeds (1–100 Hz).
 - **EEG.** A coarser brain signal measured from the surface of the head.
-- **Pupil size and behavior.** Video-derived measurements of the animal's pupil and movement. These are useful for telling what state the animal is in.
+- **Pupil size and behavior.** Video-derived measurements of the animal's pupil and movement.
 
 ### What are we trying to figure out?
-A recent paper (Mishler et al., 2026) describes a method for finding **spectral motifs**. A motif is a *recurring pattern of brain-wave activity across several frequencies at once*. Motifs tend to come in **opposing pairs**: when one goes up, the population of neurons tends to fire more, and when its partner goes up, the population tends to fire less. Each pair is linked to a different group of neurons.
+A recent paper (Mishler et al., 2026) describes a method for finding **spectral motifs**—recurring patterns of brain-wave activity across several frequencies at once. Motifs tend to come in **opposing pairs**: when one goes up, neurons tend to fire more; when its partner goes up, they fire less.
 
-The method was tested in rats learning a task. **Our question is: how do these motifs change when the brain is in a different state (awake, sedated, or on psilocybin)?**
+**Our question is: how do these motifs change when the brain is in a different state (awake, sedated, or on psilocybin)?**
 
-### What will we build?
-1. **D1, Data access layer.** Code that loads any recording into clean arrays with the state (awake, sedated, and so on) labelled. It also includes a written "data dictionary" explaining every field.
-2. **D2, Verified motif pipeline.** Our own implementation of the motif method. We first check that it reproduces a published result, *before* running it on anything new.
-3. **D3, State comparison and code release.** Statistics, figures, and a write-up comparing motifs across states.
-
-### Where are we now?
-The semester runs 14 Sep – 13 Dec 2026. We are in **Week 3 (data access)**. This repo currently contains the script that downloads the data. The loaders come next.
+### What have we built?
+1. **Data access layer.** Code that loads recordings into clean arrays with the state labelled.
+2. **Verified motif pipeline.** Python implementation of the motif method, validated against the original MATLAB code.
+3. **Analysis tools.** Visualization, spectral analysis, and comparison scripts.
 
 ---
 
@@ -47,201 +44,163 @@ The semester runs 14 Sep – 13 Dec 2026. We are in **Week 3 (data access)**. Th
 
 | Term | Meaning |
 |---|---|
-| **NWB** (Neurodata Without Borders) | A standard file format (`.nwb`) for neuroscience data. One file holds one recording session, with spikes, LFP, and metadata inside. Files are big, often 10–20 GB. |
+| **NWB** (Neurodata Without Borders) | A standard file format (`.nwb`) for neuroscience data. One file holds one recording session. |
 | **Session** | One recording of one mouse on one day. |
 | **Neuropixels** | The high-density recording probe. |
 | **Unit** | One neuron, as identified from the spike data. |
-| **LFP** | Local field potential: the slow wavy electrical signal (see above). |
+| **LFP** | Local field potential: the slow wavy electrical signal. |
 | **Hz** | Cycles per second, the speed of a brain wave. |
-| **Epoch** | A labelled stretch of time within a recording (for example "awake" or "post-drug"). |
-| **Motif** | A recurring multi-frequency pattern in the LFP (see above). |
+| **Epoch** | A labelled stretch of time within a recording (e.g., "awake" or "post-drug"). |
+| **Motif** | A recurring multi-frequency pattern in the LFP. |
 
 ---
 
-## 3. Setup: get the code and data
+## 3. Setup
 
-You need a Mac or Linux machine (Windows users: use WSL), **Python 3.9 or newer**, and **about 30 GB of free disk space** for the data.
+You need a Mac or Linux machine (Windows: use WSL), **Python 3.9+**, and **~30 GB free disk space** for full data.
 
-### Step 1: Get the repo
+### Step 1: Clone the repo
 ```bash
-git clone git@github.com:saasberkeley/dc-allen-data-acquire.git
-cd dc-allen-data-acquire
+git clone git@github.com:saasberkeley/dc-allen.git
+cd dc-allen
 ```
 
-### Step 2: Check Python
-```bash
-python3 --version
-```
-You should see `Python 3.9` or higher. If not, install Python from <https://www.python.org/downloads/>.
-
-### Step 3: Add the Dropbox link
-The data lives in a private shared Dropbox folder. The link is not stored in the repo, so you have to add it yourself.
-
-1. Ask the project leads for the **shared folder link**. It must contain an `rlkey=...` part.
-2. Create your own `.env` file from the template:
-   ```bash
-   cp .env.example .env
-   ```
-3. Open `.env` and paste the link after the `=`:
-   ```
-   DROPBOX_FOLDER_URL=https://www.dropbox.com/scl/fo/.../...?rlkey=...&dl=0
-   ```
-
-`.env` is git-ignored, so your copy stays on your machine. **Never commit the link or post it publicly.**
-
-### Step 4: Download the data
-The download script uses only the Python standard library, so there is nothing to install for this step.
-
-First, preview what will be downloaded, with sizes:
-```bash
-python3 -m src.scripts.download_dropbox_data --list
-```
-
-Then download the NWB files (~28.6 GB total):
-```bash
-python3 -m src.scripts.download_dropbox_data
-```
-
-**Notes:**
-- The large files take a while. The script prints progress.
-- It is safe to stop it (Ctrl+C) and run it again. It resumes where it left off.
-- If a file is already fully downloaded, it is skipped.
-- Partial downloads end in `.part`. Don't open those. They become normal files when finished.
-- Reference notebooks and MATLAB code are already in the repo (no download needed).
-
-### Step 5: Check that it worked
-```bash
-ls -lh data/raw
-```
-You should see:
-
-```
-data/raw/
-├── 688277-20230921-v001.nwb    (12.11 GB)
-└── 692644-20230907-v001.nwb    (16.52 GB)
-```
-
-The `data/` folder is git-ignored. **Never commit the data files** (they're ~28 GB total).
-
----
-
-## 4. Optional: open the data yourself
-
-The notebook `notebooks/read_Templeton_NWB.ipynb` shows how to read these files. To run it, set up a Python environment:
-
+### Step 2: Set up Python environment
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate          # Windows (WSL): same command
-pip install pynwb h5py numpy pandas matplotlib jupyter
-jupyter notebook notebooks/read_Templeton_NWB.ipynb
+source .venv/bin/activate
+pip install numpy scipy matplotlib h5py pynwb pandas jupyter
 ```
 
-Don't want to run anything? Open `notebooks/read_Templeton_NWB.html` in your browser to see the notebook with its outputs.
+### Step 3: Download data (optional)
+Sample data is already in `data/sample_nwb/` and `data/sample_lfp/`. For full NWB files:
 
-The recording files are very large. Reading them with `pynwb` loads data lazily, so you can look at small slices without filling up your memory. Avoid commands that copy a whole signal into memory.
+1. Get the Dropbox link from project leads
+2. Create `.env` from template: `cp .env.example .env`
+3. Add the link to `.env`
+4. Run: `python3 code/python/src/download_dropbox_data.py`
 
 ---
 
-## 5. The Mishler MATLAB reference code
+## 4. Repo layout
 
-Dr. Mishler (first author of the motif paper) shared the original MATLAB implementation. It has **not** been ported to Python yet, and porting it is our D2 task. The files are in `src/matlab/`:
-
-| File | Role |
-|---|---|
-| `SmoothEnv.m` | Preprocessing. Turns one raw LFP/EEG trace into smoothed, z-scored band-amplitude envelopes. |
-| `butterfilter.m` | Helper for `SmoothEnv`. Designs a 6th-order Butterworth bandpass filter. |
-| `getMotifs.m` | The motif-finding algorithm. |
-
-### How to run it (per Mishler)
-1. For each animal/session, call `SmoothEnv(LFP, LFPfs, freqBands)`.
-2. Store the resulting matrices in a **column cell array**, one cell per animal/session.
-3. Pass that cell array and the sampling rate to `getMotifs(LFPIn, LFPfs)`.
-
-```matlab
-freqBands = [1 4; 3 6; ...];             % N x 2, [low high] in Hz. Bands should overlap.
-LFPIn = cell(nSessions, 1);
-for k = 1:nSessions
-    LFPIn{k} = SmoothEnv(lfp{k}, fs, freqBands)';   % NOTE the transpose, see below
-end
-finalMotifs = getMotifs(LFPIn, fs);      % bands x (2 * number of motifs)
 ```
-
-### Step 1: `SmoothEnv(LFP, LFPfs, freqBands)`
-Input is one continuous trace and an `N x 2` matrix of band edges. Steps:
-1. **Bandpass** the trace into each band (6th-order Butterworth, zero-phase `filtfilt`).
-2. **Envelope.** Take the Hilbert transform and keep its magnitude, which is the instantaneous amplitude of each band.
-3. **Smooth** each envelope with a Gaussian window of about 5 s, applied forward and backward.
-4. **Trim edges.** The first and last 10 s are set to `NaN` to hide filter edge artifacts.
-5. **Z-score** each band over time, ignoring the `NaN`s.
-
-Output is **time x bands**. Positive means the band is stronger than its own session average, and negative means weaker.
-
-### Step 2: `getMotifs(LFPIn, LFPfs)`
-Input is a column cell array. Each cell is **bands x time**. All sessions need the same bands in the same order, but durations can differ. Output is a **bands x motifs** matrix. The first half are the motifs, and the second half are their exact sign-flipped opposites. This is the "opposing pairs" idea from the paper.
-
-What it does:
-1. **Subsample** to about 1 sample per second and concatenate all sessions.
-2. **Binarize.** Take `sign()` of every band, so each time point becomes a +/- pattern across bands. Only *which bands are above or below average* matters, not by how much.
-3. **Drop trivial points** where every band has the same sign (all high or all low).
-4. **Cluster.** Compute correlation distance between all pairs of time points, then run average-linkage hierarchical clustering.
-5. **Merge branches.** Walk up the tree. Two sibling clusters merge if their *expression over time* is correlated at or above a threshold `r`. Here, expression means the dot product of every time point with the cluster's mean pattern. Re-cluster the merged templates and repeat until the number of motifs stops changing.
-6. **Repeat for thresholds** `r = 0.4, 0.5, 0.6, 0.7, 0.8`.
-7. **Build null data.** Do steps 1-6 again on 20 shuffled copies. In each copy, every band is circularly shifted by a different multiple of 20 s. This breaks the relationships between bands but keeps each band's own structure.
-8. **Keep only significant motifs.** A real motif must (a) have more time points than the largest motif found in any null at that threshold, and (b) appear in **every** session.
-9. **Remove duplicates across thresholds** with uncentered PCA. Keep components that at least 2 candidate motifs map to.
-10. **Re-estimate final templates** from the original data. Average the time points that express each axis, with the opposite pole sign-flipped. Then append the negated copies.
-
-### Things to know before porting
-- **Orientation mismatch.** `SmoothEnv` returns time x bands, but `getMotifs` expects bands x time per cell. You must transpose in between (the example above does).
-- **`NaN` edges.** `SmoothEnv` leaves 10 s of `NaN` at each end, and `getMotifs` has no `NaN` handling. We expect you need to trim those samples before calling `getMotifs`. **This is unconfirmed, so ask Mishler.**
-- **Randomness.** The null shifts use `randperm` with no fixed seed, so results vary a little between runs. Set a seed in the Python port.
-- **Slow.** The tree-walking loops are plain MATLAB loops over every time point and are written for clarity, not speed. A Python version will likely need `scipy.cluster.hierarchy` plus some vectorizing.
-- **Toolboxes.** `butterfilter.m` uses `fdesign.bandpass` (Filter Design / DSP System Toolbox). `getMotifs.m` uses `pdist`, `linkage` and `pca` (Statistics Toolbox). The Python equivalents are `scipy.signal.butter(..., output='sos')` with `sosfiltfilt`, `scipy.signal.hilbert`, and `scipy.cluster.hierarchy` / `sklearn.decomposition.PCA`.
-- **Gaussian window.** `gausswin(N,1)` means the window spans only +/-1 standard deviation, which is wider than a typical "5 s Gaussian". Match this exactly in Python (for example `scipy.signal.windows.gaussian` with `std = (N-1)/2`) when checking against the MATLAB output.
-- **Chosen parameters.** The band edges (`freqBands`) are not specified in the code. Take them from the paper.
-- **All-sessions rule.** A motif must appear in every session, so with only two NWB recordings this is a strict filter.
-- **Validation target.** D2 requires reproducing a published result first. Ask Mishler for a small example input and output to compare against.
+dc-allen/
+├── code/
+│   ├── python/
+│   │   ├── src/                    # Python source code
+│   │   │   ├── smooth_env.py       # SmoothEnv port (preprocessing)
+│   │   │   ├── get_motifs.py       # getMotifs port (motif discovery)
+│   │   │   ├── extract_windows.py  # Extract time windows from NWB
+│   │   │   ├── lfp_to_motifs.py    # End-to-end LFP → motifs pipeline
+│   │   │   ├── region_sweep.py     # Run motifs across brain regions
+│   │   │   ├── spectra.py          # Spectral analysis tools
+│   │   │   ├── rasters.py          # Spike raster visualization
+│   │   │   └── tests/              # Unit tests
+│   │   └── notebooks/              # Jupyter notebooks for analysis
+│   └── matlab/
+│       ├── src/                    # Original MATLAB reference code
+│       │   ├── SmoothEnv.m         # Preprocessing
+│       │   ├── butterfilter.m      # Butterworth filter helper
+│       │   └── getMotifs.m         # Motif-finding algorithm
+│       └── notebooks/              # Reference notebooks from Allen
+│
+├── data/
+│   ├── sample_nwb/                 # Sample H5 files (extracted windows)
+│   ├── sample_lfp/                 # Sample LFP data for testing
+│   └── out/                        # Analysis outputs
+│       ├── motifs/                 # Discovered motifs
+│       ├── region_sweep/           # Per-region motif results
+│       └── motifs_comparison/      # MATLAB vs Python comparison
+│
+├── docs/
+│   ├── sow.pdf                     # Project proposal
+│   ├── papers/                     # Background reading
+│   └── preprints/                  # Mishler & Momi preprints
+│
+├── composite_motif_pipeline.ipynb  # Self-contained motif pipeline
+├── TASKS.md                        # Task assignments
+└── README.md                       # This file
+```
 
 ---
 
-## 6. Repo layout
+## 5. Running the motif pipeline
 
-```
-assets/                     Project proposal (sow.pdf)
-data/                       Downloaded data (git-ignored)
-  raw/                      .nwb recordings
-docs/
-  papers/                   Background reading PDFs
-notebooks/
-  read_Templeton_NWB.ipynb  Reference notebook (Allen Institute)
-  read_Templeton_NWB.html   Rendered version
-src/
-  matlab/                   Mishler MATLAB reference code
-    SmoothEnv.m             Preprocessing
-    butterfilter.m          Helper for SmoothEnv
-    getMotifs.m             Motif-finding algorithm
-  scripts/
-    download_dropbox_data.py   Downloads the data
-  spectral_motifs/          Python port of MATLAB code
-.env.example                Template for your local .env (copy to .env)
-TASKS.md                    Work session task assignments
+### Option 1: Use the composite pipeline (recommended)
+The notebook `composite_motif_pipeline.ipynb` contains the entire pipeline in one file:
+
+```bash
+jupyter notebook composite_motif_pipeline.ipynb
 ```
 
-## 7. Reading to get up to speed (in order)
+Edit `MAT_FILE` at the top to point to your LFP data.
 
-1. [`assets/sow.pdf`](assets/sow.pdf), the project proposal. It is short and explains the goals.
-2. Section 5 above, and the MATLAB code it describes.
-3. The rendered notebook, `notebooks/read_Templeton_NWB.html`. It shows what a session's data looks like.
-4. Mishler et al. (2026), the motif method: <https://www.biorxiv.org/content/10.64898/2026.02.20.707132v1>
-5. Momi et al. (2026), the psilocybin dataset: <https://www.biorxiv.org/content/10.64898/2026.08.14.744865v1>
-6. For deeper neuroscience background, *Principles of Neural Science* (5th ed.) is in the shared Dropbox folder. It is not downloaded by the script and is not in this repo. It is optional, so skim the chapters on neurons and electrical signaling if you're curious.
+### Option 2: Use the modular Python code
+```python
+from code.python.src.smooth_env import smooth_env
+from code.python.src.get_motifs import get_motifs
+
+# Preprocess LFP
+envelope = smooth_env(lfp_trace, fs=500, freq_bands=my_bands)
+
+# Find motifs (remove NaN edges first)
+valid = ~np.isnan(envelope).any(axis=1)
+result = get_motifs([envelope[valid].T], fs=500)
+print(f"Found {result.n_motifs} motifs")
+```
+
+---
+
+## 6. Key algorithms
+
+### SmoothEnv (preprocessing)
+Converts raw LFP into smoothed, z-scored band-amplitude envelopes:
+
+1. **Bandpass** into each frequency band (6th-order Butterworth)
+2. **Hilbert envelope** for instantaneous amplitude
+3. **Smooth** with 5-second Gaussian window
+4. **Trim edges** (first/last 10s → NaN)
+5. **Z-score** each band over time
+
+### getMotifs (motif discovery)
+Finds recurring multi-band patterns:
+
+1. **Subsample** to ~1 Hz and **binarize** (sign of each band)
+2. **Hierarchical clustering** with correlation distance
+3. **Branch consolidation** at multiple correlation thresholds (0.4–0.8)
+4. **Null hypothesis testing** via circular shifts
+5. **PCA deduplication** across thresholds
+6. **Final templates** with opposing pairs
+
+---
+
+## 7. Sample data
+
+The repo includes sample data for testing:
+
+| File | Description | Spikes | Units |
+|------|-------------|--------|-------|
+| `688277-20230921-v001_awake.h5` | Awake baseline | 743,622 | 1,398 |
+| `688277-20230921-v001_iso_anesthetized.h5` | Isoflurane anesthesia | 68,802 | 1,398 |
+| `692644-20230907-v001_psilocybin_before.h5` | Pre-psilocybin | 568,187 | 1,117 |
+| `692644-20230907-v001_psilocybin_after.h5` | Post-psilocybin | 628,619 | 1,117 |
+
+---
+
+## 8. References
+
+1. **Project proposal:** [`docs/sow.pdf`](docs/sow.pdf)
+2. **Mishler et al. (2026)** – Spectral motif method: [bioRxiv](https://www.biorxiv.org/content/10.64898/2026.02.20.707132v1)
+3. **Momi et al. (2026)** – Psilocybin dataset: [bioRxiv](https://www.biorxiv.org/content/10.64898/2026.08.14.744865v1)
+
+---
 
 ## Troubleshooting
 
 | Problem | Fix |
 |---|---|
-| `No module named src` | Run commands from the repo root (the folder containing `src/`), not from inside `src/`. |
-| Download stalls or errors | Re-run the same command. It retries and resumes automatically. |
-| `No space left on device` | Free up about 30 GB and re-run. |
-| `DROPBOX_FOLDER_URL is not set` | You haven't created `.env` yet. Do Step 3. |
-| Dropbox link returns 403/404 | The shared link may have expired. Ask the project leads for a new one and update `DROPBOX_FOLDER_URL` in your `.env`. |
+| `ModuleNotFoundError` | Run from repo root, or add repo to `PYTHONPATH` |
+| Download stalls | Re-run the download script (it resumes) |
+| `No space left on device` | Free up ~30 GB and retry |
+| HDF5 read errors | Install h5py: `pip install h5py` |
