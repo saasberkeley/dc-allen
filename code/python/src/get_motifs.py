@@ -28,7 +28,7 @@ import numpy as np
 from scipy.cluster.hierarchy import linkage
 from scipy.spatial.distance import pdist
 
-from src.mapping.smooth_env import mround
+from .smooth_env import mround
 
 CORR_THRESHOLDS = (0.4, 0.5, 0.6, 0.7, 0.8)
 

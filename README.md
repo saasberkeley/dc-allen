@@ -89,14 +89,15 @@ dc-allen/
 ├── code/
 │   ├── python/
 │   │   ├── src/                    # Python source code
-│   │   │   ├── smooth_env.py       # SmoothEnv port (preprocessing)
-│   │   │   ├── get_motifs.py       # getMotifs port (motif discovery)
-│   │   │   ├── extract_windows.py  # Extract time windows from NWB
-│   │   │   ├── lfp_to_motifs.py    # End-to-end LFP → motifs pipeline
-│   │   │   ├── region_sweep.py     # Run motifs across brain regions
-│   │   │   ├── spectra.py          # Spectral analysis tools
-│   │   │   ├── rasters.py          # Spike raster visualization
-│   │   │   └── tests/              # Unit tests
+│   │   │   ├── smooth_env.py               # SmoothEnv port (preprocessing)
+│   │   │   ├── get_motifs.py               # getMotifs port (motif discovery)
+│   │   │   ├── composite_motif_pipeline.py # Full pipeline for MAT files
+│   │   │   ├── extract_windows.py          # Extract time windows from NWB
+│   │   │   ├── lfp_to_motifs.py            # End-to-end LFP → motifs (NWB)
+│   │   │   ├── region_sweep.py             # Run motifs across brain regions
+│   │   │   ├── spectra.py                  # Spectral analysis tools
+│   │   │   ├── rasters.py                  # Spike raster visualization
+│   │   │   └── tests/                      # Unit tests
 │   │   └── notebooks/              # Jupyter notebooks for analysis
 │   └── matlab/
 │       ├── src/                    # Original MATLAB reference code
@@ -118,7 +119,6 @@ dc-allen/
 │   ├── papers/                     # Background reading
 │   └── preprints/                  # Mishler & Momi preprints
 │
-├── composite_motif_pipeline.ipynb  # Self-contained motif pipeline
 ├── TASKS.md                        # Task assignments
 └── README.md                       # This file
 ```
@@ -127,19 +127,27 @@ dc-allen/
 
 ## 5. Running the motif pipeline
 
-### Option 1: Use the composite pipeline (recommended)
-The notebook `composite_motif_pipeline.ipynb` contains the entire pipeline in one file:
+### Option 1: Use the composite pipeline for MAT files (recommended)
+The `composite_motif_pipeline.py` module processes MATLAB `.mat` files through the full Mishler pipeline:
 
 ```bash
-jupyter notebook composite_motif_pipeline.ipynb
+cd code/python
+python -m src.composite_motif_pipeline --mat /path/to/LFP_Data.mat --out /path/to/output
 ```
 
-Edit `MAT_FILE` at the top to point to your LFP data.
+This runs the complete pipeline:
+- 60 Hz bandstop filtering
+- 76-band smooth envelope ([1,5] to [76,80] Hz)
+- Noise detection and removal
+- Motif discovery with null hypothesis testing
+- Saves results to a new MAT file
+
+See all options with `python -m src.composite_motif_pipeline --help`.
 
 ### Option 2: Use the modular Python code
 ```python
-from code.python.src.smooth_env import smooth_env
-from code.python.src.get_motifs import get_motifs
+from src.smooth_env import smooth_env
+from src.get_motifs import get_motifs
 
 # Preprocess LFP
 envelope = smooth_env(lfp_trace, fs=500, freq_bands=my_bands)
@@ -148,6 +156,20 @@ envelope = smooth_env(lfp_trace, fs=500, freq_bands=my_bands)
 valid = ~np.isnan(envelope).any(axis=1)
 result = get_motifs([envelope[valid].T], fs=500)
 print(f"Found {result.n_motifs} motifs")
+```
+
+### Option 3: Use composite pipeline as a library
+```python
+from src.composite_motif_pipeline import run_pipeline, smooth_env, filter_lfp_noise
+
+# Run full pipeline on MAT file
+result = run_pipeline(
+    mat_file="/path/to/LFP_Data.mat",
+    save_dir="/path/to/output",
+    stdev_thresh=10.0,
+    n_null=20,
+)
+print(f"Found {result['n_motifs']} motifs")
 ```
 
 ---

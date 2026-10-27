@@ -23,8 +23,8 @@ import numpy as np  # noqa: E402
 from pynwb import NWBHDF5IO  # noqa: E402
 from scipy import signal  # noqa: E402
 
-from src.mapping.get_motifs import get_motifs  # noqa: E402
-from src.mapping.smooth_env import DEFAULT_FREQ_BANDS, mround, smooth_env  # noqa: E402
+from .get_motifs import get_motifs  # noqa: E402
+from .smooth_env import DEFAULT_FREQ_BANDS, mround, smooth_env  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 TRIVIAL = -1
