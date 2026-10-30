@@ -1,0 +1,96 @@
+{
+  "mouse": "720762",
+  "file": "720762-20240221-v001.nwb",
+  "windows": {
+    "awake": [
+      752.40433,
+      3147.55424
+    ],
+    "isoflurane": [
+      4648.27026,
+      7023.87438
+    ]
+  },
+  "eeg_channels": [
+    13,
+    9
+  ],
+  "lfp_probe": "probeF",
+  "lfp_region": "MOs5",
+  "frequency_bands_hz": [
+    [
+      1.0,
+      4.0
+    ],
+    [
+      4.0,
+      8.0
+    ],
+    [
+      8.0,
+      12.0
+    ],
+    [
+      12.0,
+      30.0
+    ],
+    [
+      30.0,
+      60.0
+    ],
+    [
+      60.0,
+      100.0
+    ]
+  ],
+  "n_null": 20,
+  "eeg_motif_pairs": {
+    "13": {
+      "awake": 0,
+      "isoflurane": 0,
+      "full": 0
+    },
+    "9": {
+      "awake": 0,
+      "isoflurane": 0,
+      "full": 1
+    }
+  },
+  "lfp_motif_pairs": {
+    "awake": 0,
+    "isoflurane": 0,
+    "full": 1
+  },
+  "decoder": [
+    {
+      "signal": "EEG channel 13",
+      "balanced_accuracy": 1.0,
+      "n_seconds": 4752,
+      "n_blocks": 159
+    },
+    {
+      "signal": "EEG channel 9",
+      "balanced_accuracy": 1.0,
+      "n_seconds": 4752,
+      "n_blocks": 159
+    },
+    {
+      "signal": "LFP probeF MOs5",
+      "balanced_accuracy": 1.0,
+      "n_seconds": 4752,
+      "n_blocks": 159
+    }
+  ],
+  "raster": [
+    {
+      "state": "awake",
+      "units": 60,
+      "spikes": 163656
+    },
+    {
+      "state": "isoflurane",
+      "units": 60,
+      "spikes": 15175
+    }
+  ]
+}

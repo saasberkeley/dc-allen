@@ -1,0 +1,4 @@
+signal,balanced_accuracy,n_seconds,n_blocks
+EEG channel 13,1.0,4752,159
+EEG channel 9,1.0,4752,159
+LFP probeF MOs5,1.0,4752,159
