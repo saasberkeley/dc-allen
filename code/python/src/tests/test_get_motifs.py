@@ -3,7 +3,7 @@ import pytest
 from scipy.cluster.hierarchy import linkage
 from scipy.spatial.distance import pdist
 
-from src.mapping.get_motifs import CORR_THRESHOLDS, _pca_uncentered, candidate_partition, get_motifs
+from src.get_motifs import CORR_THRESHOLDS, _pca_uncentered, candidate_partition, get_motifs
 
 
 def _matlab_chains(Z, n):
@@ -175,3 +175,59 @@ def test_rejects_nan_input():
     x[0, 0] = np.nan
     with pytest.raises(ValueError, match="NaN"):
         get_motifs([x], fs=1.0)
+
+
+def _smooth_noise(rng, n_bands, n_sessions, seconds):
+    from scipy.ndimage import gaussian_filter1d
+    out = []
+    for _ in range(n_sessions):
+        x = gaussian_filter1d(rng.standard_normal((n_bands, seconds)), sigma=3, axis=1)
+        out.append((x - x.mean(1, keepdims=True)) / x.std(1, keepdims=True))
+    return out
+
+
+RELAXED = dict(null_mode="pvalue", alpha=0.05, min_session_frac=0.5)
+
+
+def test_pvalue_mode_keeps_everything_strict_keeps():
+    rng = np.random.default_rng(1)
+    planted = np.array([[1, 1, 1, -1, -1, -1, 1, 1], [1, -1, -1, 1, 1, -1, -1, 1]], dtype=float)
+    sessions = _planted_sessions(rng, planted)
+    strict = get_motifs(sessions, fs=1.0, seed=0)
+    relaxed = get_motifs(sessions, fs=1.0, seed=0, **RELAXED)  # same seed and n_null, so identical nulls
+    assert (relaxed.n_kept >= strict.n_kept).all()
+    assert relaxed.n_motifs >= strict.n_motifs
+    assert all(c["p"] <= 0.05 for c in relaxed.kept_candidates)
+    assert all(c["p"] == pytest.approx(1 / 21) for c in strict.kept_candidates)
+
+
+def test_session_fraction_rule():
+    """A motif that only one of two sessions expresses fails 'every session' but passes 'half'.
+
+    A session only counts as absent if not even one of its seconds has the pattern, so the
+    second session cycles cleanly through a different motif and never produces it.
+    """
+    rng = np.random.default_rng(3)
+    planted = np.array([[1, 1, 1, 1, -1, -1, -1, -1]], dtype=float)
+    other = np.array([1, -1, 1, -1, 1, -1, 1, -1], dtype=float)
+    with_motif = _planted_sessions(rng, planted, n_sessions=1, seconds=1500)
+    blocks = np.repeat(np.where(np.arange(1500) // 40 % 2 == 0, 1.0, -1.0)[None, :], 8, axis=0)
+    without = [other[:, None] * blocks + 0.05 * rng.standard_normal((8, 1500))]
+    strict = get_motifs(with_motif + without, fs=1.0, seed=0)
+    half = get_motifs(with_motif + without, fs=1.0, seed=0, min_session_frac=0.5)
+    best = lambda r: max((abs(np.corrcoef(planted[0], m)[0, 1]) for m in r.motifs.T), default=0)
+    assert best(strict) < 0.9
+    assert best(half) > 0.9
+
+
+@pytest.mark.parametrize("seed", range(3))
+def test_relaxed_finds_nothing_in_smooth_noise(seed):
+    rng = np.random.default_rng(seed)
+    result = get_motifs(_smooth_noise(rng, 10, 5, 330), fs=1.0, seed=seed, n_null=100, **RELAXED)
+    assert result.n_motifs == 0
+
+
+def test_relaxed_with_size_normalization_finds_nothing_in_smooth_noise():
+    rng = np.random.default_rng(7)
+    result = get_motifs(_smooth_noise(rng, 10, 5, 330), fs=1.0, seed=7, n_null=100, normalize_size=True, **RELAXED)
+    assert result.n_motifs == 0

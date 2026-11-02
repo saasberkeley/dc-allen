@@ -1,0 +1,2780 @@
+{
+  "file": "720762-20240221-v001.nwb",
+  "subject": "720762",
+  "description": "isoflurane experiment with EEG and Neuropixels (electrical and visual)",
+  "bands_hz": [
+    [
+      1.0,
+      4.0
+    ],
+    [
+      3.0,
+      6.0
+    ],
+    [
+      5.0,
+      9.0
+    ],
+    [
+      8.0,
+      12.0
+    ],
+    [
+      10.0,
+      15.0
+    ],
+    [
+      13.0,
+      20.0
+    ],
+    [
+      18.0,
+      30.0
+    ],
+    [
+      25.0,
+      40.0
+    ],
+    [
+      35.0,
+      55.0
+    ],
+    [
+      50.0,
+      80.0
+    ]
+  ],
+  "fs": 250.0,
+  "chunk_sec": 300.0,
+  "seed": 0,
+  "versions": {
+    "original": {
+      "chunked": false,
+      "n_null": 20
+    },
+    "strict": {
+      "chunked": true,
+      "n_null": 20
+    },
+    "relaxed": {
+      "chunked": true,
+      "n_null": 100,
+      "null_mode": "pvalue",
+      "alpha": 0.05,
+      "min_session_frac": 0.5,
+      "normalize_size": true
+    }
+  },
+  "timeline": {
+    "t_start": 16.527196407676968,
+    "t_end": 7246.715593129867,
+    "iso_on": 3293.8610298227686,
+    "induction_end": 3441.8410298227686,
+    "iso_off": 7124.241029822769,
+    "electrical_blocks": [
+      [
+        "awake",
+        752.40433,
+        2423.21463
+      ],
+      [
+        "isoflurane",
+        4648.27026,
+        6319.08225
+      ]
+    ],
+    "visual_blocks": [
+      [
+        "awake",
+        2597.92792,
+        3147.55424
+      ],
+      [
+        "isoflurane",
+        6480.62275,
+        7023.87438
+      ]
+    ],
+    "stim_free_segments": [
+      [
+        16.527196407676968,
+        747.40433
+      ],
+      [
+        2428.21463,
+        4643.27026
+      ],
+      [
+        6324.08225,
+        7124.241029822769
+      ]
+    ],
+    "windows": {
+      "awake": [
+        16.527196407676968,
+        3263.8610298227686
+      ],
+      "isoflurane": [
+        3441.8410298227686,
+        7124.241029822769
+      ],
+      "full": [
+        16.527196407676968,
+        7124.241029822769
+      ]
+    }
+  },
+  "signals": [
+    {
+      "key": "eeg13",
+      "label": "EEG ch13 (MOs, frontal)",
+      "channel": 13,
+      "location": "MOs",
+      "source": [
+        "eeg",
+        "13"
+      ]
+    },
+    {
+      "key": "eeg10",
+      "label": "EEG ch10 (SSp-ll, somatosensory)",
+      "channel": 10,
+      "location": "SSp-ll",
+      "source": [
+        "eeg",
+        "10"
+      ]
+    },
+    {
+      "key": "lfp_PL5",
+      "label": "LFP PL5 (probeF, deep prelimbic)",
+      "channel": 254,
+      "location": "PL5",
+      "source": [
+        "lfp",
+        "probeF",
+        "PL5"
+      ]
+    }
+  ],
+  "eeg_channels": [
+    {
+      "id": 0,
+      "location": "VISl",
+      "valid": true
+    },
+    {
+      "id": 1,
+      "location": "VISp",
+      "valid": true
+    },
+    {
+      "id": 2,
+      "location": "RSPagl",
+      "valid": true
+    },
+    {
+      "id": 3,
+      "location": "VISal",
+      "valid": true
+    },
+    {
+      "id": 4,
+      "location": "VISp",
+      "valid": true
+    },
+    {
+      "id": 5,
+      "location": "RSPagl",
+      "valid": true
+    },
+    {
+      "id": 6,
+      "location": "SSp-bfd",
+      "valid": false
+    },
+    {
+      "id": 7,
+      "location": "VISa",
+      "valid": false
+    },
+    {
+      "id": 8,
+      "location": "RSPagl",
+      "valid": true
+    },
+    {
+      "id": 9,
+      "location": "SSp-bfd",
+      "valid": true
+    },
+    {
+      "id": 10,
+      "location": "SSp-ll",
+      "valid": true
+    },
+    {
+      "id": 11,
+      "location": "MOp",
+      "valid": true
+    },
+    {
+      "id": 12,
+      "location": "MOs",
+      "valid": true
+    },
+    {
+      "id": 13,
+      "location": "MOs",
+      "valid": true
+    },
+    {
+      "id": 14,
+      "location": "MOs",
+      "valid": false
+    },
+    {
+      "id": 15,
+      "location": "MOs",
+      "valid": true
+    },
+    {
+      "id": 16,
+      "location": "MOs",
+      "valid": true
+    },
+    {
+      "id": 17,
+      "location": "MOs",
+      "valid": true
+    },
+    {
+      "id": 18,
+      "location": "MOp",
+      "valid": true
+    },
+    {
+      "id": 19,
+      "location": "SSp-ll",
+      "valid": true
+    },
+    {
+      "id": 20,
+      "location": "SSp-bfd",
+      "valid": true
+    },
+    {
+      "id": 21,
+      "location": "RSPagl",
+      "valid": true
+    },
+    {
+      "id": 22,
+      "location": "VISa",
+      "valid": true
+    },
+    {
+      "id": 23,
+      "location": "SSp-bfd",
+      "valid": false
+    },
+    {
+      "id": 24,
+      "location": "RSPagl",
+      "valid": true
+    },
+    {
+      "id": 25,
+      "location": "VISp",
+      "valid": true
+    },
+    {
+      "id": 26,
+      "location": "VISal",
+      "valid": true
+    },
+    {
+      "id": 27,
+      "location": "RSPagl",
+      "valid": true
+    },
+    {
+      "id": 28,
+      "location": "VISp",
+      "valid": true
+    },
+    {
+      "id": 29,
+      "location": "VISl",
+      "valid": true
+    }
+  ],
+  "pl5_units": {
+    "n_total": 234,
+    "n_good": 63,
+    "criteria": {
+      "isi_violations": 0.5,
+      "amplitude_cutoff": 0.1,
+      "presence_ratio": 0.9
+    },
+    "raster_snippets": {
+      "awake": [
+        351.9657632038385,
+        411.9657632038385
+      ],
+      "induction": [
+        3353.8610298227686,
+        3413.8610298227686
+      ],
+      "isoflurane": [
+        4012.5556449113847,
+        4072.5556449113847
+      ]
+    }
+  },
+  "stim_response": {
+    "EEG ch13 (MOs, frontal)": {
+      "awake": {
+        "pre_sd_uv": 64.06803731978474,
+        "peak_abs_uv_0_500ms": 172.11167368698116
+      },
+      "isoflurane": {
+        "pre_sd_uv": 46.36375193403319,
+        "peak_abs_uv_0_500ms": 160.2611958716541
+      }
+    },
+    "EEG ch10 (SSp-ll, somatosensory)": {
+      "awake": {
+        "pre_sd_uv": 64.29254567565528,
+        "peak_abs_uv_0_500ms": 136.40177349681264
+      },
+      "isoflurane": {
+        "pre_sd_uv": 46.08328954316435,
+        "peak_abs_uv_0_500ms": 94.50251665866826
+      }
+    },
+    "LFP PL5 (probeF, deep prelimbic)": {
+      "awake": {
+        "pre_sd_uv": 81.85428511045474,
+        "peak_abs_uv_0_500ms": 786.548244625
+      },
+      "isoflurane": {
+        "pre_sd_uv": 78.76544175694299,
+        "peak_abs_uv_0_500ms": 1040.287327625
+      }
+    }
+  },
+  "spectra_band_power_db_change": {
+    "EEG ch13 (MOs, frontal)": {
+      "1-4": 2.2927210434492764,
+      "4-8": -3.7082424638672022,
+      "8-12": 1.3452302014136084,
+      "12-30": 3.7358461562640493,
+      "30-80": -0.9658797796574918
+    },
+    "EEG ch10 (SSp-ll, somatosensory)": {
+      "1-4": 2.4206325608851156,
+      "4-8": -3.867129138530942,
+      "8-12": 1.2302704625137926,
+      "12-30": 3.5559029053540074,
+      "30-80": -1.2695879130877685
+    },
+    "LFP PL5 (probeF, deep prelimbic)": {
+      "1-4": 4.250214046659821,
+      "4-8": 1.011180693250593,
+      "8-12": 5.940189886824415,
+      "12-30": 5.434762988754217,
+      "30-80": -1.0060742199734904
+    },
+    "EEG mean of 26 valid channels": {
+      "1-4": 2.7902304977259766,
+      "4-8": -3.137687115678048,
+      "8-12": 1.4182812138091858,
+      "12-30": 3.8408835804623416,
+      "30-80": 0.430765605059353
+    }
+  },
+  "motif_runs": [
+    {
+      "signal": "eeg13",
+      "window": "awake",
+      "version": "original",
+      "n_sessions": 1,
+      "session_seconds": [
+        3237.3
+      ],
+      "n_timepoints": 1531,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        765.0,
+        581.0,
+        522.0,
+        316.0,
+        171.0
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kept_candidates": [],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 2.1
+    },
+    {
+      "signal": "eeg13",
+      "window": "awake",
+      "version": "strict",
+      "n_sessions": 4,
+      "session_seconds": [
+        355.4,
+        355.4,
+        412.8,
+        412.8
+      ],
+      "n_timepoints": 1531,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        555.0,
+        512.0,
+        472.0,
+        306.0,
+        137.0
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kept_candidates": [],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 2.2
+    },
+    {
+      "signal": "eeg13",
+      "window": "awake",
+      "version": "relaxed",
+      "n_sessions": 4,
+      "session_seconds": [
+        355.4,
+        355.4,
+        412.8,
+        412.8
+      ],
+      "n_timepoints": 1531,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        734.0410958904109,
+        687.4490196078432,
+        493.0,
+        366.5634352635003,
+        238.53259452411993
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kept_candidates": [],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 10.6
+    },
+    {
+      "signal": "eeg13",
+      "window": "isoflurane",
+      "version": "original",
+      "n_sessions": 1,
+      "session_seconds": [
+        3672.4
+      ],
+      "n_timepoints": 1191,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        928.0,
+        901.0,
+        798.0,
+        687.0,
+        339.0
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kept_candidates": [],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 1.6
+    },
+    {
+      "signal": "eeg13",
+      "window": "isoflurane",
+      "version": "strict",
+      "n_sessions": 5,
+      "session_seconds": [
+        397.1,
+        397.1,
+        397.1,
+        390.1,
+        390.1
+      ],
+      "n_timepoints": 1191,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        1012.0,
+        1012.0,
+        967.0,
+        662.0,
+        455.0
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kept_candidates": [],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 1.9
+    },
+    {
+      "signal": "eeg13",
+      "window": "isoflurane",
+      "version": "relaxed",
+      "n_sessions": 5,
+      "session_seconds": [
+        397.1,
+        397.1,
+        397.1,
+        390.1,
+        390.1
+      ],
+      "n_timepoints": 1191,
+      "n_motifs": 1,
+      "motifs": [
+        [
+          0.17212426532325778,
+          -0.17212426532325778
+        ],
+        [
+          -0.4794290512174643,
+          0.4794290512174643
+        ],
+        [
+          -0.5096557514693535,
+          0.5096557514693535
+        ],
+        [
+          -0.4038623005877414,
+          0.4038623005877414
+        ],
+        [
+          -0.07136859781696053,
+          0.07136859781696053
+        ],
+        [
+          0.3534844668345928,
+          -0.3534844668345928
+        ],
+        [
+          0.7111670864819479,
+          -0.7111670864819479
+        ],
+        [
+          0.9059613769941226,
+          -0.9059613769941226
+        ],
+        [
+          0.9311502938706969,
+          -0.9311502938706969
+        ],
+        [
+          0.9479429051217464,
+          -0.9479429051217464
+        ]
+      ],
+      "null_max_size": [
+        646.0196182396606,
+        643.7668421052631,
+        621.938689217759,
+        499.43142406726224,
+        319.4445617740232
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "kept_candidates": [
+        {
+          "threshold": 0.7,
+          "size": 608,
+          "p": 0.009900990099009901,
+          "sessions_present": 3
+        },
+        {
+          "threshold": 0.8,
+          "size": 282,
+          "p": 0.0297029702970297,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.8,
+          "size": 310,
+          "p": 0.019801980198019802,
+          "sessions_present": 3
+        }
+      ],
+      "motif_support": [
+        {
+          "n_candidates": 3,
+          "min_p": 0.009900990099009901,
+          "thresholds": [
+            0.7,
+            0.8
+          ]
+        }
+      ],
+      "minority_sign_bands": [
+        4
+      ],
+      "broadband_like": [
+        false
+      ],
+      "occupancy": {
+        "M1+": 0.36285425101214575,
+        "M1-": 0.242914979757085,
+        "all-same-sign": 0.3942307692307692
+      },
+      "runtime_s": 12.5,
+      "matches_strict": [
+        false
+      ]
+    },
+    {
+      "signal": "eeg13",
+      "window": "full",
+      "version": "original",
+      "n_sessions": 1,
+      "session_seconds": [
+        7087.7
+      ],
+      "n_timepoints": 3150,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        1818.0,
+        1784.0,
+        1625.0,
+        1625.0,
+        1364.0
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kept_candidates": [],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 7.5
+    },
+    {
+      "signal": "eeg13",
+      "window": "full",
+      "version": "strict",
+      "n_sessions": 11,
+      "session_seconds": [
+        355.4,
+        355.4,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        390.1,
+        390.1
+      ],
+      "n_timepoints": 3150,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        1934.0,
+        1780.0,
+        1643.0,
+        1637.0,
+        1441.0
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kept_candidates": [],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 6.1
+    },
+    {
+      "signal": "eeg13",
+      "window": "full",
+      "version": "relaxed",
+      "n_sessions": 11,
+      "session_seconds": [
+        355.4,
+        355.4,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        390.1,
+        390.1
+      ],
+      "n_timepoints": 3150,
+      "n_motifs": 1,
+      "motifs": [
+        [
+          -0.3250793650793651,
+          0.3250793650793651
+        ],
+        [
+          0.5466666666666666,
+          -0.5466666666666666
+        ],
+        [
+          0.9453968253968253,
+          -0.9453968253968253
+        ],
+        [
+          -0.1403174603174603,
+          0.1403174603174603
+        ],
+        [
+          -0.293968253968254,
+          0.293968253968254
+        ],
+        [
+          -0.42984126984126986,
+          0.42984126984126986
+        ],
+        [
+          -0.41333333333333333,
+          0.41333333333333333
+        ],
+        [
+          0.17904761904761904,
+          -0.17904761904761904
+        ],
+        [
+          0.6850793650793651,
+          -0.6850793650793651
+        ],
+        [
+          0.9752380952380952,
+          -0.9752380952380952
+        ]
+      ],
+      "null_max_size": [
+        1713.6708860759495,
+        1607.142857142857,
+        1454.79797979798,
+        1454.79797979798,
+        1366.7318982387476
+      ],
+      "n_kept": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "kept_candidates": [
+        {
+          "threshold": 0.5,
+          "size": 1616,
+          "p": 0.009900990099009901,
+          "sessions_present": 6
+        },
+        {
+          "threshold": 0.6,
+          "size": 1607,
+          "p": 0.009900990099009901,
+          "sessions_present": 6
+        }
+      ],
+      "motif_support": [
+        {
+          "n_candidates": 2,
+          "min_p": 0.009900990099009901,
+          "thresholds": [
+            0.5,
+            0.6
+          ]
+        }
+      ],
+      "minority_sign_bands": [
+        5
+      ],
+      "broadband_like": [
+        false
+      ],
+      "occupancy": {
+        "M1+": 0.44014084507042256,
+        "M1-": 0.4141386782231853,
+        "all-same-sign": 0.1457204767063922
+      },
+      "runtime_s": 42.5,
+      "matches_strict": [
+        false
+      ]
+    },
+    {
+      "signal": "eeg10",
+      "window": "awake",
+      "version": "original",
+      "n_sessions": 1,
+      "session_seconds": [
+        3237.3
+      ],
+      "n_timepoints": 1534,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        701.0,
+        551.0,
+        476.0,
+        316.0,
+        178.0
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kept_candidates": [],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 2.8
+    },
+    {
+      "signal": "eeg10",
+      "window": "awake",
+      "version": "strict",
+      "n_sessions": 4,
+      "session_seconds": [
+        355.4,
+        355.4,
+        412.8,
+        412.8
+      ],
+      "n_timepoints": 1534,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        668.0,
+        515.0,
+        423.0,
+        312.0,
+        136.0
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "kept_candidates": [
+        {
+          "threshold": 0.8,
+          "size": 146,
+          "p": 0.047619047619047616,
+          "sessions_present": 4
+        }
+      ],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 3.0
+    },
+    {
+      "signal": "eeg10",
+      "window": "awake",
+      "version": "relaxed",
+      "n_sessions": 4,
+      "session_seconds": [
+        355.4,
+        355.4,
+        412.8,
+        412.8
+      ],
+      "n_timepoints": 1534,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        724.5829538061158,
+        702.6258945998699,
+        456.29745596868884,
+        407.2654924983692,
+        250.83648208469057
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kept_candidates": [],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 11.6
+    },
+    {
+      "signal": "eeg10",
+      "window": "isoflurane",
+      "version": "original",
+      "n_sessions": 1,
+      "session_seconds": [
+        3672.4
+      ],
+      "n_timepoints": 1183,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        986.0,
+        946.0,
+        934.0,
+        610.0,
+        414.0
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "kept_candidates": [
+        {
+          "threshold": 0.7,
+          "size": 641,
+          "p": 0.047619047619047616,
+          "sessions_present": 1
+        }
+      ],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 2.8
+    },
+    {
+      "signal": "eeg10",
+      "window": "isoflurane",
+      "version": "strict",
+      "n_sessions": 5,
+      "session_seconds": [
+        397.1,
+        397.1,
+        397.1,
+        390.1,
+        390.1
+      ],
+      "n_timepoints": 1183,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        1003.0,
+        1002.0,
+        816.0,
+        817.0,
+        518.0
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kept_candidates": [],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 3.4
+    },
+    {
+      "signal": "eeg10",
+      "window": "isoflurane",
+      "version": "relaxed",
+      "n_sessions": 5,
+      "session_seconds": [
+        397.1,
+        397.1,
+        397.1,
+        390.1,
+        390.1
+      ],
+      "n_timepoints": 1183,
+      "n_motifs": 1,
+      "motifs": [
+        [
+          0.13778529163144548,
+          -0.13778529163144548
+        ],
+        [
+          -0.45900253592561285,
+          0.45900253592561285
+        ],
+        [
+          -0.452240067624683,
+          0.452240067624683
+        ],
+        [
+          -0.3727810650887574,
+          0.3727810650887574
+        ],
+        [
+          -0.024513947590870666,
+          0.024513947590870666
+        ],
+        [
+          0.4251901944209637,
+          -0.4251901944209637
+        ],
+        [
+          0.768385460693153,
+          -0.768385460693153
+        ],
+        [
+          0.9357565511411665,
+          -0.9357565511411665
+        ],
+        [
+          0.9678782755705833,
+          -0.9678782755705833
+        ],
+        [
+          0.9323753169907016,
+          -0.9323753169907016
+        ]
+      ],
+      "null_max_size": [
+        696.4686677198526,
+        650.9926276987889,
+        600.5519788918206,
+        518.1477572559367,
+        348.1256627783669
+      ],
+      "n_kept": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kept_candidates": [
+        {
+          "threshold": 0.4,
+          "size": 679,
+          "p": 0.019801980198019802,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.5,
+          "size": 679,
+          "p": 0.009900990099009901,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.6,
+          "size": 679,
+          "p": 0.009900990099009901,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.7,
+          "size": 641,
+          "p": 0.009900990099009901,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.8,
+          "size": 351,
+          "p": 0.009900990099009901,
+          "sessions_present": 3
+        }
+      ],
+      "motif_support": [
+        {
+          "n_candidates": 5,
+          "min_p": 0.009900990099009901,
+          "thresholds": [
+            0.4,
+            0.5,
+            0.6,
+            0.7,
+            0.8
+          ]
+        }
+      ],
+      "minority_sign_bands": [
+        4
+      ],
+      "broadband_like": [
+        false
+      ],
+      "occupancy": {
+        "M1+": 0.3648785425101215,
+        "M1-": 0.2408906882591093,
+        "all-same-sign": 0.3942307692307692
+      },
+      "runtime_s": 14.6,
+      "matches_strict": [
+        false
+      ]
+    },
+    {
+      "signal": "eeg10",
+      "window": "full",
+      "version": "original",
+      "n_sessions": 1,
+      "session_seconds": [
+        7087.7
+      ],
+      "n_timepoints": 3153,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        1942.0,
+        1729.0,
+        1589.0,
+        1555.0,
+        1486.0
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kept_candidates": [],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 4.1
+    },
+    {
+      "signal": "eeg10",
+      "window": "full",
+      "version": "strict",
+      "n_sessions": 11,
+      "session_seconds": [
+        355.4,
+        355.4,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        390.1,
+        390.1
+      ],
+      "n_timepoints": 3153,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        1904.0,
+        1900.0,
+        1641.0,
+        1641.0,
+        1569.0
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kept_candidates": [],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 2.8
+    },
+    {
+      "signal": "eeg10",
+      "window": "full",
+      "version": "relaxed",
+      "n_sessions": 11,
+      "session_seconds": [
+        355.4,
+        355.4,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        390.1,
+        390.1
+      ],
+      "n_timepoints": 3153,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        1711.247390691114,
+        1711.247390691114,
+        1487.6330326944758,
+        1467.3611189601581,
+        1395.7350714886459
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kept_candidates": [],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 13.6
+    },
+    {
+      "signal": "lfp_PL5",
+      "window": "awake",
+      "version": "original",
+      "n_sessions": 1,
+      "session_seconds": [
+        3237.3
+      ],
+      "n_timepoints": 1531,
+      "n_motifs": 1,
+      "motifs": [
+        [
+          -0.5885042455911169,
+          0.5885042455911169
+        ],
+        [
+          0.56629653821032,
+          -0.56629653821032
+        ],
+        [
+          -0.06727629000653168,
+          0.06727629000653168
+        ],
+        [
+          0.6838667537557153,
+          -0.6838667537557153
+        ],
+        [
+          0.6420640104506858,
+          -0.6420640104506858
+        ],
+        [
+          0.6329196603527106,
+          -0.6329196603527106
+        ],
+        [
+          0.28935336381450033,
+          -0.28935336381450033
+        ],
+        [
+          0.0581319399085565,
+          -0.0581319399085565
+        ],
+        [
+          -0.025473546701502287,
+          0.025473546701502287
+        ],
+        [
+          0.38602220770738077,
+          -0.38602220770738077
+        ]
+      ],
+      "null_max_size": [
+        637.0,
+        550.0,
+        379.0,
+        289.0,
+        117.0
+      ],
+      "n_kept": [
+        1,
+        0,
+        2,
+        2,
+        3
+      ],
+      "kept_candidates": [
+        {
+          "threshold": 0.4,
+          "size": 696,
+          "p": 0.047619047619047616,
+          "sessions_present": 1
+        },
+        {
+          "threshold": 0.6,
+          "size": 499,
+          "p": 0.047619047619047616,
+          "sessions_present": 1
+        },
+        {
+          "threshold": 0.6,
+          "size": 384,
+          "p": 0.047619047619047616,
+          "sessions_present": 1
+        },
+        {
+          "threshold": 0.7,
+          "size": 312,
+          "p": 0.047619047619047616,
+          "sessions_present": 1
+        },
+        {
+          "threshold": 0.7,
+          "size": 359,
+          "p": 0.047619047619047616,
+          "sessions_present": 1
+        },
+        {
+          "threshold": 0.8,
+          "size": 119,
+          "p": 0.047619047619047616,
+          "sessions_present": 1
+        },
+        {
+          "threshold": 0.8,
+          "size": 321,
+          "p": 0.047619047619047616,
+          "sessions_present": 1
+        },
+        {
+          "threshold": 0.8,
+          "size": 233,
+          "p": 0.047619047619047616,
+          "sessions_present": 1
+        }
+      ],
+      "motif_support": [
+        {
+          "n_candidates": 8,
+          "min_p": 0.047619047619047616,
+          "thresholds": [
+            0.4,
+            0.6,
+            0.7,
+            0.8
+          ]
+        }
+      ],
+      "minority_sign_bands": [
+        3
+      ],
+      "broadband_like": [
+        false
+      ],
+      "occupancy": {
+        "M1+": 0.3903708523096942,
+        "M1-": 0.6057254391672089,
+        "all-same-sign": 0.003903708523096942
+      },
+      "runtime_s": 1.0,
+      "matches_strict": [
+        true
+      ]
+    },
+    {
+      "signal": "lfp_PL5",
+      "window": "awake",
+      "version": "strict",
+      "n_sessions": 4,
+      "session_seconds": [
+        355.4,
+        355.4,
+        412.8,
+        412.8
+      ],
+      "n_timepoints": 1531,
+      "n_motifs": 1,
+      "motifs": [
+        [
+          -0.5976485956890921,
+          0.5976485956890921
+        ],
+        [
+          0.5676028739386022,
+          -0.5676028739386022
+        ],
+        [
+          -0.050293925538863485,
+          0.050293925538863485
+        ],
+        [
+          0.6956237753102548,
+          -0.6956237753102548
+        ],
+        [
+          0.651208360548661,
+          -0.651208360548661
+        ],
+        [
+          0.6002612671456564,
+          -0.6002612671456564
+        ],
+        [
+          0.2906596995427825,
+          -0.2906596995427825
+        ],
+        [
+          0.11691704768125408,
+          -0.11691704768125408
+        ],
+        [
+          0.007184846505551927,
+          -0.007184846505551927
+        ],
+        [
+          0.387328543435663,
+          -0.387328543435663
+        ]
+      ],
+      "null_max_size": [
+        642.0,
+        503.0,
+        370.0,
+        312.0,
+        137.0
+      ],
+      "n_kept": [
+        1,
+        0,
+        2,
+        1,
+        2
+      ],
+      "kept_candidates": [
+        {
+          "threshold": 0.4,
+          "size": 696,
+          "p": 0.047619047619047616,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.6,
+          "size": 499,
+          "p": 0.047619047619047616,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.6,
+          "size": 384,
+          "p": 0.047619047619047616,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.7,
+          "size": 359,
+          "p": 0.047619047619047616,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.8,
+          "size": 321,
+          "p": 0.047619047619047616,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.8,
+          "size": 233,
+          "p": 0.047619047619047616,
+          "sessions_present": 4
+        }
+      ],
+      "motif_support": [
+        {
+          "n_candidates": 6,
+          "min_p": 0.047619047619047616,
+          "thresholds": [
+            0.4,
+            0.6,
+            0.7,
+            0.8
+          ]
+        }
+      ],
+      "minority_sign_bands": [
+        2
+      ],
+      "broadband_like": [
+        false
+      ],
+      "occupancy": {
+        "M1+": 0.3972691807542263,
+        "M1-": 0.5981794538361509,
+        "all-same-sign": 0.004551365409622887
+      },
+      "runtime_s": 0.9
+    },
+    {
+      "signal": "lfp_PL5",
+      "window": "awake",
+      "version": "relaxed",
+      "n_sessions": 4,
+      "session_seconds": [
+        355.4,
+        355.4,
+        412.8,
+        412.8
+      ],
+      "n_timepoints": 1531,
+      "n_motifs": 1,
+      "motifs": [
+        [
+          -0.5976485956890921,
+          0.5976485956890921
+        ],
+        [
+          0.5937295885042456,
+          -0.5937295885042456
+        ],
+        [
+          -0.10254735467015023,
+          0.10254735467015023
+        ],
+        [
+          0.6616590463749183,
+          -0.6616590463749183
+        ],
+        [
+          0.659046374918354,
+          -0.659046374918354
+        ],
+        [
+          0.6237753102547354,
+          -0.6237753102547354
+        ],
+        [
+          0.26714565643370347,
+          -0.26714565643370347
+        ],
+        [
+          0.06466361854996734,
+          -0.06466361854996734
+        ],
+        [
+          -0.005878510777269758,
+          0.005878510777269758
+        ],
+        [
+          0.3638145003265839,
+          -0.3638145003265839
+        ]
+      ],
+      "null_max_size": [
+        700.6271186440678,
+        596.3895424836602,
+        505.3398564905414,
+        349.3155149934811,
+        205.59713168187744
+      ],
+      "n_kept": [
+        1,
+        0,
+        1,
+        2,
+        2
+      ],
+      "kept_candidates": [
+        {
+          "threshold": 0.4,
+          "size": 696,
+          "p": 0.019801980198019802,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.6,
+          "size": 499,
+          "p": 0.019801980198019802,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.7,
+          "size": 312,
+          "p": 0.039603960396039604,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.7,
+          "size": 359,
+          "p": 0.009900990099009901,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.8,
+          "size": 321,
+          "p": 0.009900990099009901,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.8,
+          "size": 233,
+          "p": 0.009900990099009901,
+          "sessions_present": 4
+        }
+      ],
+      "motif_support": [
+        {
+          "n_candidates": 6,
+          "min_p": 0.009900990099009901,
+          "thresholds": [
+            0.4,
+            0.6,
+            0.7,
+            0.8
+          ]
+        }
+      ],
+      "minority_sign_bands": [
+        3
+      ],
+      "broadband_like": [
+        false
+      ],
+      "occupancy": {
+        "M1+": 0.40052015604681407,
+        "M1-": 0.5949284785435631,
+        "all-same-sign": 0.004551365409622887
+      },
+      "runtime_s": 4.2,
+      "matches_strict": [
+        true
+      ]
+    },
+    {
+      "signal": "lfp_PL5",
+      "window": "isoflurane",
+      "version": "original",
+      "n_sessions": 1,
+      "session_seconds": [
+        3672.4
+      ],
+      "n_timepoints": 983,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        496.0,
+        379.0,
+        347.0,
+        263.0,
+        160.0
+      ],
+      "n_kept": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kept_candidates": [
+        {
+          "threshold": 0.4,
+          "size": 497,
+          "p": 0.047619047619047616,
+          "sessions_present": 1
+        }
+      ],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 1.2
+    },
+    {
+      "signal": "lfp_PL5",
+      "window": "isoflurane",
+      "version": "strict",
+      "n_sessions": 5,
+      "session_seconds": [
+        397.1,
+        397.1,
+        397.1,
+        390.1,
+        390.1
+      ],
+      "n_timepoints": 983,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        910.0,
+        910.0,
+        398.0,
+        502.0,
+        202.0
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kept_candidates": [],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 1.1
+    },
+    {
+      "signal": "lfp_PL5",
+      "window": "isoflurane",
+      "version": "relaxed",
+      "n_sessions": 5,
+      "session_seconds": [
+        397.1,
+        397.1,
+        397.1,
+        390.1,
+        390.1
+      ],
+      "n_timepoints": 983,
+      "n_motifs": 1,
+      "motifs": [
+        [
+          0.25940996948118006,
+          -0.25940996948118006
+        ],
+        [
+          -0.36927772126144454,
+          0.36927772126144454
+        ],
+        [
+          -0.5686673448626653,
+          0.5686673448626653
+        ],
+        [
+          -0.4750762970498474,
+          0.4750762970498474
+        ],
+        [
+          -0.4872838250254323,
+          0.4872838250254323
+        ],
+        [
+          -0.10478128179043744,
+          0.10478128179043744
+        ],
+        [
+          0.1943031536113937,
+          -0.1943031536113937
+        ],
+        [
+          0.46083418107833163,
+          -0.46083418107833163
+        ],
+        [
+          0.6622583926754833,
+          -0.6622583926754833
+        ],
+        [
+          0.7782299084435402,
+          -0.7782299084435402
+        ]
+      ],
+      "null_max_size": [
+        475.30818278427205,
+        475.30818278427205,
+        260.3904255319149,
+        265.0193340494093,
+        108.87326943556975
+      ],
+      "n_kept": [
+        2,
+        1,
+        2,
+        3,
+        2
+      ],
+      "kept_candidates": [
+        {
+          "threshold": 0.4,
+          "size": 497,
+          "p": 0.009900990099009901,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.4,
+          "size": 318,
+          "p": 0.0297029702970297,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.5,
+          "size": 318,
+          "p": 0.04950495049504951,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.6,
+          "size": 215,
+          "p": 0.04950495049504951,
+          "sessions_present": 3
+        },
+        {
+          "threshold": 0.6,
+          "size": 316,
+          "p": 0.009900990099009901,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.7,
+          "size": 170,
+          "p": 0.0297029702970297,
+          "sessions_present": 4
+        },
+        {
+          "threshold": 0.7,
+          "size": 215,
+          "p": 0.019801980198019802,
+          "sessions_present": 3
+        },
+        {
+          "threshold": 0.7,
+          "size": 183,
+          "p": 0.0297029702970297,
+          "sessions_present": 3
+        },
+        {
+          "threshold": 0.8,
+          "size": 134,
+          "p": 0.009900990099009901,
+          "sessions_present": 3
+        },
+        {
+          "threshold": 0.8,
+          "size": 122,
+          "p": 0.009900990099009901,
+          "sessions_present": 3
+        }
+      ],
+      "motif_support": [
+        {
+          "n_candidates": 9,
+          "min_p": 0.009900990099009901,
+          "thresholds": [
+            0.4,
+            0.5,
+            0.6,
+            0.7,
+            0.8
+          ]
+        }
+      ],
+      "minority_sign_bands": [
+        5
+      ],
+      "broadband_like": [
+        false
+      ],
+      "occupancy": {
+        "M1+": 0.3026315789473684,
+        "M1-": 0.1978744939271255,
+        "all-same-sign": 0.49949392712550605
+      },
+      "runtime_s": 6.3,
+      "matches_strict": [
+        false
+      ]
+    },
+    {
+      "signal": "lfp_PL5",
+      "window": "full",
+      "version": "original",
+      "n_sessions": 1,
+      "session_seconds": [
+        7087.7
+      ],
+      "n_timepoints": 3112,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        1711.0,
+        1711.0,
+        1694.0,
+        1666.0,
+        1594.0
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kept_candidates": [],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 5.2
+    },
+    {
+      "signal": "lfp_PL5",
+      "window": "full",
+      "version": "strict",
+      "n_sessions": 11,
+      "session_seconds": [
+        355.4,
+        355.4,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        390.1,
+        390.1
+      ],
+      "n_timepoints": 3112,
+      "n_motifs": 0,
+      "motifs": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_max_size": [
+        1728.0,
+        1673.0,
+        1664.0,
+        1665.0,
+        1657.0
+      ],
+      "n_kept": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kept_candidates": [],
+      "motif_support": [],
+      "minority_sign_bands": [],
+      "broadband_like": [],
+      "occupancy": {
+        "all-same-sign": 1.0
+      },
+      "runtime_s": 4.1
+    },
+    {
+      "signal": "lfp_PL5",
+      "window": "full",
+      "version": "relaxed",
+      "n_sessions": 11,
+      "session_seconds": [
+        355.4,
+        355.4,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        313.6,
+        390.1,
+        390.1
+      ],
+      "n_timepoints": 3112,
+      "n_motifs": 1,
+      "motifs": [
+        [
+          -0.7152956298200515,
+          0.7152956298200515
+        ],
+        [
+          0.2461439588688946,
+          -0.2461439588688946
+        ],
+        [
+          0.5051413881748072,
+          -0.5051413881748072
+        ],
+        [
+          -0.6780205655526992,
+          0.6780205655526992
+        ],
+        [
+          -0.8014138817480719,
+          0.8014138817480719
+        ],
+        [
+          -0.6838046272493573,
+          0.6838046272493573
+        ],
+        [
+          -0.12082262210796915,
+          0.12082262210796915
+        ],
+        [
+          0.5038560411311054,
+          -0.5038560411311054
+        ],
+        [
+          0.705655526992288,
+          -0.705655526992288
+        ],
+        [
+          0.9562982005141388,
+          -0.9562982005141388
+        ]
+      ],
+      "null_max_size": [
+        1478.9702970297028,
+        1468.5553719008265,
+        1450.152575048196,
+        1430.7161308051664,
+        1421.329658213892
+      ],
+      "n_kept": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kept_candidates": [
+        {
+          "threshold": 0.4,
+          "size": 1642,
+          "p": 0.009900990099009901,
+          "sessions_present": 7
+        },
+        {
+          "threshold": 0.5,
+          "size": 1641,
+          "p": 0.009900990099009901,
+          "sessions_present": 7
+        },
+        {
+          "threshold": 0.6,
+          "size": 1571,
+          "p": 0.009900990099009901,
+          "sessions_present": 6
+        },
+        {
+          "threshold": 0.7,
+          "size": 1571,
+          "p": 0.009900990099009901,
+          "sessions_present": 6
+        },
+        {
+          "threshold": 0.8,
+          "size": 1550,
+          "p": 0.009900990099009901,
+          "sessions_present": 6
+        }
+      ],
+      "motif_support": [
+        {
+          "n_candidates": 5,
+          "min_p": 0.009900990099009901,
+          "thresholds": [
+            0.4,
+            0.5,
+            0.6,
+            0.7,
+            0.8
+          ]
+        }
+      ],
+      "minority_sign_bands": [
+        5
+      ],
+      "broadband_like": [
+        false
+      ],
+      "occupancy": {
+        "M1+": 0.45639219934994585,
+        "M1-": 0.3894907908992416,
+        "all-same-sign": 0.15411700975081258
+      },
+      "runtime_s": 16.8,
+      "matches_strict": [
+        false
+      ]
+    }
+  ],
+  "guardrail": [
+    {
+      "signal": "eeg13",
+      "window": "awake",
+      "repeat": 0,
+      "n_motifs": 0
+    },
+    {
+      "signal": "eeg13",
+      "window": "awake",
+      "repeat": 1,
+      "n_motifs": 0
+    },
+    {
+      "signal": "eeg13",
+      "window": "isoflurane",
+      "repeat": 0,
+      "n_motifs": 0
+    },
+    {
+      "signal": "eeg13",
+      "window": "isoflurane",
+      "repeat": 1,
+      "n_motifs": 0
+    },
+    {
+      "signal": "eeg13",
+      "window": "full",
+      "repeat": 0,
+      "n_motifs": 0
+    },
+    {
+      "signal": "eeg13",
+      "window": "full",
+      "repeat": 1,
+      "n_motifs": 0
+    },
+    {
+      "signal": "eeg10",
+      "window": "awake",
+      "repeat": 0,
+      "n_motifs": 0
+    },
+    {
+      "signal": "eeg10",
+      "window": "awake",
+      "repeat": 1,
+      "n_motifs": 0
+    },
+    {
+      "signal": "eeg10",
+      "window": "isoflurane",
+      "repeat": 0,
+      "n_motifs": 0
+    },
+    {
+      "signal": "eeg10",
+      "window": "isoflurane",
+      "repeat": 1,
+      "n_motifs": 0
+    },
+    {
+      "signal": "eeg10",
+      "window": "full",
+      "repeat": 0,
+      "n_motifs": 0
+    },
+    {
+      "signal": "eeg10",
+      "window": "full",
+      "repeat": 1,
+      "n_motifs": 0
+    },
+    {
+      "signal": "lfp_PL5",
+      "window": "awake",
+      "repeat": 0,
+      "n_motifs": 0
+    },
+    {
+      "signal": "lfp_PL5",
+      "window": "awake",
+      "repeat": 1,
+      "n_motifs": 0
+    },
+    {
+      "signal": "lfp_PL5",
+      "window": "isoflurane",
+      "repeat": 0,
+      "n_motifs": 0
+    },
+    {
+      "signal": "lfp_PL5",
+      "window": "isoflurane",
+      "repeat": 1,
+      "n_motifs": 0
+    },
+    {
+      "signal": "lfp_PL5",
+      "window": "full",
+      "repeat": 0,
+      "n_motifs": 0
+    },
+    {
+      "signal": "lfp_PL5",
+      "window": "full",
+      "repeat": 1,
+      "n_motifs": 0
+    }
+  ],
+  "cross_state_similarity": {
+    "EEG ch13 (MOs, frontal) | original": {
+      "awake vs isoflurane": [],
+      "awake vs full": [],
+      "isoflurane vs full": []
+    },
+    "EEG ch13 (MOs, frontal) | strict": {
+      "awake vs isoflurane": [],
+      "awake vs full": [],
+      "isoflurane vs full": []
+    },
+    "EEG ch13 (MOs, frontal) | relaxed": {
+      "awake vs isoflurane": [],
+      "awake vs full": [],
+      "isoflurane vs full": [
+        [
+          0.037146513482070966
+        ]
+      ]
+    },
+    "EEG ch10 (SSp-ll, somatosensory) | original": {
+      "awake vs isoflurane": [],
+      "awake vs full": [],
+      "isoflurane vs full": []
+    },
+    "EEG ch10 (SSp-ll, somatosensory) | strict": {
+      "awake vs isoflurane": [],
+      "awake vs full": [],
+      "isoflurane vs full": []
+    },
+    "EEG ch10 (SSp-ll, somatosensory) | relaxed": {
+      "awake vs isoflurane": [],
+      "awake vs full": [],
+      "isoflurane vs full": [
+        []
+      ]
+    },
+    "LFP PL5 (probeF, deep prelimbic) | original": {
+      "awake vs isoflurane": [
+        []
+      ],
+      "awake vs full": [
+        []
+      ],
+      "isoflurane vs full": []
+    },
+    "LFP PL5 (probeF, deep prelimbic) | strict": {
+      "awake vs isoflurane": [
+        []
+      ],
+      "awake vs full": [
+        []
+      ],
+      "isoflurane vs full": []
+    },
+    "LFP PL5 (probeF, deep prelimbic) | relaxed": {
+      "awake vs isoflurane": [
+        [
+          0.39560247011688643
+        ]
+      ],
+      "awake vs full": [
+        [
+          0.20547911740716854
+        ]
+      ],
+      "isoflurane vs full": [
+        [
+          0.5387231168740031
+        ]
+      ]
+    }
+  },
+  "permutation_tests": {
+    "eeg13": {
+      "version": "relaxed",
+      "tests": [
+        {
+          "motif": 1,
+          "n_awake_chunks": 4,
+          "n_iso_chunks": 5,
+          "n_permutations": 126,
+          "balance_awake": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "balance_iso": [
+            -0.9867549668874173,
+            -1.0,
+            -1.0,
+            -1.0,
+            -0.9677419354838711
+          ],
+          "balance_diff": 1.9908993804742576,
+          "balance_p": 0.007936507936507936,
+          "shape_within": 0.33704178962300707,
+          "shape_between": 0.33025387559826636,
+          "shape_gap": -0.0067879140247407155,
+          "shape_p": 0.40476190476190477
+        }
+      ]
+    },
+    "lfp_PL5": {
+      "version": "relaxed",
+      "tests": [
+        {
+          "motif": 1,
+          "n_awake_chunks": 4,
+          "n_iso_chunks": 5,
+          "n_permutations": 126,
+          "balance_awake": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "balance_iso": [
+            -0.9501779359430605,
+            -1.0,
+            -0.9606299212598425,
+            -0.9919354838709676,
+            -0.9850746268656717
+          ],
+          "balance_diff": 1.9775635935879083,
+          "balance_p": 0.007936507936507936,
+          "shape_within": 0.20428343221972986,
+          "shape_between": 0.26812736713204377,
+          "shape_gap": 0.06384393491231391,
+          "shape_p": 0.1111111111111111
+        }
+      ]
+    }
+  },
+  "eeg_vs_lfp": [
+    {
+      "window": "isoflurane",
+      "eeg": "eeg13",
+      "eeg_version": "relaxed",
+      "lfp_version": "relaxed",
+      "shape_abs_r": [
+        [
+          0.9256353932693602
+        ]
+      ],
+      "temporal": {
+        "full": {
+          "r": [
+            [
+              0.682701050286421
+            ]
+          ],
+          "n_seconds": 1973
+        },
+        "isoflurane": {
+          "r": [
+            [
+              0.682701050286421
+            ]
+          ],
+          "n_seconds": 1973
+        }
+      }
+    },
+    {
+      "window": "isoflurane",
+      "eeg": "eeg10",
+      "eeg_version": "relaxed",
+      "lfp_version": "relaxed",
+      "shape_abs_r": [
+        [
+          0.9065245631594591
+        ]
+      ],
+      "temporal": {
+        "full": {
+          "r": [
+            [
+              0.6787100612916358
+            ]
+          ],
+          "n_seconds": 1973
+        },
+        "isoflurane": {
+          "r": [
+            [
+              0.6787100612916358
+            ]
+          ],
+          "n_seconds": 1973
+        }
+      }
+    },
+    {
+      "window": "full",
+      "eeg": "eeg13",
+      "eeg_version": "relaxed",
+      "lfp_version": "relaxed",
+      "shape_abs_r": [
+        [
+          0.8819393760319029
+        ]
+      ],
+      "temporal": {
+        "full": {
+          "r": [
+            [
+              0.9477516364175816
+            ]
+          ],
+          "n_seconds": 3688
+        },
+        "awake": {
+          "r": [
+            [
+              NaN
+            ]
+          ],
+          "n_seconds": 1537
+        },
+        "isoflurane": {
+          "r": [
+            [
+              0.7341469072029845
+            ]
+          ],
+          "n_seconds": 1973
+        }
+      }
+    }
+  ],
+  "spikes_by_lfp_pole": [
+    {
+      "state": "awake",
+      "motif": 1,
+      "rate_plus_z": 0.5658528207244309,
+      "rate_minus_z": -0.3731442074521165,
+      "diff": 0.9389970281765474,
+      "p": 0.000999000999000999,
+      "n_plus": 611,
+      "n_minus": 919,
+      "mean_rate_hz": 6.359141184124919,
+      "version": "strict"
+    },
+    {
+      "state": "isoflurane",
+      "motif": 1,
+      "rate_plus_z": 0.3211775658034412,
+      "rate_minus_z": -0.31932548615921325,
+      "diff": 0.6405030519626544,
+      "p": 0.07192807192807193,
+      "n_plus": 598,
+      "n_minus": 391,
+      "mean_rate_hz": 1.0704752250621485,
+      "version": "relaxed"
+    }
+  ],
+  "runtime_s": 506
+}

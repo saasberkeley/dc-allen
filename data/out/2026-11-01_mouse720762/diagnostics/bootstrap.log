@@ -1,0 +1,8 @@
+[   10s] envelopes ready; running 40 bootstraps x 6
+[   60s] ('eeg13', 'awake'): motifs in 11/40 bootstraps
+[  115s] ('eeg13', 'isoflurane'): motifs in 27/40 bootstraps
+[  164s] ('eeg10', 'awake'): motifs in 18/40 bootstraps
+[  233s] ('eeg10', 'isoflurane'): motifs in 21/40 bootstraps
+[  284s] ('lfp_PL5', 'awake'): motifs in 35/40 bootstraps
+[  356s] ('lfp_PL5', 'isoflurane'): motifs in 37/40 bootstraps
+[  357s] done

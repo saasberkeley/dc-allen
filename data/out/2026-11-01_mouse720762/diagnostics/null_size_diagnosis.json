@@ -1,0 +1,353 @@
+[
+ {
+  "signal": "eeg13",
+  "window": "awake",
+  "n_real": 1531,
+  "n_total": 1537,
+  "n_null_median": 1532.5,
+  "per_threshold": [
+   {
+    "threshold": 0.4,
+    "real_largest": 390,
+    "null_largest_median": 511.5,
+    "null_largest_max": 765.0
+   },
+   {
+    "threshold": 0.5,
+    "real_largest": 390,
+    "null_largest_median": 392.0,
+    "null_largest_max": 581.0
+   },
+   {
+    "threshold": 0.6,
+    "real_largest": 390,
+    "null_largest_median": 257.0,
+    "null_largest_max": 522.0
+   },
+   {
+    "threshold": 0.7,
+    "real_largest": 275,
+    "null_largest_median": 183.0,
+    "null_largest_max": 316.0
+   },
+   {
+    "threshold": 0.8,
+    "real_largest": 112,
+    "null_largest_median": 98.5,
+    "null_largest_max": 171.0
+   }
+  ]
+ },
+ {
+  "signal": "eeg13",
+  "window": "isoflurane",
+  "n_real": 1191,
+  "n_total": 1972,
+  "n_null_median": 1897.0,
+  "per_threshold": [
+   {
+    "threshold": 0.4,
+    "real_largest": 562,
+    "null_largest_median": 772.0,
+    "null_largest_max": 928.0
+   },
+   {
+    "threshold": 0.5,
+    "real_largest": 562,
+    "null_largest_median": 651.0,
+    "null_largest_max": 901.0
+   },
+   {
+    "threshold": 0.6,
+    "real_largest": 562,
+    "null_largest_median": 438.0,
+    "null_largest_max": 798.0
+   },
+   {
+    "threshold": 0.7,
+    "real_largest": 608,
+    "null_largest_median": 408.0,
+    "null_largest_max": 687.0
+   },
+   {
+    "threshold": 0.8,
+    "real_largest": 310,
+    "null_largest_median": 273.5,
+    "null_largest_max": 339.0
+   }
+  ]
+ },
+ {
+  "signal": "eeg13",
+  "window": "full",
+  "n_real": 3150,
+  "n_total": 3687,
+  "n_null_median": 3571.5,
+  "per_threshold": [
+   {
+    "threshold": 0.4,
+    "real_largest": 1616,
+    "null_largest_median": 1606.0,
+    "null_largest_max": 1818.0
+   },
+   {
+    "threshold": 0.5,
+    "real_largest": 1616,
+    "null_largest_median": 1552.5,
+    "null_largest_max": 1784.0
+   },
+   {
+    "threshold": 0.6,
+    "real_largest": 1607,
+    "null_largest_median": 1495.5,
+    "null_largest_max": 1625.0
+   },
+   {
+    "threshold": 0.7,
+    "real_largest": 971,
+    "null_largest_median": 1346.0,
+    "null_largest_max": 1625.0
+   },
+   {
+    "threshold": 0.8,
+    "real_largest": 872,
+    "null_largest_median": 1100.0,
+    "null_largest_max": 1364.0
+   }
+  ]
+ },
+ {
+  "signal": "eeg10",
+  "window": "awake",
+  "n_real": 1534,
+  "n_total": 1537,
+  "n_null_median": 1533.0,
+  "per_threshold": [
+   {
+    "threshold": 0.4,
+    "real_largest": 580,
+    "null_largest_median": 531.5,
+    "null_largest_max": 701.0
+   },
+   {
+    "threshold": 0.5,
+    "real_largest": 491,
+    "null_largest_median": 419.0,
+    "null_largest_max": 551.0
+   },
+   {
+    "threshold": 0.6,
+    "real_largest": 405,
+    "null_largest_median": 306.5,
+    "null_largest_max": 476.0
+   },
+   {
+    "threshold": 0.7,
+    "real_largest": 285,
+    "null_largest_median": 209.0,
+    "null_largest_max": 316.0
+   },
+   {
+    "threshold": 0.8,
+    "real_largest": 146,
+    "null_largest_median": 97.5,
+    "null_largest_max": 178.0
+   }
+  ]
+ },
+ {
+  "signal": "eeg10",
+  "window": "isoflurane",
+  "n_real": 1183,
+  "n_total": 1972,
+  "n_null_median": 1896.5,
+  "per_threshold": [
+   {
+    "threshold": 0.4,
+    "real_largest": 679,
+    "null_largest_median": 674.0,
+    "null_largest_max": 986.0
+   },
+   {
+    "threshold": 0.5,
+    "real_largest": 679,
+    "null_largest_median": 644.0,
+    "null_largest_max": 946.0
+   },
+   {
+    "threshold": 0.6,
+    "real_largest": 679,
+    "null_largest_median": 538.0,
+    "null_largest_max": 934.0
+   },
+   {
+    "threshold": 0.7,
+    "real_largest": 641,
+    "null_largest_median": 394.0,
+    "null_largest_max": 610.0
+   },
+   {
+    "threshold": 0.8,
+    "real_largest": 351,
+    "null_largest_median": 278.5,
+    "null_largest_max": 414.0
+   }
+  ]
+ },
+ {
+  "signal": "eeg10",
+  "window": "full",
+  "n_real": 3153,
+  "n_total": 3687,
+  "n_null_median": 3569.0,
+  "per_threshold": [
+   {
+    "threshold": 0.4,
+    "real_largest": 1616,
+    "null_largest_median": 1603.0,
+    "null_largest_max": 1942.0
+   },
+   {
+    "threshold": 0.5,
+    "real_largest": 1616,
+    "null_largest_median": 1498.0,
+    "null_largest_max": 1729.0
+   },
+   {
+    "threshold": 0.6,
+    "real_largest": 1328,
+    "null_largest_median": 1478.0,
+    "null_largest_max": 1589.0
+   },
+   {
+    "threshold": 0.7,
+    "real_largest": 943,
+    "null_largest_median": 1435.0,
+    "null_largest_max": 1555.0
+   },
+   {
+    "threshold": 0.8,
+    "real_largest": 943,
+    "null_largest_median": 1035.5,
+    "null_largest_max": 1486.0
+   }
+  ]
+ },
+ {
+  "signal": "lfp_PL5",
+  "window": "awake",
+  "n_real": 1531,
+  "n_total": 1537,
+  "n_null_median": 1532.5,
+  "per_threshold": [
+   {
+    "threshold": 0.4,
+    "real_largest": 696,
+    "null_largest_median": 400.0,
+    "null_largest_max": 637.0
+   },
+   {
+    "threshold": 0.5,
+    "real_largest": 453,
+    "null_largest_median": 316.5,
+    "null_largest_max": 550.0
+   },
+   {
+    "threshold": 0.6,
+    "real_largest": 499,
+    "null_largest_median": 251.5,
+    "null_largest_max": 379.0
+   },
+   {
+    "threshold": 0.7,
+    "real_largest": 359,
+    "null_largest_median": 134.0,
+    "null_largest_max": 289.0
+   },
+   {
+    "threshold": 0.8,
+    "real_largest": 321,
+    "null_largest_median": 62.0,
+    "null_largest_max": 117.0
+   }
+  ]
+ },
+ {
+  "signal": "lfp_PL5",
+  "window": "isoflurane",
+  "n_real": 983,
+  "n_total": 1972,
+  "n_null_median": 1883.0,
+  "per_threshold": [
+   {
+    "threshold": 0.4,
+    "real_largest": 497,
+    "null_largest_median": 279.0,
+    "null_largest_max": 496.0
+   },
+   {
+    "threshold": 0.5,
+    "real_largest": 318,
+    "null_largest_median": 233.0,
+    "null_largest_max": 379.0
+   },
+   {
+    "threshold": 0.6,
+    "real_largest": 316,
+    "null_largest_median": 219.0,
+    "null_largest_max": 347.0
+   },
+   {
+    "threshold": 0.7,
+    "real_largest": 215,
+    "null_largest_median": 172.0,
+    "null_largest_max": 263.0
+   },
+   {
+    "threshold": 0.8,
+    "real_largest": 134,
+    "null_largest_median": 106.5,
+    "null_largest_max": 160.0
+   }
+  ]
+ },
+ {
+  "signal": "lfp_PL5",
+  "window": "full",
+  "n_real": 3112,
+  "n_total": 3687,
+  "n_null_median": 3642.0,
+  "per_threshold": [
+   {
+    "threshold": 0.4,
+    "real_largest": 1642,
+    "null_largest_median": 1632.5,
+    "null_largest_max": 1711.0
+   },
+   {
+    "threshold": 0.5,
+    "real_largest": 1641,
+    "null_largest_median": 1618.5,
+    "null_largest_max": 1711.0
+   },
+   {
+    "threshold": 0.6,
+    "real_largest": 1571,
+    "null_largest_median": 1597.5,
+    "null_largest_max": 1694.0
+   },
+   {
+    "threshold": 0.7,
+    "real_largest": 1571,
+    "null_largest_median": 1561.5,
+    "null_largest_max": 1666.0
+   },
+   {
+    "threshold": 0.8,
+    "real_largest": 1550,
+    "null_largest_median": 1510.0,
+    "null_largest_max": 1594.0
+   }
+  ]
+ }
+]

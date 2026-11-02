@@ -53,3 +53,25 @@ Outputs go to `results/lfp_to_motifs/` (change with `--out`):
 3. **Channel choice.** We use one mid-layer-5 channel of secondary motor cortex (MOs5, probeF), the closest match to rat mPFC that is in both sessions. Should we use one channel, average across the layer, or treat each region separately?
 4. **Sessions.** There are only two NWB files (one isoflurane, one psilocybin), so the rule that a motif must appear in every session is weak here. Should each state epoch count as its own "session"?
 5. **Line noise.** The 50–80 Hz band contains 60 Hz mains noise. Notch it first?
+
+## State analysis: awake vs isoflurane vs full recording (mouse 720762)
+
+| File | What it is |
+|---|---|
+| `src/session_data.py` | Loads a session: traces, isoflurane timeline, stimulation blocks, stimulation-free windows, sorted units. |
+| `src/state_motifs.py` | EEG and LFP motifs (original / strict-chunked / relaxed), spectra, PL5 raster, permutation test, EEG-vs-LFP coupling, spikes by motif pole. |
+| `src/motif_bootstrap.py` | Chunk bootstrap: how reproducible each state's motif is, and whether the states share motifs. |
+| `src/motif_calibration.py` | False-positive calibration of each version on synthetic motif-free data. |
+| `src/null_size_diagnosis.py` | Shows why the original rules find few motifs within one state (shuffled nulls keep more timepoints). |
+
+`get_motifs` gained options for the relaxed version (`null_mode="pvalue"`, `alpha`, `min_session_frac`,
+`min_pca_support`, `normalize_size`); the defaults still reproduce getMotifs.m. `smooth_env` gained `zscore=False`.
+
+```bash
+python -m src.state_motifs --nwb ../../data/raw/720762-20240221-v001.nwb --out ../../data/out/2026-11-01_mouse720762
+python -m src.motif_bootstrap --nwb ../../data/raw/720762-20240221-v001.nwb --out ../../data/out/2026-11-01_mouse720762
+python -m src.motif_calibration --out ../../data/out/2026-11-01_mouse720762/diagnostics
+```
+
+Results, figures and the write-up (`report_mouse720762_2026-11-01.docx`) are in `data/out/2026-11-01_mouse720762/`;
+the notebook is `notebooks/mouse720762_states_naman.ipynb`.

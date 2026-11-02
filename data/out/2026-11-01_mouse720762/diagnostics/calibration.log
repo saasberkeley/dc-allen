@@ -1,0 +1,16 @@
+[   33s] independent      strict (getMotifs.m rules)                 1/20 datasets; 0/1 false motifs flagged broadband-like
+[  209s] independent      relaxed: p-value + half the chunks         0/20 datasets; 0/0 false motifs flagged broadband-like
+[  377s] independent      relaxed: ... + size normalization (used)   0/20 datasets; 0/0 false motifs flagged broadband-like
+[  461s] independent      relaxed: ... + PCA support 1 (rejected)    3/20 datasets; 0/3 false motifs flagged broadband-like
+[  480s] broadband w=0.5  strict (getMotifs.m rules)                 10/20 datasets; 10/10 false motifs flagged broadband-like
+[  549s] broadband w=0.5  relaxed: p-value + half the chunks         11/20 datasets; 10/11 false motifs flagged broadband-like
+[  614s] broadband w=0.5  relaxed: ... + size normalization (used)   16/20 datasets; 15/16 false motifs flagged broadband-like
+[  681s] broadband w=0.5  relaxed: ... + PCA support 1 (rejected)    18/20 datasets; 17/19 false motifs flagged broadband-like
+[  695s] broadband w=1    strict (getMotifs.m rules)                 19/20 datasets; 19/19 false motifs flagged broadband-like
+[  763s] broadband w=1    relaxed: p-value + half the chunks         20/20 datasets; 20/20 false motifs flagged broadband-like
+[  830s] broadband w=1    relaxed: ... + size normalization (used)   20/20 datasets; 20/20 false motifs flagged broadband-like
+[  897s] broadband w=1    relaxed: ... + PCA support 1 (rejected)    20/20 datasets; 20/21 false motifs flagged broadband-like
+[  910s] broadband w=2    strict (getMotifs.m rules)                 17/20 datasets; 17/17 false motifs flagged broadband-like
+[  975s] broadband w=2    relaxed: p-value + half the chunks         17/20 datasets; 17/17 false motifs flagged broadband-like
+[ 1040s] broadband w=2    relaxed: ... + size normalization (used)   19/20 datasets; 19/21 false motifs flagged broadband-like
+[ 1107s] broadband w=2    relaxed: ... + PCA support 1 (rejected)    19/20 datasets; 19/19 false motifs flagged broadband-like

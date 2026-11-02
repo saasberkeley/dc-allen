@@ -1,8 +1,8 @@
 """Run lfp_to_motifs over many brain regions and seeds, and compare the motifs found.
 
 Usage (from the repo root):
-    python -m src.mapping.region_sweep                 # 10 regions x 3 seeds, ~20 min
-    python -m src.mapping.region_sweep --seeds 0       # one seed per region, ~7 min
+    python -m src.region_sweep                 # 10 regions x 3 seeds, ~20 min
+    python -m src.region_sweep --seeds 0       # one seed per region, ~7 min
 
 Each region's full outputs (seed 0) go to <out>/<region>/; the cross-region
 comparison goes to <out>/region_comparison.png, motif_shapes.png and sweep_summary.json.
@@ -18,10 +18,10 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 
-from src.mapping.lfp_to_motifs import (  # noqa: E402
+from src.lfp_to_motifs import (  # noqa: E402
     ROOT, band_labels, find_motifs, pole_names, prepare, write_outputs,
 )
-from src.mapping.smooth_env import DEFAULT_FREQ_BANDS  # noqa: E402
+from src.smooth_env import DEFAULT_FREQ_BANDS  # noqa: E402
 
 # Regions with valid channels in both sessions, and the probe that records them.
 REGIONS = [

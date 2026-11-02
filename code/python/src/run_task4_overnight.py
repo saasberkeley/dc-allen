@@ -16,8 +16,8 @@ import numpy as np
 import pandas as pd
 import scipy.io as sio
 
-from src.mapping.smooth_env import smooth_env
-from src.mapping.get_motifs import get_motifs
+from src.smooth_env import smooth_env
+from src.get_motifs import get_motifs
 
 
 # 1. Logging setup

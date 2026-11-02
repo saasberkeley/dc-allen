@@ -73,8 +73,12 @@ def smooth_env(
     freq_bands: np.ndarray = DEFAULT_FREQ_BANDS,
     smooth_sec: float = 5.0,
     edge_sec: float = 10.0,
+    zscore: bool = True,
 ) -> np.ndarray:
     """Port of SmoothEnv(LFP, LFPfs, freqBands).
+
+    zscore=False returns the smoothed envelopes before the final z-scoring step, so
+    several pieces of one recording can be z-scored together.
 
     Returns a (time, bands) array: each band's Hilbert envelope, smoothed with a
     gausswin(round(5 * fs), 1) kernel applied forward and backward, the first and
@@ -95,6 +99,8 @@ def smooth_env(
     edge = mround(edge_sec * fs)
     smooth[:edge] = np.nan
     smooth[smooth.shape[0] - edge:] = np.nan
+    if not zscore:
+        return smooth
 
     mu = np.nanmean(smooth, axis=0)
     sigma = np.nanstd(smooth, axis=0, ddof=1)
