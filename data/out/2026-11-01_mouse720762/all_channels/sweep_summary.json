@@ -1,0 +1,635 @@
+{
+ "counts": {
+  "eeg/awake": {
+   "n_signals": 26,
+   "strict": 9,
+   "relaxed_only": 4,
+   "broadband_only": 2,
+   "none": 11,
+   "strict_names": [
+    0,
+    5,
+    9,
+    11,
+    12,
+    18,
+    20,
+    22,
+    29
+   ],
+   "broadband_names": [
+    3,
+    17
+   ]
+  },
+  "eeg/isoflurane": {
+   "n_signals": 26,
+   "strict": 0,
+   "relaxed_only": 21,
+   "broadband_only": 0,
+   "none": 5,
+   "strict_names": [],
+   "broadband_names": []
+  },
+  "eeg/full": {
+   "n_signals": 26,
+   "strict": 0,
+   "relaxed_only": 13,
+   "broadband_only": 1,
+   "none": 12,
+   "strict_names": [],
+   "broadband_names": [
+    11
+   ]
+  },
+  "lfp/awake": {
+   "n_signals": 45,
+   "strict": 11,
+   "relaxed_only": 6,
+   "broadband_only": 10,
+   "none": 18,
+   "strict_names": [
+    "AON",
+    "MOs2/3",
+    "MOs5",
+    "PL5",
+    "MOp6b",
+    "VISpm1",
+    "RSPagl5",
+    "AD",
+    "LD",
+    "CP",
+    "STR"
+   ],
+   "broadband_names": [
+    "DP",
+    "ILA1",
+    "ILA2/3",
+    "ILA5",
+    "ORBm1",
+    "ORBm2/3",
+    "ORBm5",
+    "TTd",
+    "SSp-bfd1",
+    "AMd"
+   ]
+  },
+  "lfp/isoflurane": {
+   "n_signals": 45,
+   "strict": 0,
+   "relaxed_only": 17,
+   "broadband_only": 7,
+   "none": 21,
+   "strict_names": [],
+   "broadband_names": [
+    "AON",
+    "DP",
+    "ILA1",
+    "ORBm1",
+    "TTd",
+    "AMd",
+    "IAD"
+   ]
+  },
+  "lfp/full": {
+   "n_signals": 45,
+   "strict": 0,
+   "relaxed_only": 10,
+   "broadband_only": 3,
+   "none": 32,
+   "strict_names": [],
+   "broadband_names": [
+    "ILA1",
+    "ORBm1",
+    "SSp-bfd4"
+   ]
+  }
+ },
+ "bootstrap": {
+  "eeg": {
+   "n_both": 26,
+   "within_median": 0.9782868638243469,
+   "across_median": 0.3470926575654479,
+   "n_across_below_within_by_0.2": 23,
+   "detection_awake_median": 0.4,
+   "detection_iso_median": 0.525
+  },
+  "lfp": {
+   "n_both": 44,
+   "within_median": 0.9705425898526355,
+   "across_median": 0.3716710464676424,
+   "n_across_below_within_by_0.2": 44,
+   "detection_awake_median": 0.55,
+   "detection_iso_median": 0.5
+  }
+ },
+ "coupling": {
+  "awake": {
+   "n_pairs": 221,
+   "median_abs_r": 0.4415691552579518,
+   "share_positive": 1.0,
+   "top": [
+    {
+     "state": "awake",
+     "eeg": "eeg9",
+     "lfp": "lfp_MOs2-3",
+     "r": -0.8124859566401865,
+     "shape_abs_r": 0.9765063684012713,
+     "r_aligned": 0.8124859566401865
+    },
+    {
+     "state": "awake",
+     "eeg": "eeg12",
+     "lfp": "lfp_MOs2-3",
+     "r": 0.7718105542134255,
+     "shape_abs_r": 0.9728237265356863,
+     "r_aligned": 0.7718105542134255
+    },
+    {
+     "state": "awake",
+     "eeg": "eeg8",
+     "lfp": "lfp_MOs2-3",
+     "r": 0.7702972587868424,
+     "shape_abs_r": 0.9663580365399592,
+     "r_aligned": 0.7702972587868424
+    },
+    {
+     "state": "awake",
+     "eeg": "eeg5",
+     "lfp": "lfp_MOs2-3",
+     "r": 0.7558978132662767,
+     "shape_abs_r": 0.9583569699371044,
+     "r_aligned": 0.7558978132662767
+    },
+    {
+     "state": "awake",
+     "eeg": "eeg5",
+     "lfp": "lfp_VISpm1",
+     "r": -0.7525252290612215,
+     "shape_abs_r": 0.9801186607786276,
+     "r_aligned": 0.7525252290612215
+    },
+    {
+     "state": "awake",
+     "eeg": "eeg12",
+     "lfp": "lfp_MOs5",
+     "r": 0.7490867443734752,
+     "shape_abs_r": 0.9842621394166098,
+     "r_aligned": 0.7490867443734752
+    },
+    {
+     "state": "awake",
+     "eeg": "eeg8",
+     "lfp": "lfp_VISpm1",
+     "r": -0.7488470268197632,
+     "shape_abs_r": 0.9596903734291713,
+     "r_aligned": 0.7488470268197632
+    },
+    {
+     "state": "awake",
+     "eeg": "eeg9",
+     "lfp": "lfp_MOs5",
+     "r": -0.7414804920815928,
+     "shape_abs_r": 0.9269350760989118,
+     "r_aligned": 0.7414804920815928
+    },
+    {
+     "state": "awake",
+     "eeg": "eeg9",
+     "lfp": "lfp_VISpm1",
+     "r": 0.736852119089082,
+     "shape_abs_r": 0.9497788395306748,
+     "r_aligned": 0.736852119089082
+    },
+    {
+     "state": "awake",
+     "eeg": "eeg11",
+     "lfp": "lfp_MOs2-3",
+     "r": 0.7289786493610335,
+     "shape_abs_r": 0.9229235528670077,
+     "r_aligned": 0.7289786493610335
+    }
+   ],
+   "eeg_ranked": [
+    [
+     "eeg5",
+     0.642307170531871,
+     17
+    ],
+    [
+     "eeg8",
+     0.6350769430839873,
+     17
+    ],
+    [
+     "eeg9",
+     0.618550479050087,
+     17
+    ],
+    [
+     "eeg12",
+     0.5912624190631195,
+     17
+    ],
+    [
+     "eeg11",
+     0.5503826617753212,
+     17
+    ],
+    [
+     "eeg18",
+     0.4664459720986653,
+     17
+    ],
+    [
+     "eeg28",
+     0.4478339318231776,
+     17
+    ],
+    [
+     "eeg0",
+     0.4242949932142493,
+     17
+    ]
+   ]
+  },
+  "isoflurane": {
+   "n_pairs": 357,
+   "median_abs_r": 0.6757611821498509,
+   "share_positive": 1.0,
+   "top": [
+    {
+     "state": "isoflurane",
+     "eeg": "eeg9",
+     "lfp": "lfp_SSp-bfd2-3",
+     "r": 0.8879054118035884,
+     "shape_abs_r": 0.9979731339611508,
+     "r_aligned": 0.8879054118035884
+    },
+    {
+     "state": "isoflurane",
+     "eeg": "eeg10",
+     "lfp": "lfp_SSp-bfd2-3",
+     "r": 0.8772097834007372,
+     "shape_abs_r": 0.9963516420050437,
+     "r_aligned": 0.8772097834007372
+    },
+    {
+     "state": "isoflurane",
+     "eeg": "eeg5",
+     "lfp": "lfp_VISpm1",
+     "r": 0.8713922751493047,
+     "shape_abs_r": 0.9861804561644945,
+     "r_aligned": 0.8713922751493047
+    },
+    {
+     "state": "isoflurane",
+     "eeg": "eeg13",
+     "lfp": "lfp_MOs5",
+     "r": 0.8688027714089214,
+     "shape_abs_r": 0.9945850498037812,
+     "r_aligned": 0.8688027714089214
+    },
+    {
+     "state": "isoflurane",
+     "eeg": "eeg13",
+     "lfp": "lfp_SSp-bfd2-3",
+     "r": 0.8652785308816894,
+     "shape_abs_r": 0.9927266138709934,
+     "r_aligned": 0.8652785308816894
+    },
+    {
+     "state": "isoflurane",
+     "eeg": "eeg9",
+     "lfp": "lfp_MOs5",
+     "r": 0.8549917478519009,
+     "shape_abs_r": 0.9852918540421489,
+     "r_aligned": 0.8549917478519009
+    },
+    {
+     "state": "isoflurane",
+     "eeg": "eeg12",
+     "lfp": "lfp_MOs5",
+     "r": 0.8546418461630922,
+     "shape_abs_r": 0.9912880421817543,
+     "r_aligned": 0.8546418461630922
+    },
+    {
+     "state": "isoflurane",
+     "eeg": "eeg9",
+     "lfp": "lfp_VISpm1",
+     "r": 0.8528381300087468,
+     "shape_abs_r": 0.9981709316758204,
+     "r_aligned": 0.8528381300087468
+    },
+    {
+     "state": "isoflurane",
+     "eeg": "eeg10",
+     "lfp": "lfp_MOs5",
+     "r": 0.8489803305764047,
+     "shape_abs_r": 0.9880120690983593,
+     "r_aligned": 0.8489803305764047
+    },
+    {
+     "state": "isoflurane",
+     "eeg": "eeg10",
+     "lfp": "lfp_VISpm1",
+     "r": 0.8486758214336797,
+     "shape_abs_r": 0.9969110687309546,
+     "r_aligned": 0.8486758214336797
+    }
+   ],
+   "eeg_ranked": [
+    [
+     "eeg11",
+     0.7047825608450524,
+     17
+    ],
+    [
+     "eeg10",
+     0.6984725668457727,
+     17
+    ],
+    [
+     "eeg12",
+     0.6935700681204265,
+     17
+    ],
+    [
+     "eeg21",
+     0.6917226861750007,
+     17
+    ],
+    [
+     "eeg9",
+     0.6894139956697101,
+     17
+    ],
+    [
+     "eeg13",
+     0.6885613216381601,
+     17
+    ],
+    [
+     "eeg24",
+     0.6836733539172176,
+     17
+    ],
+    [
+     "eeg25",
+     0.6816778519197448,
+     17
+    ]
+   ]
+  }
+ },
+ "spikes": [
+  {
+   "state": "isoflurane",
+   "motif": 1,
+   "rate_plus_z": 0.19927750963006377,
+   "rate_minus_z": -0.07633211397198822,
+   "diff": 0.275609623602052,
+   "p": 0.6073926073926074,
+   "n_plus": 622,
+   "n_minus": 436,
+   "mean_rate_hz": 1.0525261765542135,
+   "region": "ILA2/3",
+   "group": "prefrontal / olfactory",
+   "n_units": 41,
+   "version": "relaxed",
+   "diff_raw": 0.275609623602052
+  },
+  {
+   "state": "isoflurane",
+   "motif": 1,
+   "rate_plus_z": 0.3287091998055438,
+   "rate_minus_z": -0.2934953229713193,
+   "diff": 0.6222045227768631,
+   "p": 0.04595404595404595,
+   "n_plus": 641,
+   "n_minus": 413,
+   "mean_rate_hz": 1.4855549923973643,
+   "region": "ILA5",
+   "group": "prefrontal / olfactory",
+   "n_units": 14,
+   "version": "relaxed",
+   "diff_raw": 0.6222045227768631
+  },
+  {
+   "state": "isoflurane",
+   "motif": 1,
+   "rate_plus_z": 0.30219627076520716,
+   "rate_minus_z": -0.2535606222607448,
+   "diff": 0.555756893025952,
+   "p": 0.13386613386613386,
+   "n_plus": 624,
+   "n_minus": 409,
+   "mean_rate_hz": 1.230893852726088,
+   "region": "ORBm5",
+   "group": "prefrontal / olfactory",
+   "n_units": 56,
+   "version": "relaxed",
+   "diff_raw": 0.555756893025952
+  },
+  {
+   "state": "awake",
+   "motif": 1,
+   "rate_plus_z": 0.5658528207244309,
+   "rate_minus_z": -0.3731442074521165,
+   "diff": 0.9389970281765474,
+   "p": 0.000999000999000999,
+   "n_plus": 611,
+   "n_minus": 919,
+   "mean_rate_hz": 6.359141184124919,
+   "region": "PL5",
+   "group": "prefrontal / olfactory",
+   "n_units": 63,
+   "version": "strict",
+   "diff_raw": 0.9389970281765474
+  },
+  {
+   "state": "isoflurane",
+   "motif": 1,
+   "rate_plus_z": 0.3211775658034412,
+   "rate_minus_z": -0.31932548615921325,
+   "diff": 0.6405030519626544,
+   "p": 0.07192807192807193,
+   "n_plus": 598,
+   "n_minus": 391,
+   "mean_rate_hz": 1.0704752250621485,
+   "region": "PL5",
+   "group": "prefrontal / olfactory",
+   "n_units": 63,
+   "version": "relaxed",
+   "diff_raw": 0.6405030519626544
+  },
+  {
+   "state": "awake",
+   "motif": 1,
+   "rate_plus_z": 0.6457912222485455,
+   "rate_minus_z": -0.447184789868904,
+   "diff": 1.0929760121174494,
+   "p": 0.000999000999000999,
+   "n_plus": 630,
+   "n_minus": 879,
+   "mean_rate_hz": 14.123972319157746,
+   "region": "SSp-bfd6a",
+   "group": "somatosensory",
+   "n_units": 11,
+   "version": "relaxed",
+   "diff_raw": 1.0929760121174494
+  },
+  {
+   "state": "isoflurane",
+   "motif": 1,
+   "rate_plus_z": 0.30618833253508837,
+   "rate_minus_z": -0.3560373543421079,
+   "diff": 0.6622256868771963,
+   "p": 0.12087912087912088,
+   "n_plus": 624,
+   "n_minus": 379,
+   "mean_rate_hz": 1.0422061466156751,
+   "region": "SSp-bfd6a",
+   "group": "somatosensory",
+   "n_units": 11,
+   "version": "relaxed",
+   "diff_raw": 0.6622256868771963
+  },
+  {
+   "state": "awake",
+   "motif": 1,
+   "rate_plus_z": -0.1544673663881978,
+   "rate_minus_z": 0.16025611524521383,
+   "diff": 0.31472348163341163,
+   "p": 0.006993006993006993,
+   "n_plus": 777,
+   "n_minus": 741,
+   "mean_rate_hz": 7.1525048796356545,
+   "region": "RSPagl5",
+   "group": "retrosplenial",
+   "n_units": 35,
+   "version": "strict",
+   "diff_raw": -0.31472348163341163
+  },
+  {
+   "state": "isoflurane",
+   "motif": 1,
+   "rate_plus_z": 0.3695785168931326,
+   "rate_minus_z": -0.39448886161542096,
+   "diff": 0.7640673785085536,
+   "p": 0.012987012987012988,
+   "n_plus": 743,
+   "n_minus": 460,
+   "mean_rate_hz": 1.288871189631453,
+   "region": "RSPagl5",
+   "group": "retrosplenial",
+   "n_units": 35,
+   "version": "relaxed",
+   "diff_raw": 0.7640673785085536
+  },
+  {
+   "state": "awake",
+   "motif": 1,
+   "rate_plus_z": 0.3143611604078773,
+   "rate_minus_z": -0.23512959015935156,
+   "diff": 0.5494907505672288,
+   "p": 0.000999000999000999,
+   "n_plus": 657,
+   "n_minus": 878,
+   "mean_rate_hz": 11.756750162654521,
+   "region": "RSPagl6a",
+   "group": "retrosplenial",
+   "n_units": 16,
+   "version": "relaxed",
+   "diff_raw": 0.5494907505672288
+  },
+  {
+   "state": "isoflurane",
+   "motif": 1,
+   "rate_plus_z": 0.38412558422810167,
+   "rate_minus_z": -0.3622503101491594,
+   "diff": 0.7463758943772612,
+   "p": 0.002997002997002997,
+   "n_plus": 788,
+   "n_minus": 497,
+   "mean_rate_hz": 1.6446718195641155,
+   "region": "RSPagl6a",
+   "group": "retrosplenial",
+   "n_units": 16,
+   "version": "relaxed",
+   "diff_raw": 0.7463758943772612
+  },
+  {
+   "state": "isoflurane",
+   "motif": 1,
+   "rate_plus_z": 0.3440796169734635,
+   "rate_minus_z": -0.47770206078803323,
+   "diff": 0.8217816777614968,
+   "p": 0.12787212787212787,
+   "n_plus": 849,
+   "n_minus": 447,
+   "mean_rate_hz": 1.582730498087822,
+   "region": "CA1",
+   "group": "hippocampus",
+   "n_units": 33,
+   "version": "relaxed",
+   "diff_raw": 0.8217816777614968
+  },
+  {
+   "state": "awake",
+   "motif": 1,
+   "rate_plus_z": 0.4673187385394945,
+   "rate_minus_z": -0.34255733407282657,
+   "diff": 0.8098760726123211,
+   "p": 0.000999000999000999,
+   "n_plus": 650,
+   "n_minus": 874,
+   "mean_rate_hz": 13.201399950642767,
+   "region": "AD",
+   "group": "thalamus",
+   "n_units": 29,
+   "version": "strict",
+   "diff_raw": 0.8098760726123211
+  }
+ ],
+ "spikes_excluded_broadband": [
+  "ILA1 awake",
+  "ILA1 isoflurane",
+  "ILA2/3 awake",
+  "ILA5 awake",
+  "ORBm5 awake",
+  "AMd awake",
+  "AMd isoflurane",
+  "IAD isoflurane"
+ ],
+ "guardrail_hits": [
+  [
+   "EEG ch12 (MOs)",
+   "awake"
+  ],
+  [
+   "EEG ch26 (VISal)",
+   "awake"
+  ],
+  [
+   "LFP ORBm1 (probeF)",
+   "isoflurane"
+  ],
+  [
+   "LFP RSPagl2/3 (probeB)",
+   "awake"
+  ],
+  [
+   "LFP DG-po (probeC)",
+   "awake"
+  ],
+  [
+   "LFP STR (probeD)",
+   "awake"
+  ]
+ ],
+ "guardrail_runs": 142,
+ "n_motifs_total": 145,
+ "n_motifs_broadband": 34
+}

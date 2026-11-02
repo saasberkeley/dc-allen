@@ -63,6 +63,7 @@ Outputs go to `results/lfp_to_motifs/` (change with `--out`):
 | `src/motif_bootstrap.py` | Chunk bootstrap: how reproducible each state's motif is, and whether the states share motifs. |
 | `src/motif_calibration.py` | False-positive calibration of each version on synthetic motif-free data. |
 | `src/null_size_diagnosis.py` | Shows why the original rules find few motifs within one state (shuffled nulls keep more timepoints). |
+| `src/channel_sweep.py` | The same analysis on every valid EEG channel and every grey-matter LFP region (parallel), plus EEG x LFP coupling and spikes-by-pole per region. |
 
 `get_motifs` gained options for the relaxed version (`null_mode="pvalue"`, `alpha`, `min_session_frac`,
 `min_pca_support`, `normalize_size`); the defaults still reproduce getMotifs.m. `smooth_env` gained `zscore=False`.
@@ -71,7 +72,10 @@ Outputs go to `results/lfp_to_motifs/` (change with `--out`):
 python -m src.state_motifs --nwb ../../data/raw/720762-20240221-v001.nwb --out ../../data/out/2026-11-01_mouse720762
 python -m src.motif_bootstrap --nwb ../../data/raw/720762-20240221-v001.nwb --out ../../data/out/2026-11-01_mouse720762
 python -m src.motif_calibration --out ../../data/out/2026-11-01_mouse720762/diagnostics
+python -m src.channel_sweep --nwb ../../data/raw/720762-20240221-v001.nwb --out ../../data/out/2026-11-01_mouse720762/all_channels
 ```
 
 Results, figures and the write-up (`report_mouse720762_2026-11-01.docx`) are in `data/out/2026-11-01_mouse720762/`;
 the notebook is `notebooks/mouse720762_states_naman.ipynb`.
+
+The Word report is generated from the saved results: `cd report && npm install && node build_report.js ../../../data/out/2026-11-01_mouse720762`.
