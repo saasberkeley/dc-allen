@@ -1,0 +1,131 @@
+{
+  "params": {
+    "probe": "EEG",
+    "region": "ch9 SSp-bfd (awake only)",
+    "fs": 250.0009688027118,
+    "freq_bands": [
+      [
+        1.0,
+        4.0
+      ],
+      [
+        4.0,
+        8.0
+      ],
+      [
+        8.0,
+        12.0
+      ],
+      [
+        12.0,
+        30.0
+      ],
+      [
+        30.0,
+        60.0
+      ],
+      [
+        60.0,
+        100.0
+      ]
+    ],
+    "n_null": 20,
+    "seed": 0,
+    "corr_thresholds": [
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8
+    ]
+  },
+  "sessions": [
+    {
+      "file": "709401-20231213-v001.nwb",
+      "subject": "709401",
+      "experiment": "isoflurane",
+      "pharmacology": "isoflurane (inhalation): induction at 5%, maintenance at 1.5%",
+      "probe": "EEG",
+      "region": "ch9 SSp-bfd (awake only)",
+      "channel": 9,
+      "electrode_id": 9,
+      "fs": 250.0009688027118,
+      "states": [
+        [
+          "awake",
+          758.05193,
+          3069.4437
+        ]
+      ]
+    }
+  ],
+  "n_timepoints_nontrivial": 2209,
+  "per_threshold": [
+    {
+      "corr_thresh": 0.4,
+      "n_candidates": 9,
+      "largest_candidate": 974,
+      "null_max_size": 517,
+      "kept_after_null_and_all_sessions": 2
+    },
+    {
+      "corr_thresh": 0.5,
+      "n_candidates": 16,
+      "largest_candidate": 680,
+      "null_max_size": 383,
+      "kept_after_null_and_all_sessions": 2
+    },
+    {
+      "corr_thresh": 0.6,
+      "n_candidates": 31,
+      "largest_candidate": 471,
+      "null_max_size": 221,
+      "kept_after_null_and_all_sessions": 3
+    },
+    {
+      "corr_thresh": 0.7,
+      "n_candidates": 47,
+      "largest_candidate": 508,
+      "null_max_size": 128,
+      "kept_after_null_and_all_sessions": 3
+    },
+    {
+      "corr_thresh": 0.8,
+      "n_candidates": 59,
+      "largest_candidate": 349,
+      "null_max_size": 80,
+      "kept_after_null_and_all_sessions": 4
+    }
+  ],
+  "n_motif_pairs": 1,
+  "motifs": {
+    "M1+": [
+      0.5165233137166139,
+      -0.3544590312358533,
+      0.7492077863286555,
+      0.5771842462652784,
+      0.29289271163422365,
+      -0.5011317338162065
+    ],
+    "M1-": [
+      -0.5165233137166139,
+      0.3544590312358533,
+      -0.7492077863286555,
+      -0.5771842462652784,
+      -0.29289271163422365,
+      0.5011317338162065
+    ]
+  },
+  "occupancy": [
+    {
+      "session": "709401 (isoflurane)",
+      "state": "awake",
+      "n_seconds": 2312,
+      "fraction": {
+        "M1+": 0.41998269896193774,
+        "M1-": 0.5354671280276817,
+        "all-same-sign": 0.044550173010380625
+      }
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "params": {
+    "probe": "probeF",
+    "region": "MOs5 (awake only)",
+    "fs": 250.00069969173637,
+    "freq_bands": [
+      [
+        1.0,
+        4.0
+      ],
+      [
+        4.0,
+        8.0
+      ],
+      [
+        8.0,
+        12.0
+      ],
+      [
+        12.0,
+        30.0
+      ],
+      [
+        30.0,
+        60.0
+      ],
+      [
+        60.0,
+        100.0
+      ]
+    ],
+    "n_null": 20,
+    "seed": 0,
+    "corr_thresholds": [
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8
+    ]
+  },
+  "sessions": [
+    {
+      "file": "709401-20231213-v001.nwb",
+      "subject": "709401",
+      "experiment": "isoflurane",
+      "pharmacology": "isoflurane (inhalation): induction at 5%, maintenance at 1.5%",
+      "probe": "probeF",
+      "region": "MOs5 (awake only)",
+      "channel": 304,
+      "electrode_id": 1486,
+      "fs": 250.00069969173637,
+      "states": [
+        [
+          "awake",
+          758.05193,
+          3069.4437
+        ]
+      ]
+    }
+  ],
+  "n_timepoints_nontrivial": 1158,
+  "per_threshold": [
+    {
+      "corr_thresh": 0.4,
+      "n_candidates": 18,
+      "largest_candidate": 313,
+      "null_max_size": 401,
+      "kept_after_null_and_all_sessions": 0
+    },
+    {
+      "corr_thresh": 0.5,
+      "n_candidates": 18,
+      "largest_candidate": 313,
+      "null_max_size": 401,
+      "kept_after_null_and_all_sessions": 0
+    },
+    {
+      "corr_thresh": 0.6,
+      "n_candidates": 35,
+      "largest_candidate": 128,
+      "null_max_size": 374,
+      "kept_after_null_and_all_sessions": 0
+    },
+    {
+      "corr_thresh": 0.7,
+      "n_candidates": 51,
+      "largest_candidate": 128,
+      "null_max_size": 246,
+      "kept_after_null_and_all_sessions": 0
+    },
+    {
+      "corr_thresh": 0.8,
+      "n_candidates": 61,
+      "largest_candidate": 81,
+      "null_max_size": 124,
+      "kept_after_null_and_all_sessions": 0
+    }
+  ],
+  "n_motif_pairs": 0,
+  "motifs": {},
+  "occupancy": [
+    {
+      "session": "709401 (isoflurane)",
+      "state": "awake",
+      "n_seconds": 2312,
+      "fraction": {
+        "all-same-sign": 1.0
+      }
+    }
+  ]
+}
