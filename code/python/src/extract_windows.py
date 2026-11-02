@@ -51,7 +51,7 @@ HIPPOCAMPUS = ("CA1", "CA2", "CA3", "DG")
 WINDOWS = {
     "isoflurane": [
         # Stimulus-free awake period between the last awake trial and induction
-        ("awake", "iso_onset", -WINDOW_S - 5.0),
+        ("awake", "iso_onset", -WINDOW_S - 3.0),
         # Anesthetized: starts at the EEG power drop (+268 s after onset, when
         # 5% induction steps down to maintenance; see results/power_drop.csv)
         ("iso_anesthetized", "iso_onset", 270.0),

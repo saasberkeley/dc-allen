@@ -18,17 +18,20 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 
-from src.mapping.lfp_to_motifs import (  # noqa: E402
+from src.lfp_to_motifs import (  # noqa: E402
     ROOT, band_labels, find_motifs, pole_names, prepare, write_outputs,
 )
-from src.mapping.smooth_env import DEFAULT_FREQ_BANDS  # noqa: E402
+from src.smooth_env import DEFAULT_FREQ_BANDS  # noqa: E402
 
 # Regions with valid channels in both sessions, and the probe that records them.
+# REGIONS = [
+#     ("probeF", "MOs2/3", "cortex"), ("probeF", "MOs5", "cortex"), ("probeF", "MOs6a", "cortex"),
+#     ("probeD", "SSp-bfd2/3", "cortex"), ("probeD", "SSp-bfd5", "cortex"), ("probeB", "SSp-tr5", "cortex"),
+#     ("probeB", "CA3", "hippocampus"), ("probeB", "LD", "thalamus"), ("probeB", "VAL", "thalamus"),
+#     ("probeF", "CP", "striatum"),
+# ]
 REGIONS = [
-    ("probeF", "MOs2/3", "cortex"), ("probeF", "MOs5", "cortex"), ("probeF", "MOs6a", "cortex"),
-    ("probeD", "SSp-bfd2/3", "cortex"), ("probeD", "SSp-bfd5", "cortex"), ("probeB", "SSp-tr5", "cortex"),
-    ("probeB", "CA3", "hippocampus"), ("probeB", "LD", "thalamus"), ("probeB", "VAL", "thalamus"),
-    ("probeF", "CP", "striatum"),
+    ("probeF", "MOs1", "cortex"), ("probeF", "MOs2/3", "cortex"), ("probeF", "MOs5", "cortex"), ("probeF", "MOs6a", "cortex")
 ]
 GROUP_COLORS = {"cortex": "C0", "hippocampus": "C2", "thalamus": "C4", "striatum": "C1"}
 

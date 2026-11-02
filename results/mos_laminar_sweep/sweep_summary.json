@@ -1,0 +1,95 @@
+{
+  "seeds": [
+    0
+  ],
+  "n_null": 20,
+  "freq_bands": [
+    [
+      1.0,
+      4.0
+    ],
+    [
+      4.0,
+      8.0
+    ],
+    [
+      8.0,
+      12.0
+    ],
+    [
+      12.0,
+      30.0
+    ],
+    [
+      30.0,
+      60.0
+    ],
+    [
+      60.0,
+      100.0
+    ]
+  ],
+  "results": [
+    {
+      "region": "MOs1",
+      "probe": "probeF",
+      "group": "cortex",
+      "motif": null,
+      "pairs_per_seed": [
+        0
+      ]
+    },
+    {
+      "region": "MOs2/3",
+      "probe": "probeF",
+      "group": "cortex",
+      "motif": null,
+      "pairs_per_seed": [
+        0
+      ]
+    },
+    {
+      "region": "MOs5",
+      "probe": "probeF",
+      "group": "cortex",
+      "motif": 1,
+      "channels": [
+        304
+      ],
+      "plus_pole": [
+        0.6530147895335608,
+        0.5066363291619265,
+        0.7853621539628366,
+        0.5058778915434206,
+        -0.3265073947667804,
+        -0.6435343193022374
+      ],
+      "minus_pole": [
+        -0.6530147895335608,
+        -0.5066363291619265,
+        -0.7853621539628366,
+        -0.5058778915434206,
+        0.3265073947667804,
+        0.6435343193022374
+      ],
+      "corr_with_MOs5_M1": 1.0,
+      "shape_corr_other_seeds": [],
+      "pairs_per_seed": [
+        1
+      ],
+      "balance_per_state": {
+        "709401 (isoflurane) awake": -0.7210499227997941,
+        "709401 (isoflurane) isoflurane": 0.8858603066439524
+      }
+    },
+    {
+      "region": "MOs6a",
+      "probe": "probeF",
+      "group": "cortex",
+      "motif": null,
+      "pairs_per_seed": [
+        0
+      ]
+    }
+  ]
+}

@@ -8,14 +8,10 @@ import numpy as np
 from scipy import signal
 
 # Placeholder bands (same as TASKS.md). Replace with the bands from the Mishler paper once confirmed.
-DEFAULT_FREQ_BANDS = np.array([
-    [1.0, 4.0],
-    [4.0, 8.0],
-    [8.0, 12.0],
-    [12.0, 30.0],
-    [30.0, 60.0],
-    [60.0, 100.0],
-], dtype=float)
+DEFAULT_FREQ_BANDS = np.column_stack((
+    np.arange(1.0, 77.0),
+    np.arange(5.0, 81.0),
+))
 
 
 def mround(x: float) -> int:
