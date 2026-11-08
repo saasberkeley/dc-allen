@@ -1,0 +1,146 @@
+{
+  "params": {
+    "probe": "probeF",
+    "region": "MOs5 (pre-stim baseline)",
+    "fs": 250.00069969173637,
+    "freq_bands": [
+      [
+        1.0,
+        4.0
+      ],
+      [
+        4.0,
+        8.0
+      ],
+      [
+        8.0,
+        12.0
+      ],
+      [
+        12.0,
+        30.0
+      ],
+      [
+        30.0,
+        60.0
+      ],
+      [
+        60.0,
+        100.0
+      ]
+    ],
+    "n_null": 20,
+    "seed": 0,
+    "corr_thresholds": [
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8
+    ]
+  },
+  "sessions": [
+    {
+      "file": "709401-20231213-v001.nwb",
+      "subject": "709401",
+      "experiment": "isoflurane",
+      "pharmacology": "isoflurane (inhalation): induction at 5%, maintenance at 1.5%",
+      "probe": "probeF",
+      "region": "MOs5 (pre-stim baseline)",
+      "channel": 304,
+      "electrode_id": 1486,
+      "fs": 250.00069969173637,
+      "states": [
+        [
+          "awake",
+          758.05193,
+          3069.4437
+        ],
+        [
+          "isoflurane",
+          4767.7976,
+          7079.9113
+        ]
+      ]
+    }
+  ],
+  "n_timepoints_nontrivial": 4885,
+  "per_threshold": [
+    {
+      "corr_thresh": 0.4,
+      "n_candidates": 19,
+      "largest_candidate": 2336,
+      "null_max_size": 2831,
+      "kept_after_null_and_all_sessions": 0
+    },
+    {
+      "corr_thresh": 0.5,
+      "n_candidates": 28,
+      "largest_candidate": 2336,
+      "null_max_size": 2176,
+      "kept_after_null_and_all_sessions": 1
+    },
+    {
+      "corr_thresh": 0.6,
+      "n_candidates": 34,
+      "largest_candidate": 2648,
+      "null_max_size": 1577,
+      "kept_after_null_and_all_sessions": 1
+    },
+    {
+      "corr_thresh": 0.7,
+      "n_candidates": 42,
+      "largest_candidate": 1909,
+      "null_max_size": 916,
+      "kept_after_null_and_all_sessions": 1
+    },
+    {
+      "corr_thresh": 0.8,
+      "n_candidates": 58,
+      "largest_candidate": 1219,
+      "null_max_size": 516,
+      "kept_after_null_and_all_sessions": 1
+    }
+  ],
+  "n_motif_pairs": 1,
+  "motifs": {
+    "M1+": [
+      -0.3887410440122825,
+      -0.41535312180143297,
+      -0.8640736949846469,
+      -0.406345957011259,
+      0.35148413510747184,
+      0.6143295803480041
+    ],
+    "M1-": [
+      0.3887410440122825,
+      0.41535312180143297,
+      0.8640736949846469,
+      0.406345957011259,
+      -0.35148413510747184,
+      -0.6143295803480041
+    ]
+  },
+  "occupancy": [
+    {
+      "session": "709401 (isoflurane)",
+      "state": "awake",
+      "n_seconds": 2311,
+      "fraction": {
+        "M1+": 0.19948074426655127,
+        "M1-": 0.330592816962354,
+        "all-same-sign": 0.46992643877109475
+      }
+    },
+    {
+      "session": "709401 (isoflurane)",
+      "state": "isoflurane",
+      "n_seconds": 2312,
+      "fraction": {
+        "M1+": 0.016868512110726645,
+        "M1-": 0.5834775086505191,
+        "all-same-sign": 0.39965397923875434
+      }
+    }
+  ]
+}
