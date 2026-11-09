@@ -226,10 +226,14 @@ def extract_window(nwb, name, anchor, offset, out_dir: Path, fs_out=DEFAULT_FS,
     spike_times = np.concatenate(clipped) if clipped else np.array([])
 
     # ---- Stimuli in window (EEG/LFP contamination check) ----------------------
-    n_stim = 0
+    stim_times = np.array([], dtype=float)
     if nwb.trials is not None:
         tr = nwb.trials.to_dataframe()
-        n_stim = int(((tr.start_time >= common_start) & (tr.start_time < window_end)).sum())
+        in_window = (tr.start_time >= common_start) & (tr.start_time < window_end)
+        if "stimulus_type" in tr.columns:
+            in_window &= tr.stimulus_type.astype(str).str.lower().eq("electrical")
+        stim_times = tr.loc[in_window, "start_time"].to_numpy(float) - common_start
+    n_stim = int(len(stim_times))
 
     # ---- Write ------------------------------------------------------------------
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -291,6 +295,7 @@ def extract_window(nwb, name, anchor, offset, out_dir: Path, fs_out=DEFAULT_FS,
             g.create_dataset(c, data=np.asarray(units[c][:], float))
 
         g = f.create_group("behavior")
+        g.create_dataset("stim_ts", data=stim_times)
         i0, i1 = clip(running_ts)
         g.create_dataset("running_speed", data=np.asarray(running.data[i0:i1], np.float32))
         g.create_dataset("running_ts", data=running_ts[i0:i1] - common_start)

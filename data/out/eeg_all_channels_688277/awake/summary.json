@@ -1,0 +1,10 @@
+{
+  "input": "data/sample_nwb/688277-20230921-v001_awake.h5",
+  "sampling_rate_hz": 500.00113028891917,
+  "n_channels": 30,
+  "n_valid_channels": 27,
+  "n_null": 3,
+  "seed": 0,
+  "theta_speed_spearman": -0.19929034392310976,
+  "theta_band_index": 1
+}

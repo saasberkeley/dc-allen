@@ -91,6 +91,9 @@ The consolidated work on `justin-branch` now has three complementary paths:
   multi-seed stability.
 - `src/eeg_motif_diagnostics.py`: all-channel EEG diagnostics with optional
   common-average referencing and intermediate-stage plots.
+- `src/eeg_motif_batch.py`: multi-window/multi-mouse runner that adds GMM model
+  selection, shifted-band controls, seed stability, behavior associations,
+  early/late comparisons, and combined CSV/JSON summaries.
 - `notebooks/eeg_motif_diagnostics_walkthrough.ipynb`: a detailed, cell-by-cell
   explanation of the diagnostic workflow, including interpretation guidance and
   switches that keep the expensive all-channel steps off until needed.
@@ -106,3 +109,35 @@ Treat a GMM cluster as a candidate motif, not automatic evidence of a biological
 motif. GMM always returns the requested number of clusters. Check BIC, stability
 across seeds, shifted-band controls, behavior/stimulation alignment, and
 generalization to held-out time windows.
+
+### Complete all-channel analysis
+
+Quick pipeline check with weak null testing and no optional GMM/transition work:
+
+```bash
+PYTHONPATH=code/python python -m src.eeg_motif_batch \
+  data/sample_nwb/688277-20230921-v001_awake.h5 \
+  data/sample_nwb/688277-20230921-v001_iso_anesthetized.h5 \
+  --out data/out/eeg_batch_pilot --n-null 3 --gmm-k 0 --no-transition
+```
+
+Final configuration once the full target-mouse windows are available:
+
+```bash
+PYTHONPATH=code/python python -m src.eeg_motif_batch \
+  data/extracted/<mouse1_awake>.h5 data/extracted/<mouse1_iso>.h5 \
+  data/extracted/<mouse2_awake>.h5 data/extracted/<mouse2_iso>.h5 \
+  --out data/out/eeg_batch_final \
+  --n-null 100 --gmm-k 5 --gmm-k-max 12 --gmm-seeds 5
+```
+
+The batch output includes per-window diagnostic figures plus:
+
+- `all_windows_channel_summary.csv`: every channel, reference and metric;
+- `detection_summary.csv`: motif recovery rates for each condition;
+- `channel_outcomes.csv`: continuous rescue, binary-only, both or neither;
+- `batch_summary.json`: inputs, parameters and headline results;
+- `batch_detection_fraction.png` and `batch_gmm_quality.png`.
+
+Future HDF5 extractions also preserve electrical-stimulation timestamps so the
+theta/stimulation effect can be computed rather than inferred from trial counts.

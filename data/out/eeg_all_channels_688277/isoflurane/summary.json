@@ -1,0 +1,10 @@
+{
+  "input": "data/sample_nwb/688277-20230921-v001_iso_anesthetized.h5",
+  "sampling_rate_hz": 500.00193758410717,
+  "n_channels": 30,
+  "n_valid_channels": 27,
+  "n_null": 3,
+  "seed": 0,
+  "theta_speed_spearman": NaN,
+  "theta_band_index": 1
+}
