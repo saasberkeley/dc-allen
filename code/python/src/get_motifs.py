@@ -48,6 +48,12 @@ class MotifResult:
     """Non-trivial ~1 Hz timepoints in the real data."""
     shifts: np.ndarray = field(repr=False)
     """(bands, 1 + n_null) circular shifts in samples; column 0 is the real data."""
+    null_largest: np.ndarray = field(default=None, repr=False)
+    """(n_null, n_thresholds) size of the largest candidate in each null dataset."""
+    kept_candidates: list = field(default_factory=list)
+    """Candidates that passed the null and session filters: threshold, size, p, sessions_present."""
+    motif_support: list = field(default_factory=list)
+    """Per final motif: the kept candidates whose strongest PCA loading is on its axis."""
 
     @property
     def n_motifs(self) -> int:
@@ -225,12 +231,30 @@ def get_motifs(
     n_null: int = 20,
     seed=None,
     verbose: bool = False,
+    null_mode: str = "max",
+    alpha: float = 0.05,
+    min_session_frac: float = 1.0,
+    min_pca_support: int = 2,
+    normalize_size: bool = False,
 ) -> MotifResult:
     """Port of getMotifs(LFPIn, LFPfs).
 
     lfp_in: list of (bands, time) arrays, one per session, same bands in the same
     order. Must not contain NaN. fs: sampling rate of the time axis in Hz.
+
+    The defaults reproduce getMotifs.m. The other settings loosen its three filters:
+      null_mode="pvalue": keep a candidate if its permutation p-value is <= alpha, where
+          p = (1 + #nulls whose largest candidate is at least as big) / (n_null + 1).
+          "max" keeps only candidates bigger than the largest candidate of every null.
+      min_session_frac: fraction of sessions a candidate must have timepoints in (1.0 = all).
+      min_pca_support: candidates that must load on a PCA axis for it to become a motif
+          (getMotifs.m requires 2).
+      normalize_size: compare candidate size as a fraction of each dataset's non-trivial
+          timepoints. Shuffling breaks broadband co-fluctuation, so null datasets keep more
+          timepoints than the real data and grow bigger clusters for that reason alone.
     """
+    if null_mode not in ("max", "pvalue"):
+        raise ValueError("null_mode must be 'max' or 'pvalue'")
     sessions = [np.asarray(s, dtype=float) for s in lfp_in]
     n_bands = sessions[0].shape[0]
     if any(s.ndim != 2 or s.shape[0] != n_bands for s in sessions):
@@ -243,7 +267,8 @@ def get_motifs(
     shifts = _null_shifts(n_bands, fs, n_null, np.random.default_rng(seed))
     thresholds = tuple(corr_thresholds)
 
-    null_max = np.zeros(len(thresholds))
+    null_largest = np.zeros((shifts.shape[1] - 1, len(thresholds)))
+    null_n = np.ones(shifts.shape[1] - 1)
     real = None
     for s in range(shifts.shape[1]):
         t0 = time.time()
@@ -254,20 +279,29 @@ def get_motifs(
         if s == 0:
             real = (X, session_of[nontrivial], per_thresh)
         else:
-            null_max = np.maximum(null_max, [sizes.max() for sizes, _ in per_thresh])
+            null_largest[s - 1] = [sizes.max() for sizes, _ in per_thresh]
+            null_n[s - 1] = X.shape[0]
         if verbose:
             kind = "real data" if s == 0 else f"null {s}/{shifts.shape[1] - 1}"
             print(f"  [{kind}] {X.shape[0]} timepoints, candidates per threshold: "
                   f"{[sizes.size for sizes, _ in per_thresh]} ({time.time() - t0:.1f}s)", flush=True)
 
     X, session_ids, per_thresh = real
-    templates, n_kept = [], []
-    for (sizes, labels), limit in zip(per_thresh, null_max):
+    if normalize_size:
+        null_largest = null_largest / null_n[:, None] * X.shape[0]  # null sizes rescaled to the real data's length
+    null_max = null_largest.max(axis=0) if null_largest.size else np.zeros(len(thresholds))
+    templates, n_kept, kept_info = [], [], []
+    for t, ((sizes, labels), limit) in enumerate(zip(per_thresh, null_max)):
+        p = (1 + (null_largest[:, t][None, :] >= sizes[:, None]).sum(axis=1)) / (null_largest.shape[0] + 1)
+        passes = sizes > limit if null_mode == "max" else p <= alpha
         kept = 0
-        for k in np.flatnonzero(sizes > limit):
+        for k in np.flatnonzero(passes):
             members = labels == k
-            if np.unique(session_ids[members]).size == len(sessions):
+            n_present = np.unique(session_ids[members]).size
+            if n_present >= min_session_frac * len(sessions) - 1e-9:
                 templates.append(X[members].mean(axis=0))
+                kept_info.append({"threshold": thresholds[t], "size": int(sizes[k]), "p": float(p[k]),
+                                  "sessions_present": int(n_present)})
                 kept += 1
         n_kept.append(kept)
 
@@ -279,16 +313,19 @@ def get_motifs(
         n_kept=np.array(n_kept),
         n_timepoints=X.shape[0],
         shifts=shifts,
+        null_largest=null_largest,
+        kept_candidates=kept_info,
     )
     if not templates:
         return result
 
     coeff, score = _pca_uncentered(np.array(templates))
     magnitude = np.abs(score)
-    _, best_axis = np.nonzero(magnitude == magnitude.max(axis=1, keepdims=True))
-    axes = np.flatnonzero(np.bincount(best_axis, minlength=coeff.shape[1]) > 1)
+    which, best_axis = np.nonzero(magnitude == magnitude.max(axis=1, keepdims=True))
+    axes = np.flatnonzero(np.bincount(best_axis, minlength=coeff.shape[1]) >= min_pca_support)
     if axes.size == 0:
         return result
+    result.motif_support = [[kept_info[c] for c in which[best_axis == a]] for a in axes]
 
     proj = X @ coeff[:, axes]
     proj = np.hstack([proj, -proj])

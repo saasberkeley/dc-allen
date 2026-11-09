@@ -1,0 +1,6 @@
+{
+  "name": "mouse720762-report",
+  "private": true,
+  "description": "Builds report_mouse720762_2026-11-01.docx from the analysis outputs",
+  "dependencies": { "docx": "9.5.1" }
+}

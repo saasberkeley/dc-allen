@@ -1,7 +1,7 @@
 import numpy as np
 from scipy import signal
 
-from src.mapping.smooth_env import butterfilter, fir_filtfilt, gausswin, mround, smooth_env
+from src.smooth_env import butterfilter, fir_filtfilt, gausswin, mround, smooth_env
 
 
 def test_mround_matches_matlab():

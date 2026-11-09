@@ -6,8 +6,8 @@ get_motifs (getMotifs.m). Finally measure how often each motif pole dominates in
 each labelled brain state (awake / isoflurane / psilocybin ...).
 
 Usage (from code/python/):
-    python -m src.mapping.lfp_to_motifs
-    python -m src.mapping.lfp_to_motifs --probe probeF --region MOs5 --out data/out/lfp_to_motifs
+    python -m src.lfp_to_motifs
+    python -m src.lfp_to_motifs --probe probeF --region MOs5 --out data/out/lfp_to_motifs
 """
 
 import argparse
