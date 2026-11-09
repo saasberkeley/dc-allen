@@ -91,6 +91,9 @@ The consolidated work on `justin-branch` now has three complementary paths:
   multi-seed stability.
 - `src/eeg_motif_diagnostics.py`: all-channel EEG diagnostics with optional
   common-average referencing and intermediate-stage plots.
+- `notebooks/eeg_motif_diagnostics_walkthrough.ipynb`: a detailed, cell-by-cell
+  explanation of the diagnostic workflow, including interpretation guidance and
+  switches that keep the expensive all-channel steps off until needed.
 
 The main prior analyses remain as readable references:
 
