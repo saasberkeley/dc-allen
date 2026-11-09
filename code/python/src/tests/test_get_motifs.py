@@ -170,6 +170,33 @@ def test_no_motifs_in_structureless_noise():
     assert result.n_motifs == 0
 
 
+def test_continuous_representation_keeps_amplitude_information():
+    rng = np.random.default_rng(4)
+    sessions = _planted_sessions(
+        rng,
+        np.array([[2.0, 1.0, -0.5, -1.5, 0.25, -2.0]]),
+        n_sessions=2,
+        seconds=1000,
+    )
+    result = get_motifs(
+        sessions,
+        fs=1.0,
+        n_null=3,
+        seed=0,
+        representation="continuous",
+    )
+
+    assert result.representation == "continuous"
+    assert result.n_timepoints == 2000
+    if result.n_motifs:
+        assert np.any(np.abs(result.motifs) != 1)
+
+
+def test_rejects_unknown_representation():
+    with pytest.raises(ValueError, match="representation"):
+        get_motifs([np.zeros((4, 100))], fs=1.0, representation="ranks")
+
+
 def test_rejects_nan_input():
     x = np.zeros((4, 100))
     x[0, 0] = np.nan

@@ -54,6 +54,8 @@ class MotifResult:
     """Candidates that passed the null and session filters: threshold, size, p, sessions_present."""
     motif_support: list = field(default_factory=list)
     """Per final motif: the kept candidates whose strongest PCA loading is on its axis."""
+    representation: str = "binary"
+    """Input representation clustered at ~1 Hz: ``binary`` or ``continuous``."""
 
     @property
     def n_motifs(self) -> int:
@@ -217,9 +219,12 @@ def _null_shifts(n_bands, fs, n_null, rng):
     return np.column_stack([np.zeros(n_bands, dtype=np.int64), perms[:n_null].T])
 
 
-def _binarize(sessions, shift, hop):
+def _represent(sessions, shift, hop, representation):
     shifted = [np.stack([np.roll(s[f], shift[f]) for f in range(s.shape[0])]) for s in sessions]
-    signs = np.sign(np.concatenate(shifted, axis=1)[:, ::hop])
+    sampled = np.concatenate(shifted, axis=1)[:, ::hop]
+    if representation == "continuous":
+        return sampled.T, np.ones(sampled.shape[1], dtype=bool)
+    signs = np.sign(sampled)
     nontrivial = np.abs(signs.sum(axis=0)) != signs.shape[0]
     return signs[:, nontrivial].T, nontrivial
 
@@ -236,6 +241,7 @@ def get_motifs(
     min_session_frac: float = 1.0,
     min_pca_support: int = 2,
     normalize_size: bool = False,
+    representation: str = "binary",
 ) -> MotifResult:
     """Port of getMotifs(LFPIn, LFPfs).
 
@@ -252,6 +258,12 @@ def get_motifs(
       normalize_size: compare candidate size as a fraction of each dataset's non-trivial
           timepoints. Shuffling breaks broadband co-fluctuation, so null datasets keep more
           timepoints than the real data and grow bigger clusters for that reason alone.
+
+    ``representation="binary"`` reproduces the MATLAB method by clustering the
+    sign of each z-scored band. ``representation="continuous"`` is an
+    experimental ablation that clusters the actual z-scored band-envelope values
+    sampled at the same ~1 Hz cadence. The null shifts and all downstream
+    significance tests are otherwise identical.
     """
     if null_mode not in ("max", "pvalue"):
         raise ValueError("null_mode must be 'max' or 'pvalue'")
@@ -261,6 +273,8 @@ def get_motifs(
         raise ValueError("every session must be a (bands, time) array with the same number of bands")
     if not all(np.isfinite(s).all() for s in sessions):
         raise ValueError("input contains NaN/inf; trim SmoothEnv's NaN edges before calling get_motifs")
+    if representation not in {"binary", "continuous"}:
+        raise ValueError("representation must be 'binary' or 'continuous'")
 
     hop = mround(fs)
     session_of = np.concatenate([np.full(s.shape[1], i) for i, s in enumerate(sessions)])[::hop]
@@ -272,7 +286,7 @@ def get_motifs(
     real = None
     for s in range(shifts.shape[1]):
         t0 = time.time()
-        X, nontrivial = _binarize(sessions, shifts[:, s], hop)
+        X, nontrivial = _represent(sessions, shifts[:, s], hop, representation)
         second_moment, mean = X.T @ X / X.shape[0], X.mean(axis=0)
         tree0 = _build_tree(_correlation_linkage(X), X, np.ones(X.shape[0]), second_moment, mean)
         per_thresh = [_candidates(X, tree0, t, second_moment, mean, need_labels=(s == 0)) for t in thresholds]
@@ -315,6 +329,7 @@ def get_motifs(
         shifts=shifts,
         null_largest=null_largest,
         kept_candidates=kept_info,
+        representation=representation,
     )
     if not templates:
         return result
