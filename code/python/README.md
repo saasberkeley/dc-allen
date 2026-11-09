@@ -79,3 +79,27 @@ Results, figures and the write-up (`report_mouse720762_2026-11-01.docx`) are in 
 the notebook is `notebooks/mouse720762_states_naman.ipynb`.
 
 The Word report is generated from the saved results: `cd report && npm install && node build_report.js ../../../data/out/2026-11-01_mouse720762`.
+
+## EEG motif recovery workflow
+
+The consolidated work on `justin-branch` now has three complementary paths:
+
+- `src/get_motifs.py`: the original sign-based algorithm, plus an optional
+  `representation="continuous"` ablation.
+- `src/gmm_motifs.py`: Jahan's GMM idea extracted into reusable functions for
+  continuous band envelopes, K/BIC sweeps, shifted-band controls, and
+  multi-seed stability.
+- `src/eeg_motif_diagnostics.py`: all-channel EEG diagnostics with optional
+  common-average referencing and intermediate-stage plots.
+
+The main prior analyses remain as readable references:
+
+- `notebooks/mouse720762_full_analysis.ipynb`: Justin's mouse 720762 analysis.
+- `notebooks/mouse720762_states_naman.ipynb`: Naman's state and all-channel work.
+- `notebooks/709401_awake_iso_jahan.ipynb`: Jahan's GMM, behavior, and
+  stimulation exploration.
+
+Treat a GMM cluster as a candidate motif, not automatic evidence of a biological
+motif. GMM always returns the requested number of clusters. Check BIC, stability
+across seeds, shifted-band controls, behavior/stimulation alignment, and
+generalization to held-out time windows.
