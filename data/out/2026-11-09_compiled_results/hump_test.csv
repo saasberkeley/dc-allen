@@ -1,0 +1,12 @@
+stimulus,window,motif,gain_over_surrogate_K2,max_gain_over_surrogate,K_at_max,humps_supported,interpretation
+included,awake,1,0.04,0.05,5,2 (weak),slight skew from the electrical-stimulation block
+included,isoflurane,1,0.05,0.05,2,2,narrow hump at -2.4 (32% of seconds) plus a broad bulk
+included,isoflurane,2,0.03,0.09,4,3,stimulation-related humps
+included,isoflurane,3,0.09,0.10,5,2,narrow hump at -2.4 (24%) plus the bulk; extra K add ~0.01
+included,full,1,0.28,0.40,3,3,awake vs isoflurane states
+excluded,awake,1,-0.01,0.00,1,1,one hump
+excluded,awake,2,0.00,0.00,1,1,one hump
+excluded,isoflurane,1,0.10,0.14,4,2-3,compact lump at -5.5 (8%): broadband-low suppression seconds
+excluded,isoflurane,2,0.00,0.00,1,1,one hump
+excluded,isoflurane,3,-0.12,0.00,1,1,one hump
+excluded,full,1,0.49,0.49,2,2,awake vs isoflurane states

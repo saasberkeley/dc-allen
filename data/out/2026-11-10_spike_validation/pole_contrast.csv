@@ -1,0 +1,29 @@
+state,motif,target,diff (z),p
+awake,Original (strict),population rate,0.47780299828715234,0.000999000999000999
+awake,Original (strict),ensemble 1 (32 units),0.6305448069891011,0.000999000999000999
+awake,Original (strict),ensemble 2 (6 units),-0.0747422854352599,0.7592407592407593
+awake,Relaxed (state motif),population rate,0.4674507499338143,0.000999000999000999
+awake,Relaxed (state motif),ensemble 1 (32 units),0.6207336045074001,0.000999000999000999
+awake,Relaxed (state motif),ensemble 2 (6 units),-0.06848675536203354,0.7712287712287712
+awake,Tracker M1 expression,population rate,-0.001868467257474242,0.9920079920079921
+awake,Tracker M1 expression,ensemble 1 (32 units),0.12709066144572212,0.45754245754245754
+awake,Tracker M1 expression,ensemble 2 (6 units),0.15666994665672795,0.2817182817182817
+awake,Tracker M2 expression,population rate,-0.07669923545272413,0.41358641358641357
+awake,Tracker M2 expression,ensemble 1 (32 units),0.007273327426627888,0.9470529470529471
+awake,Tracker M2 expression,ensemble 2 (6 units),-0.07258500317871888,0.6123876123876124
+isoflurane,Original (strict),population rate,,
+isoflurane,Original (strict),ensemble 1 (27 units),,
+isoflurane,Original (strict),ensemble 2 (25 units),,
+isoflurane,Original (strict),ensemble 3 (6 units),,
+isoflurane,Relaxed (state motif),population rate,0.814623378391701,0.000999000999000999
+isoflurane,Relaxed (state motif),ensemble 1 (27 units),0.3947480899601321,0.016983016983016984
+isoflurane,Relaxed (state motif),ensemble 2 (25 units),0.09361413212417914,0.6473526473526473
+isoflurane,Relaxed (state motif),ensemble 3 (6 units),0.4641336869245196,0.003996003996003996
+isoflurane,Tracker M1 expression,population rate,0.9301335536350115,0.000999000999000999
+isoflurane,Tracker M1 expression,ensemble 1 (27 units),0.37651106894899355,0.000999000999000999
+isoflurane,Tracker M1 expression,ensemble 2 (25 units),0.5235527057575651,0.000999000999000999
+isoflurane,Tracker M1 expression,ensemble 3 (6 units),0.3893449907435913,0.000999000999000999
+isoflurane,Tracker M2 expression,population rate,0.2629564319836503,0.004995004995004995
+isoflurane,Tracker M2 expression,ensemble 1 (27 units),-0.03604684729493912,0.7652347652347652
+isoflurane,Tracker M2 expression,ensemble 2 (25 units),0.1342434768109116,0.04495504495504495
+isoflurane,Tracker M2 expression,ensemble 3 (6 units),-0.14534162622136984,0.03896103896103896

@@ -1,0 +1,447 @@
+<title>Mouse 720762 Motif Results</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
+<style>
+/* Layout: lab notebook. Sticky contents rail on wide screens, one reading column, figures on white plates (matplotlib output). */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --ink: #1b2330;
+  --muted: #5b6676;
+  --rule: #d9dee6;
+  --accent: #2f5d8a;
+  --awake: #1f77b4;
+  --iso: #c0392b;
+  --warn: #9a6400;
+  --chip: #e8edf4;
+  --plate: #ffffff;
+  --display: "Newsreader", Georgia, "Times New Roman", serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12161d; --surface: #1a2029; --ink: #e3e8ef; --muted: #9aa5b4; --rule: #2d3542;
+    --accent: #7fb0e0; --awake: #6fb0e6; --iso: #ef7d6e; --warn: #e2b155; --chip: #232b37; --plate: #f4f5f7;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12161d; --surface: #1a2029; --ink: #e3e8ef; --muted: #9aa5b4; --rule: #2d3542;
+  --accent: #7fb0e0; --awake: #6fb0e6; --iso: #ef7d6e; --warn: #e2b155; --chip: #232b37; --plate: #f4f5f7;
+  color-scheme: dark;
+}
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15.5px; line-height: 1.6; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 40px 80px; display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 48px; }
+@media (max-width: 860px) { .wrap { grid-template-columns: minmax(0, 1fr); gap: 24px; padding-block: 24px 60px; } nav.toc { position: static !important; } }
+nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 24px); align-self: start; font-size: 13.5px; }
+nav.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+nav.toc a { color: var(--muted); text-decoration: none; }
+nav.toc a:hover, nav.toc a:focus-visible { color: var(--accent); }
+nav.toc .date { font-family: var(--mono); font-size: 11.5px; color: var(--muted); display: block; }
+main { min-width: 0; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--display); font-weight: 600; font-size: clamp(30px, 4.4vw, 44px); line-height: 1.1; margin: 8px 0 12px; text-wrap: balance; }
+h2 { font-family: var(--display); font-weight: 600; font-size: 28px; line-height: 1.2; margin: 0 0 6px; text-wrap: balance; }
+h3 { font-size: 16px; font-weight: 600; margin: 28px 0 8px; }
+p, li { max-width: 72ch; }
+.lede { font-size: 17px; color: var(--muted); max-width: 70ch; }
+section { padding-top: 48px; margin-top: 48px; border-top: 1px solid var(--rule); scroll-margin-top: 16px; }
+.section-meta { font-family: var(--mono); font-size: 12.5px; color: var(--muted); margin-bottom: 18px; }
+a { color: var(--accent); }
+code, .mono { font-family: var(--mono); font-size: 0.88em; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 28px; margin: 24px 0 0; padding: 18px 20px; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; }
+.facts div { min-width: 0; }
+.facts dt { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+.facts dd { margin: 2px 0 0; font-size: 14px; font-variant-numeric: tabular-nums; }
+.awake { color: var(--awake); font-weight: 600; }
+.iso { color: var(--iso); font-weight: 600; }
+.findings { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 14px; }
+.findings li { padding-left: 16px; border-left: 2px solid var(--rule); max-width: 78ch; }
+.findings b { color: var(--ink); }
+.table-scroll { overflow-x: auto; margin: 14px 0 6px; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-weight: 600; font-size: 12.5px; color: var(--muted); background: var(--chip); white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+td.num, th.num { text-align: right; }
+.pill { display: inline-block; font-family: var(--mono); font-size: 11.5px; padding: 1px 7px; border-radius: 999px; background: var(--chip); color: var(--muted); white-space: nowrap; }
+.pill.lean { color: var(--accent); }
+.pill.warn { color: var(--warn); }
+.note { font-size: 13.5px; color: var(--muted); }
+.callout { margin: 18px 0; padding: 12px 16px; background: var(--surface); border: 1px solid var(--rule); border-left: 3px solid var(--warn); border-radius: 4px; font-size: 14.5px; max-width: 80ch; }
+figure { margin: 18px 0 26px; }
+figure a { display: block; background: var(--plate); border: 1px solid var(--rule); border-radius: 6px; padding: 8px; }
+figure img { display: block; width: 100%; height: auto; }
+figure.half { max-width: 620px; }
+figure.third { max-width: 460px; }
+figcaption { font-size: 13.5px; color: var(--muted); margin-top: 8px; max-width: 80ch; }
+figcaption b { color: var(--ink); font-weight: 600; }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+.figrow figure { margin: 0; min-width: 0; }
+.files { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 6px 28px; font-family: var(--mono); font-size: 13px; }
+.files div { min-width: 0; overflow-wrap: anywhere; }
+.files span { font-family: var(--body); color: var(--muted); font-size: 13px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+
+<div class="wrap">
+<nav class="toc" aria-label="Contents">
+  <ol>
+    <li><a href="#top">Overview</a></li>
+    <li><a href="#findings">Main findings</a></li>
+    <li><a href="#decisions">Open decisions</a></li>
+    <li><a href="#report"><span class="date">01 Nov</span>Motif detection report</a></li>
+    <li><a href="#pca"><span class="date">03 Nov</span>PCA and motif axes</a></li>
+    <li><a href="#eda"><span class="date">08 Nov</span>Band-count EDA</a></li>
+    <li><a href="#candidates"><span class="date">08 Nov</span>More candidate motifs</a></li>
+    <li><a href="#gmm"><span class="date">09 Nov</span>Gaussian mixtures</a></li>
+    <li><a href="#humps"><span class="date">09 Nov</span>Humps along motif axes</a></li>
+    <li><a href="#caveats">Caveats</a></li>
+    <li><a href="#files">Files</a></li>
+  </ol>
+</nav>
+
+<main id="top">
+  <div class="eyebrow">Berkeley SAAS × Allen Institute · spectral motifs · Mishler et al. 2026</div>
+  <h1>Mouse 720762 motif results</h1>
+  <p class="lede">Everything run on the awake → isoflurane session so far, in one place: what each analysis asked, the numbers, the figures, and the decisions still open before spike validation. Compiled 9 November 2026.</p>
+
+  <dl class="facts">
+    <div><dt>Recording</dt><dd>NWB, 2500 Hz, decimated to 250 Hz; analysed 17–7124 s</dd></div>
+    <div><dt>States</dt><dd><span class="awake">Awake</span> to 3264 s · induction 3294–3442 s · <span class="iso">isoflurane</span> 3442–7124 s</dd></div>
+    <div><dt>Electrical stimulation</dt><dd>752–2423 s (awake) · 4648–6319 s (isoflurane)</dd></div>
+    <div><dt>Visual stimulation</dt><dd>2598–3148 s (awake) · 6481–7024 s (isoflurane)</dd></div>
+    <div><dt>Signals</dt><dd>PL5 LFP (probeF ch 254) · 26 valid EEG channels · 45 LFP regions · 63 of 234 PL5 units pass quality</dd></div>
+    <div><dt>Bands (report set)</dt><dd class="mono">1–4, 3–6, 5–9, 8–12, 10–15, 13–20, 18–30, 25–40, 35–55, 50–80 Hz</dd></div>
+  </dl>
+
+  <section id="findings">
+    <h2>Main findings</h2>
+    <div class="section-meta">Across all five analyses</div>
+    <ul class="findings">
+      <li><b>Mishler's rules find few motifs here.</b> On PL5 the strict rules find one awake motif and nothing under isoflurane; the relaxed version adds one per state. Across channels, strict motifs appear only while awake (11 of 45 LFP regions, 9 of 26 EEG channels); under isoflurane only the relaxed version finds any (17 LFP, 21 EEG).</li>
+      <li><b>Awake and isoflurane motifs are different patterns.</b> Bootstrap resamples agree within a state (median |r| 0.97) but not across states (0.37). On PL5 the awake motif is PC1 of the awake data (|r| 0.99); the isoflurane motif is PC2 of the isoflurane data (|r| 1.00).</li>
+      <li><b>In spontaneous activity, a motif is a direction through one continuous cloud, not two discrete states.</b> Spontaneous awake shows one hump on every motif axis and one Gaussian-mixture component in 10-D. The + and − poles are the two tails of that hump.</li>
+      <li><b>The discrete structure in this recording is states and events:</b> awake vs isoflurane, stimulus blocks, and a broadband-low "suppression" population of seconds under isoflurane (about 8–10% of spontaneous isoflurane seconds).</li>
+      <li><b>Candidate count can grow about 26×</b> (48 → 1,238 distinct across 45 LFP regions) by keeping every candidate with its p-value as a score and detecting in finer time bins. The union across channels never levels off, so most extra candidates are probably channel-specific; a cross-channel recurrence score is needed to rank them.</li>
+      <li><b>Gaussian mixtures label states well but don't find new spontaneous motifs.</b> With 2 components the poles are always exact mirror images, a consequence of z-scoring. With 3+ components they can differ, but the difference is mostly an overall broadband level.</li>
+      <li><b>Spikes already separate by pole while awake.</b> PL5 units fire 0.94 z higher in the + pole than in the − pole (p = 0.001, strict motif); under isoflurane the difference is 0.64 z (p = 0.07).</li>
+      <li><b>Confound to keep in mind:</b> the awake + pole concentrates in the visual-stimulus block (82% of high-scoring seconds in 36% of the time; about 50% of its seconds in 17% of the time with the EDA bands). Visual stimulation and time in session can't be separated in this session.</li>
+      <li><b>Behaviour:</b> motif or component expression tracks pupil size (r = 0.50–0.60, largely from the stretch before induction); running barely (|r| ≤ 0.14).</li>
+    </ul>
+  </section>
+
+  <section id="decisions">
+    <h2>Open decisions</h2>
+    <div class="section-meta">What the evidence says for each choice; "lean" is my suggestion, not a conclusion</div>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Decision</th><th>Options</th><th>Evidence so far</th><th>Lean</th></tr></thead>
+      <tbody>
+        <tr><td>How to generate candidates</td><td>Strict / relaxed (filter) vs. keep all with p-value (P), finer bins (G), both</td><td>PL5: 4 → 18 (G) → 36 (P) → 108 (G+P). Union across channels doesn't saturate.</td><td><span class="pill lean">G+P, ranked by p and cross-channel recurrence</span></td></tr>
+        <tr><td>How to define poles</td><td>Sign rule · 1-D GMM along axis · continuous projection</td><td>No strong/weak sub-humps on any axis. Only spontaneous extra hump: isoflurane suppression lump.</td><td><span class="pill lean">Sign for discovery, projection as expression; test firing vs. strength</span></td></tr>
+        <tr><td>Strength as separate motifs?</td><td>Weak / strong as different motifs vs. one continuous strength</td><td>Strength is continuous; profiles keep the motif's shape at every intensity.</td><td><span class="pill lean">Continuous, unless firing is non-monotonic in strength</span></td></tr>
+        <tr><td>Baseline</td><td>Label quiet seconds vs. treat as a state</td><td>Quiet seconds are 1.2–1.5× more common than a matched Gaussian under isoflurane (p ≈ 0.005), but no separate cluster.</td><td><span class="pill">Run a dwell-time test</span></td></tr>
+        <tr><td>Stimulus periods</td><td>Exclude vs. separate labelled bins</td><td>Stimulation creates the only repeatable pole split and the narrow humps; the awake + pole sits in the visual block.</td><td><span class="pill lean">Separate bins, labelled evoked vs. spontaneous</span></td></tr>
+        <tr><td>Suppression seconds</td><td>Ignore · flag as broadband · own state</td><td>Compact, far out (−5.5 on iso M1), ~8% of spontaneous isoflurane, every band low.</td><td><span class="pill lean">Own state label</span></td></tr>
+        <tr><td>Bands</td><td>Report's 10 bands vs. Mishler's 76 bands [k, k+4] with 60 Hz notch</td><td>Not compared yet. Band count (5–20) didn't change the EDA conclusions.</td><td><span class="pill warn">Not tested</span></td></tr>
+        <tr><td>EEG reference</td><td>As recorded vs. common average</td><td>CAR: 28 vs 30 distinct candidates, higher broadband share, 100% still match an LFP candidate.</td><td><span class="pill">No gain for candidates</span></td></tr>
+        <tr><td>Validation design</td><td>Same data vs. held-out time</td><td>With ~1,800 candidates, many will pass by chance on the data they came from.</td><td><span class="pill lean">Held-out time</span></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section id="report">
+    <h2>Motif detection on three signals and all channels</h2>
+    <div class="section-meta">1 Nov · report_mouse720762_2026-11-01.docx · branch naman-mouse720762-states</div>
+    <p>Mishler's pipeline ported to Python and run in three versions on frontal EEG (ch13, MOs), somatosensory EEG (ch10, SSp-ll) and deep prelimbic LFP (PL5), in awake, isoflurane and full-recording windows, with electrical stimulation blocks excluded.</p>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Version</th><th>Rules</th></tr></thead>
+      <tbody>
+        <tr><td>original</td><td>getMotifs.m as written: one session, 20 circular-shift nulls, candidate must beat every null</td></tr>
+        <tr><td>strict</td><td>Same rules on 5-minute chunks treated as sessions; motif must appear in every chunk</td></tr>
+        <tr><td>relaxed</td><td>100 nulls, permutation p ≤ 0.05, present in at least half the chunks, null cluster sizes normalised for the number of seconds kept</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Motif pairs found</h3>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Signal</th><th>Window</th><th class="num">original</th><th class="num">strict</th><th class="num">relaxed</th><th class="num">relaxed p</th></tr></thead>
+      <tbody>
+        <tr><td>EEG ch13</td><td class="awake">awake</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">–</td></tr>
+        <tr><td>EEG ch13</td><td class="iso">isoflurane</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0.010</td></tr>
+        <tr><td>EEG ch13</td><td>full</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0.010</td></tr>
+        <tr><td>EEG ch10</td><td class="awake">awake</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">–</td></tr>
+        <tr><td>EEG ch10</td><td class="iso">isoflurane</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0.010</td></tr>
+        <tr><td>EEG ch10</td><td>full</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">–</td></tr>
+        <tr><td>LFP PL5</td><td class="awake">awake</td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num">0.010</td></tr>
+        <tr><td>LFP PL5</td><td class="iso">isoflurane</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0.010</td></tr>
+        <tr><td>LFP PL5</td><td>full</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0.010</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Checks on the method</h3>
+    <ul>
+      <li><b>Calibration on synthetic noise</b> (20 datasets each): independent bands give 1 false motif under strict, 0 under relaxed. A shared broadband component produces false motifs under every version (16/20 relaxed at weight 0.5), but 15 of 16 are caught by the broadband flag (at most 1 band of the minority sign).</li>
+      <li><b>Null-size bias:</b> circular shifts keep 59–92% more seconds than real data under isoflurane (e.g. 1,897 vs 1,191 for EEG ch13), because real isoflurane has more all-same-sign seconds that get dropped. This inflates the null; the relaxed version normalises for it.</li>
+      <li><b>Bootstrap over chunks</b> (40 resamples): PL5 detection 0.88 awake, 0.93 isoflurane; EEG 0.28–0.68.</li>
+      <li><b>Exact permutation test of chunks:</b> pole balance differs between states (p = 0.008 for PL5 and EEG ch13); motif shape does not differ significantly (p = 0.11, 0.40).</li>
+      <li><b>EEG vs LFP:</b> isoflurane motifs match in shape (|r| 0.93 ch13, 0.91 ch10) and in time (r = 0.68).</li>
+    </ul>
+
+    <h3>All channels</h3>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Signals</th><th>Window</th><th class="num">strict motif</th><th class="num">relaxed only</th><th class="num">broadband only</th><th class="num">none</th></tr></thead>
+      <tbody>
+        <tr><td>EEG (26)</td><td class="awake">awake</td><td class="num">9</td><td class="num">4</td><td class="num">2</td><td class="num">11</td></tr>
+        <tr><td>EEG (26)</td><td class="iso">isoflurane</td><td class="num">0</td><td class="num">21</td><td class="num">0</td><td class="num">5</td></tr>
+        <tr><td>EEG (26)</td><td>full</td><td class="num">0</td><td class="num">13</td><td class="num">1</td><td class="num">12</td></tr>
+        <tr><td>LFP (45)</td><td class="awake">awake</td><td class="num">11</td><td class="num">6</td><td class="num">10</td><td class="num">18</td></tr>
+        <tr><td>LFP (45)</td><td class="iso">isoflurane</td><td class="num">0</td><td class="num">17</td><td class="num">7</td><td class="num">21</td></tr>
+        <tr><td>LFP (45)</td><td>full</td><td class="num">0</td><td class="num">10</td><td class="num">3</td><td class="num">32</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Bootstrap across all signals: within-state |r| median 0.97–0.98, across-state 0.35–0.37 (all 44 LFP regions show the gap). Awake EEG–LFP motif coupling: 221 pairs, median |r| 0.44; strongest MOs2/3 with frontal and visual EEG (|r| up to 0.81).</p>
+
+    <figure><a href="figs/r_01_overview_timeline.png" target="_blank" rel="noopener"><img src="figs/r_01_overview_timeline.png" alt="Session timeline with isoflurane level, stimulus blocks and signals"></a><figcaption><b>Session overview.</b> Isoflurane level, stimulus blocks and the three signals.</figcaption></figure>
+    <div class="figrow">
+      <figure><a href="figs/r_06_motifs_lfp_PL5.png" target="_blank" rel="noopener"><img src="figs/r_06_motifs_lfp_PL5.png" alt="PL5 motifs by version and window"></a><figcaption><b>PL5 motifs</b> by version and window.</figcaption></figure>
+      <figure><a href="figs/r_06_motifs_eeg13.png" target="_blank" rel="noopener"><img src="figs/r_06_motifs_eeg13.png" alt="EEG ch13 motifs"></a><figcaption><b>EEG ch13 motifs.</b></figcaption></figure>
+    </div>
+    <figure><a href="figs/r_03_power_spectra.png" target="_blank" rel="noopener"><img src="figs/r_03_power_spectra.png" alt="Power spectra awake vs isoflurane"></a><figcaption><b>Power spectra.</b> Isoflurane vs awake on PL5: +4.3 dB at 1–4 Hz, +5.9 dB at 8–12 Hz, +5.4 dB at 12–30 Hz, −1.0 dB at 30–80 Hz.</figcaption></figure>
+    <div class="figrow">
+      <figure><a href="figs/r_08_permutation_test.png" target="_blank" rel="noopener"><img src="figs/r_08_permutation_test.png" alt="Permutation test of chunks"></a><figcaption><b>Permutation test:</b> pole balance separates states, shape does not.</figcaption></figure>
+      <figure><a href="figs/r_09_spikes_by_LFP_pole.png" target="_blank" rel="noopener"><img src="figs/r_09_spikes_by_LFP_pole.png" alt="PL5 firing by LFP pole"></a><figcaption><b>PL5 firing by LFP pole.</b> Awake: 0.94 z difference, p = 0.001 (611 + vs 919 − seconds). Isoflurane: 0.64 z, p = 0.07.</figcaption></figure>
+    </div>
+    <figure><a href="figs/r_10_bootstrap_stability.png" target="_blank" rel="noopener"><img src="figs/r_10_bootstrap_stability.png" alt="Bootstrap stability"></a><figcaption><b>Bootstrap stability</b> for the three signals.</figcaption></figure>
+    <div class="figrow">
+      <figure><a href="figs/r_12_lfp_region_grid.png" target="_blank" rel="noopener"><img src="figs/r_12_lfp_region_grid.png" alt="LFP region grid"></a><figcaption><b>Which LFP regions have motifs</b>, by window and version.</figcaption></figure>
+      <figure><a href="figs/r_13_motif_shapes_all_signals.png" target="_blank" rel="noopener"><img src="figs/r_13_motif_shapes_all_signals.png" alt="Motif shapes on all signals"></a><figcaption><b>Motif shapes on every signal.</b></figcaption></figure>
+    </div>
+    <div class="figrow">
+      <figure><a href="figs/r_14_eeg_lfp_coupling.png" target="_blank" rel="noopener"><img src="figs/r_14_eeg_lfp_coupling.png" alt="EEG LFP coupling"></a><figcaption><b>EEG–LFP motif coupling</b> in time.</figcaption></figure>
+      <figure><a href="figs/r_16_bootstrap_all_signals.png" target="_blank" rel="noopener"><img src="figs/r_16_bootstrap_all_signals.png" alt="Bootstrap on all signals"></a><figcaption><b>Within- vs across-state similarity</b> on all signals.</figcaption></figure>
+    </div>
+    <figure><a href="figs/r_17_spikes_by_pole_regions.png" target="_blank" rel="noopener"><img src="figs/r_17_spikes_by_pole_regions.png" alt="Spikes by pole across regions"></a><figcaption><b>PL5 firing by pole</b> for motifs from other regions.</figcaption></figure>
+  </section>
+
+  <section id="pca">
+    <h2>PCA and projections onto motif axes</h2>
+    <div class="section-meta">3 Nov · pca_lfp_states.ipynb, motif_axis_projection.ipynb · PL5, report bands</div>
+    <div class="table-scroll"><table>
+      <thead><tr><th></th><th class="num">awake</th><th class="num">isoflurane</th><th class="num">full</th></tr></thead>
+      <tbody>
+        <tr><td>Variance on PC1 (centered)</td><td class="num">36%</td><td class="num">82%</td><td class="num">62%</td></tr>
+        <tr><td>PC1, z-scored within each stretch</td><td class="num">31%</td><td class="num">82%</td><td class="num">–</td></tr>
+        <tr><td>PC1 of phase-randomised surrogate</td><td class="num">17%</td><td class="num">16%</td><td class="num">–</td></tr>
+        <tr><td>|r| of the motif with PC1 / PC2</td><td class="num">0.99 / 0.33</td><td class="num">0.04 / 1.00</td><td class="num">0.35 / 0.99</td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li>The awake motif is the main axis of awake variation; the isoflurane motif is the second axis under isoflurane (the first is an overall level change).</li>
+      <li>Awake PC1 vs running speed: r = 0.23.</li>
+      <li>Seconds spread continuously along each axis, and the band profile keeps the motif's shape at every intensity (no sub-motifs by intensity).</li>
+      <li>Peaks that exist have other explanations: the two states (full), the two stretches of the isoflurane window, and a sharp isoflurane spike where every band is low (burst suppression).</li>
+    </ul>
+    <div class="figrow">
+      <figure><a href="figs/p_pca_scatter_and_band_patterns.png" target="_blank" rel="noopener"><img src="figs/p_pca_scatter_and_band_patterns.png" alt="PCA scatter and band patterns"></a><figcaption><b>PC scatter and loadings</b> per window.</figcaption></figure>
+      <figure><a href="figs/p_motif_axis_histograms.png" target="_blank" rel="noopener"><img src="figs/p_motif_axis_histograms.png" alt="Motif axis histograms"></a><figcaption><b>Seconds along each motif axis.</b></figcaption></figure>
+    </div>
+    <div class="figrow">
+      <figure><a href="figs/p_pca_within_stretch.png" target="_blank" rel="noopener"><img src="figs/p_pca_within_stretch.png" alt="PCA within stretch vs surrogate"></a><figcaption><b>Within-stretch PCA vs surrogate.</b></figcaption></figure>
+      <figure><a href="figs/p_profiles_along_axis.png" target="_blank" rel="noopener"><img src="figs/p_profiles_along_axis.png" alt="Profiles along axis"></a><figcaption><b>Mean band profile in 10 groups along the axis:</b> same shape, scaled.</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="eda">
+    <h2>Band-count EDA: sub-poles and baseline</h2>
+    <div class="section-meta">8 Nov · band_eda.ipynb · PL5 · 5, 6, 8, 10, 20 log-spaced bands (not the report set) · awake, isoflurane, full · stimuli included or excluded</div>
+    <ul>
+      <li><b>Single bands:</b> awake is one slightly right-skewed hump per band. Isoflurane with stimuli adds a sharp low peak in every band (suppression seconds).</li>
+      <li><b>PCA:</b> awake is one cloud; isoflurane a fan with a dense tip; full two clusters. Uncentered PC1 holds 93–100% of the variance and is the average spectrum.</li>
+      <li><b>Sub-poles across the axis</b> (split inside a pole): 7 of 84 poles at p ≤ 0.05, about 4 expected by chance. The only repeatable one is 99% electrical stimulation and disappears with stimuli excluded.</li>
+      <li><b>Bimodality along the axis</b> (dip test vs. band-shifted data): 6 of 11 axes at 10 bands. A stricter surrogate later showed most of this is states, stimulation or suppression (see <a href="#humps">humps</a>).</li>
+      <li><b>Baseline:</b> with stimuli excluded, quiet seconds are 1.2–1.5× more common than in a matched Gaussian under isoflurane (p ≈ 0.005 at every band count) and 1.2–2.0× awake (significant at 5–8 bands). No separate central cluster.</li>
+    </ul>
+    <figure><a href="figs/e_1_band_distributions_10.png" target="_blank" rel="noopener"><img src="figs/e_1_band_distributions_10.png" alt="Band distributions"></a><figcaption><b>Distribution of each band</b> (10 bands).</figcaption></figure>
+    <div class="figrow">
+      <figure><a href="figs/e_2_pca_10.png" target="_blank" rel="noopener"><img src="figs/e_2_pca_10.png" alt="Centered and uncentered PCA"></a><figcaption><b>Centered and uncentered PCA</b>, top 2 and 3 PCs.</figcaption></figure>
+      <figure><a href="figs/e_4_motif_axes_10.png" target="_blank" rel="noopener"><img src="figs/e_4_motif_axes_10.png" alt="Seconds along motif axes"></a><figcaption><b>Seconds along each motif axis</b>, coloured by state; black line is the band-shifted null.</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="candidates">
+    <h2>Getting more candidate motifs</h2>
+    <div class="section-meta">8 Nov · candidate_motifs.ipynb · report bands · PL5, 26 EEG (raw and CAR), 45 LFP regions</div>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Idea</th><th class="num">PL5 distinct candidates</th><th>Verdict</th></tr></thead>
+      <tbody>
+        <tr><td>Current relaxed version</td><td class="num">4</td><td>baseline</td></tr>
+        <tr><td>F: present in any chunk</td><td class="num">4</td><td>identical to current</td></tr>
+        <tr><td>C: baseline label</td><td class="num">4</td><td>adds labels, not patterns</td></tr>
+        <tr><td>A: GMM poles (2 or 3 components)</td><td class="num">4</td><td>2 components always mirrored; 3 absorb broadband shifts</td></tr>
+        <tr><td>B: no binarization</td><td class="num">0</td><td>worse</td></tr>
+        <tr><td>G: finer time bins</td><td class="num">18</td><td>4.5×, mostly awake and stimulus-evoked bins</td></tr>
+        <tr><td>P: keep all, p-value as score</td><td class="num">36</td><td>9×, the biggest lever</td></tr>
+        <tr><td>G+P</td><td class="num">108</td><td>27×</td></tr>
+      </tbody>
+    </table></div>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Signals</th><th>Variant</th><th class="num">distinct</th><th class="num">not broadband</th><th class="num">broadband share</th></tr></thead>
+      <tbody>
+        <tr><td>LFP (45)</td><td>relaxed (current)</td><td class="num">48</td><td class="num">26</td><td class="num">0.44</td></tr>
+        <tr><td>LFP (45)</td><td>G+F</td><td class="num">142</td><td class="num">106</td><td class="num">0.49</td></tr>
+        <tr><td>LFP (45)</td><td>P</td><td class="num">1,128</td><td class="num">1,056</td><td class="num">0.09</td></tr>
+        <tr><td>LFP (45)</td><td>max (G+P+A+C)</td><td class="num">1,238</td><td class="num">864</td><td class="num">0.49</td></tr>
+        <tr><td>EEG raw (26)</td><td>relaxed (current)</td><td class="num">30</td><td class="num">22</td><td class="num">0.28</td></tr>
+        <tr><td>EEG CAR (26)</td><td>relaxed (current)</td><td class="num">28</td><td class="num">20</td><td class="num">0.44</td></tr>
+        <tr><td>EEG CAR (26)</td><td>max</td><td class="num">1,044</td><td class="num">751</td><td class="num">0.49</td></tr>
+        <tr><td colspan="2">All LFP + CAR EEG, max</td><td class="num">1,810</td><td class="num">1,312</td><td class="num">–</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Two candidates count as the same if their band patterns correlate at r ≥ 0.9 with the same sign. "Broadband-like" = at most 1 band of the minority sign.</p>
+    <figure><a href="figs/c_1_pl5_candidates_by_variant.png" target="_blank" rel="noopener"><img src="figs/c_1_pl5_candidates_by_variant.png" alt="PL5 candidates by variant"></a><figcaption><b>PL5 candidates for each variant.</b></figcaption></figure>
+    <div class="figrow">
+      <figure><a href="figs/c_3_redundancy.png" target="_blank" rel="noopener"><img src="figs/c_3_redundancy.png" alt="Redundancy between variants"></a><figcaption><b>Redundancy:</b> share of one variant's candidates found by another.</figcaption></figure>
+      <figure><a href="figs/c_6_union_accumulation.png" target="_blank" rel="noopener"><img src="figs/c_6_union_accumulation.png" alt="Union accumulation across channels"></a><figcaption><b>Distinct candidates as channels are added.</b> P and max keep rising, which suggests channel-specific noise.</figcaption></figure>
+    </div>
+    <figure><a href="figs/c_6_templates_lfp_PL5.png" target="_blank" rel="noopener"><img src="figs/c_6_templates_lfp_PL5.png" alt="PL5 candidate templates"></a><figcaption><b>PL5 candidates</b> (G+F), labelled by the bin they were found in.</figcaption></figure>
+    <figure><a href="figs/c_6_strength_over_time_lfp_PL5.png" target="_blank" rel="noopener"><img src="figs/c_6_strength_over_time_lfp_PL5.png" alt="PL5 candidate strength over time"></a><figcaption><b>PL5 candidate strength over the recording</b> with isoflurane, stimuli, running and pupil. Mostly slow state and stimulus changes; one candidate tracks pupil (r = 0.50).</figcaption></figure>
+    <figure><a href="figs/c_6_templates_eeg20_car.png" target="_blank" rel="noopener"><img src="figs/c_6_templates_eeg20_car.png" alt="EEG ch20 CAR candidate templates"></a><figcaption><b>EEG ch20 (CAR) candidates.</b></figcaption></figure>
+    <figure><a href="figs/c_6_strength_over_time_eeg20_car.png" target="_blank" rel="noopener"><img src="figs/c_6_strength_over_time_eeg20_car.png" alt="EEG ch20 CAR candidate strength over time"></a><figcaption><b>EEG ch20 (CAR) candidate strength over time.</b></figcaption></figure>
+  </section>
+
+  <section id="gmm">
+    <h2>Gaussian mixtures in the full 10-band space</h2>
+    <div class="section-meta">9 Nov · gmm_motifs.ipynb · PL5 · report bands · number of components chosen on held-out time against phase-randomised surrogates</div>
+    <p>Each second is a point in 10-D; a mixture is fitted with no motif axis given. Component means are candidate motifs; responsibilities are their expression. "Extra structure" is how much more the real data gains from extra components than surrogates with the same band correlations but no clusters (held-out log-likelihood, nats per second).</p>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Bin</th><th class="num">seconds</th><th class="num">best K</th><th class="num">extra structure</th><th>What the components are</th></tr></thead>
+      <tbody>
+        <tr><td class="awake">Spontaneous awake</td><td class="num">947</td><td class="num">1</td><td class="num">0.00</td><td>one cloud, no clusters</td></tr>
+        <tr><td class="iso">Spontaneous isoflurane</td><td class="num">1,388</td><td class="num">2</td><td class="num">0.37</td><td>broadband-low cluster (11%, all bands about −2 z) + the rest</td></tr>
+        <tr><td>Awake, stimuli included</td><td class="num">3,238</td><td class="num">2</td><td class="num">0.20</td><td>mirrored pair</td></tr>
+        <tr><td>Isoflurane, stimuli included</td><td class="num">3,662</td><td class="num">4</td><td class="num">3.19</td><td>all broadband-like</td></tr>
+        <tr><td>Full recording</td><td class="num">7,088</td><td class="num">7</td><td class="num">5.53</td><td>epochs of the session (below)</td></tr>
+      </tbody>
+    </table></div>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Full-recording component</th><th class="num">share</th><th>When</th><th>Pattern</th><th class="num">split-half r</th></tr></thead>
+      <tbody>
+        <tr><td>#4</td><td class="num">29%</td><td>spontaneous awake</td><td>theta and gamma slightly up</td><td class="num">0.35</td></tr>
+        <tr><td>#2</td><td class="num">18%</td><td>awake visual block, pre-induction</td><td>theta and beta–gamma up</td><td class="num">0.94</td></tr>
+        <tr><td>#7</td><td class="num">17%</td><td>early isoflurane</td><td>delta and alpha–beta up, gamma down</td><td class="num">0.59</td></tr>
+        <tr><td>#6</td><td class="num">9%</td><td>isoflurane</td><td>all bands down (broadband)</td><td class="num">0.81</td></tr>
+        <tr><td>#5</td><td class="num">6%</td><td>isoflurane, intermittent</td><td>all bands up except gamma (broadband)</td><td class="num">0.94</td></tr>
+        <tr><td>#3</td><td class="num">12%</td><td>isoflurane electrical stimulation, late</td><td>all bands down strongly (broadband)</td><td class="num">0.98</td></tr>
+        <tr><td>#1</td><td class="num">9%</td><td>late isoflurane</td><td>alpha–beta up, gamma down</td><td class="num">0.95</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Split-half r: the component re-found when fitting alternating 5-minute blocks separately. Awake and isoflurane components form near-opponent pairs (r ≈ −0.9). Within awake seconds, #2 vs #4 tracks pupil (r = ±0.60) and running weakly (±0.14).</p>
+    <div class="callout">With K = 2 the two component means are always exact opposites (r = −1.00), in 10-D just as along an axis, because z-scored data average to zero: weight₁·mean₁ + weight₂·mean₂ = 0. Non-mirrored candidates need K ≥ 3.</div>
+    <figure><a href="figs/g_1_choose_k.png" target="_blank" rel="noopener"><img src="figs/g_1_choose_k.png" alt="Choosing K"></a><figcaption><b>Held-out likelihood vs number of components</b>, real data (black) against surrogates (grey).</figcaption></figure>
+    <figure><a href="figs/g_2_means_full.png" target="_blank" rel="noopener"><img src="figs/g_2_means_full.png" alt="Full recording component means"></a><figcaption><b>Full-recording component means</b> (BB = broadband-like).</figcaption></figure>
+    <figure><a href="figs/g_5_timeline_full.png" target="_blank" rel="noopener"><img src="figs/g_5_timeline_full.png" alt="Component responsibility over time"></a><figcaption><b>Component responsibility over the recording</b> with isoflurane, stimuli, running and pupil: an unsupervised segmentation into epochs.</figcaption></figure>
+    <div class="figrow">
+      <figure><a href="figs/g_2_means_by_k_awake.png" target="_blank" rel="noopener"><img src="figs/g_2_means_by_k_awake.png" alt="Awake means for K 2 to 6"></a><figcaption><b>Spontaneous awake, K = 2–6.</b> Slices of one cloud; held-out data support K = 1.</figcaption></figure>
+      <figure><a href="figs/g_2_means_by_k_isoflurane.png" target="_blank" rel="noopener"><img src="figs/g_2_means_by_k_isoflurane.png" alt="Isoflurane means for K 2 to 6"></a><figcaption><b>Spontaneous isoflurane, K = 2–6.</b> The broadband-low cluster appears at every K.</figcaption></figure>
+    </div>
+    <figure><a href="figs/g_4_pc_scatter.png" target="_blank" rel="noopener"><img src="figs/g_4_pc_scatter.png" alt="PC scatter coloured by component"></a><figcaption><b>Seconds on the first two PCs</b>, coloured by component; stars are means.</figcaption></figure>
+    <figure class="half"><a href="figs/g_3_component_correlations.png" target="_blank" rel="noopener"><img src="figs/g_3_component_correlations.png" alt="Correlation between component means"></a><figcaption><b>Correlation between component means</b> per bin.</figcaption></figure>
+
+    <h3>1-D mixtures along each motif axis</h3>
+    <p>Mishler's axes come first; seconds are projected onto each, and a 2- and 3-component mixture is fitted to the projection. Pole templates are the responsibility-weighted average of the full 10-band seconds.</p>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Stimuli</th><th>Window</th><th>Axis</th><th class="num">2-comp r(high, −low)</th><th class="num">3-comp r(high, −low)</th></tr></thead>
+      <tbody>
+        <tr><td>included</td><td class="awake">awake</td><td>M1</td><td class="num">1.000</td><td class="num">0.996</td></tr>
+        <tr><td>included</td><td class="iso">isoflurane</td><td>M1</td><td class="num">1.000</td><td class="num">0.868</td></tr>
+        <tr><td>included</td><td class="iso">isoflurane</td><td>M2</td><td class="num">1.000</td><td class="num">0.499</td></tr>
+        <tr><td>included</td><td class="iso">isoflurane</td><td>M3</td><td class="num">1.000</td><td class="num">0.402</td></tr>
+        <tr><td>included</td><td>full</td><td>M1</td><td class="num">1.000</td><td class="num">0.926</td></tr>
+        <tr><td>excluded</td><td class="awake">awake</td><td>M1</td><td class="num">1.000</td><td class="num">0.960</td></tr>
+        <tr><td>excluded</td><td class="awake">awake</td><td>M2</td><td class="num">1.000</td><td class="num">0.956</td></tr>
+        <tr><td>excluded</td><td class="iso">isoflurane</td><td>M1</td><td class="num">1.000</td><td class="num">0.747</td></tr>
+        <tr><td>excluded</td><td class="iso">isoflurane</td><td>M2</td><td class="num">1.000</td><td class="num">0.992</td></tr>
+        <tr><td>excluded</td><td class="iso">isoflurane</td><td>M3</td><td class="num">1.000</td><td class="num">0.566</td></tr>
+        <tr><td>excluded</td><td>full</td><td>M1</td><td class="num">1.000</td><td class="num">0.998</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Shape asymmetry (r below 1) appears only on isoflurane axes, and is mostly an overall broadband level pulled into each pole. Position asymmetry is real: on spontaneous isoflurane M1 the 2-component weights are 0.24 / 0.76, so the low pole sits about 3× farther from zero than the high pole.</p>
+    <figure><a href="figs/g_6_axis_gmm_excluded_isoflurane_m1.png" target="_blank" rel="noopener"><img src="figs/g_6_axis_gmm_excluded_isoflurane_m1.png" alt="Isoflurane M1 axis GMM, stimuli excluded"></a><figcaption><b>Spontaneous isoflurane, M1:</b> the far-left lump is the suppression population.</figcaption></figure>
+    <figure><a href="figs/g_6_axis_gmm_included_isoflurane_m1.png" target="_blank" rel="noopener"><img src="figs/g_6_axis_gmm_included_isoflurane_m1.png" alt="Isoflurane M1 axis GMM, stimuli included"></a><figcaption><b>Isoflurane with stimuli, M1.</b></figcaption></figure>
+    <figure><a href="figs/g_6_axis_gmm_excluded_awake_m2.png" target="_blank" rel="noopener"><img src="figs/g_6_axis_gmm_excluded_awake_m2.png" alt="Awake M2 axis GMM"></a><figcaption><b>Spontaneous awake, M2:</b> one hump; the mixture splits it arbitrarily.</figcaption></figure>
+    <figure><a href="figs/g_6_axis_gmm_excluded_full_m1.png" target="_blank" rel="noopener"><img src="figs/g_6_axis_gmm_excluded_full_m1.png" alt="Full recording M1 axis GMM"></a><figcaption><b>Full recording, M1:</b> the two humps are awake and isoflurane.</figcaption></figure>
+  </section>
+
+  <section id="humps">
+    <h2>How many humps along each motif axis?</h2>
+    <div class="section-meta">9 Nov · scratchpad humps.py · results in hump_test.csv · band-EDA axes (10 log-spaced bands)</div>
+    <p>The question: are there strong and weak humps on each side (strong +, weak +, weak −, strong −) that should be separate motifs? 1-D mixtures with 1–6 humps, scored on held-out time against 5 phase surrogates per axis. A hump counts only if it helps the real data more than the surrogates.</p>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Stimuli</th><th>Window</th><th>Axis</th><th class="num">gain at 2 humps</th><th class="num">best gain (humps)</th><th>Supported</th><th>What they are</th></tr></thead>
+      <tbody>
+        <tr><td>excluded</td><td class="awake">awake</td><td>M1</td><td class="num">−0.01</td><td class="num">0.00 (1)</td><td>1</td><td>one hump</td></tr>
+        <tr><td>excluded</td><td class="awake">awake</td><td>M2</td><td class="num">0.00</td><td class="num">0.00 (1)</td><td>1</td><td>one hump</td></tr>
+        <tr><td>excluded</td><td class="iso">isoflurane</td><td>M1</td><td class="num">0.10</td><td class="num">0.14 (4)</td><td>2–3</td><td>lump at −5.5 (8%): suppression seconds</td></tr>
+        <tr><td>excluded</td><td class="iso">isoflurane</td><td>M2</td><td class="num">0.00</td><td class="num">0.00 (1)</td><td>1</td><td>one hump</td></tr>
+        <tr><td>excluded</td><td class="iso">isoflurane</td><td>M3</td><td class="num">−0.12</td><td class="num">0.00 (1)</td><td>1</td><td>one hump</td></tr>
+        <tr><td>excluded</td><td>full</td><td>M1</td><td class="num">0.49</td><td class="num">0.49 (2)</td><td>2</td><td>awake vs isoflurane</td></tr>
+        <tr><td>included</td><td class="awake">awake</td><td>M1</td><td class="num">0.04</td><td class="num">0.05 (5)</td><td>2, weak</td><td>skew from stimulation</td></tr>
+        <tr><td>included</td><td class="iso">isoflurane</td><td>M1</td><td class="num">0.05</td><td class="num">0.05 (2)</td><td>2</td><td>narrow hump at −2.4 (32%) + bulk</td></tr>
+        <tr><td>included</td><td class="iso">isoflurane</td><td>M2</td><td class="num">0.03</td><td class="num">0.09 (4)</td><td>3</td><td>stimulation-related</td></tr>
+        <tr><td>included</td><td class="iso">isoflurane</td><td>M3</td><td class="num">0.09</td><td class="num">0.10 (5)</td><td>2</td><td>narrow hump at −2.4 (24%) + bulk</td></tr>
+        <tr><td>included</td><td>full</td><td>M1</td><td class="num">0.28</td><td class="num">0.40 (3)</td><td>3</td><td>awake vs isoflurane</td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li><b>No axis shows the strong/weak pattern on both sides.</b> Spontaneous awake has one hump on both axes.</li>
+      <li><b>The one spontaneous extra hump</b> (isoflurane M1) is broadband-low suppression seconds: a separate state, not a stronger version of M1.</li>
+      <li><b>The band-shift null used in the EDA was too weak:</b> it breaks band correlations. Against the stricter surrogate, the remaining bimodality is states, stimulation, or suppression.</li>
+      <li><b>Open test, needs spikes:</b> bin each axis's projection into 5 strength levels and plot firing against strength. Monotonic firing means one motif with a continuous strength; non-monotonic firing would justify sub-motifs even without humps.</li>
+    </ul>
+  </section>
+
+  <section id="caveats">
+    <h2>Caveats</h2>
+    <ul>
+      <li>One mouse, one session. Most EDA and the mixture work use one channel (PL5).</li>
+      <li>Ten bands throughout, not Mishler's 76 bands [k, k+4]; no 60 Hz notch or noise filter. The band EDA used log-spaced bands, not the report set.</li>
+      <li>Spontaneous bins are short (947 s awake, 1,388 s isoflurane), which limits how many components or humps any test can support.</li>
+      <li>Stimulus blocks are fixed in time, so stimulus effects and time-in-session effects are confounded.</li>
+      <li>No held-out validation has been run yet; the spike result above comes from the same data the motif was found on.</li>
+    </ul>
+  </section>
+
+  <section id="files">
+    <h2>Files</h2>
+    <div class="section-meta">Repo dc-allen-data-acquire · branch naman-mouse720762-states · everything after 1 Nov is not committed yet</div>
+    <h3>Notebooks (code/python/notebooks)</h3>
+    <div class="files">
+      <div>pca_lfp_states.ipynb <span>· 3 Nov PCA</span></div>
+      <div>motif_axis_projection.ipynb <span>· 3 Nov axes</span></div>
+      <div>band_eda.ipynb <span>· 8 Nov EDA</span></div>
+      <div>candidate_motifs.ipynb <span>· 8 Nov candidates</span></div>
+      <div>gmm_motifs.ipynb <span>· 9 Nov mixtures</span></div>
+    </div>
+    <h3>Code (code/python/src)</h3>
+    <div class="files">
+      <div>get_motifs.py <span>· port + relaxed options + binarize switch</span></div>
+      <div>state_motifs.py <span>· report pipeline, bands</span></div>
+      <div>band_eda.py <span>· EDA helpers</span></div>
+      <div>candidate_motifs.py <span>· candidate variants</span></div>
+      <div>gmm_motifs.py <span>· 10-D mixtures, surrogates</span></div>
+    </div>
+    <h3>Outputs (data/out)</h3>
+    <div class="files">
+      <div>2026-11-01_mouse720762/ <span>· report, results.json, all_channels</span></div>
+      <div>2026-11-03_pca_and_motif_axes/</div>
+      <div>2026-11-08_band_eda/ <span>· axis_tests.csv, baseline_tests.csv</span></div>
+      <div>2026-11-08_candidate_motifs/ <span>· channels_summary.csv</span></div>
+      <div>2026-11-09_gmm_motifs/</div>
+      <div>2026-11-09_compiled_results/ <span>· this page, hump_test.csv</span></div>
+    </div>
+  </section>
+</main>
+</div>

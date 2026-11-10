@@ -1,0 +1,110 @@
+{
+ "n_windows": 114,
+ "n_candidates": 191,
+ "n_tracks": 53,
+ "library": [
+  {
+   "motif": "M1",
+   "life": 89,
+   "broadband": true
+  },
+  {
+   "motif": "M2",
+   "life": 25,
+   "broadband": false
+  },
+  {
+   "motif": "M3",
+   "life": 4,
+   "broadband": false
+  },
+  {
+   "motif": "M4",
+   "life": 4,
+   "broadband": false
+  },
+  {
+   "motif": "M5",
+   "life": 4,
+   "broadband": false
+  },
+  {
+   "motif": "M6",
+   "life": 4,
+   "broadband": false
+  },
+  {
+   "motif": "M7",
+   "life": 3,
+   "broadband": false
+  },
+  {
+   "motif": "M8",
+   "life": 3,
+   "broadband": false
+  },
+  {
+   "motif": "M9",
+   "life": 3,
+   "broadband": false
+  }
+ ],
+ "present_share": {
+  "M1": 0.8070175438596491,
+  "M2": 0.2543859649122807,
+  "M3": 0.06140350877192982,
+  "M4": 0.08771929824561403,
+  "M5": 0.05263157894736842,
+  "M6": 0.09649122807017543,
+  "M7": 0.043859649122807015,
+  "M8": 0.03508771929824561,
+  "M9": 0.06140350877192982
+ },
+ "bimodal_share": {
+  "M1": 0.10526315789473684,
+  "M2": 0.0,
+  "M3": 0.05263157894736842,
+  "M4": 0.06140350877192982,
+  "M5": 0.07017543859649122,
+  "M6": 0.008771929824561403,
+  "M7": 0.07017543859649122,
+  "M8": 0.06140350877192982,
+  "M9": 0.03508771929824561
+ },
+ "multi": {
+  "eeg13": {
+   "library": 6,
+   "longest": 77
+  },
+  "lfp_CA3": {
+   "library": 6,
+   "longest": 69
+  },
+  "lfp_MOs5": {
+   "library": 7,
+   "longest": 90
+  },
+  "lfp_PL5": {
+   "library": 9,
+   "longest": 89
+  }
+ },
+ "old_vs_new": [
+  [
+   "relaxed \u00b7 awake",
+   0.7635780213058339
+  ],
+  [
+   "strict \u00b7 awake",
+   0.7454045974110035
+  ],
+  [
+   "relaxed \u00b7 full",
+   0.7206662462606523
+  ],
+  [
+   "relaxed \u00b7 isoflurane",
+   0.9255190405073461
+  ]
+ ]
+}

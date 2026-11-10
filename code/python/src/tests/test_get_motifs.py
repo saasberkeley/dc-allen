@@ -231,3 +231,19 @@ def test_relaxed_with_size_normalization_finds_nothing_in_smooth_noise():
     rng = np.random.default_rng(7)
     result = get_motifs(_smooth_noise(rng, 10, 5, 330), fs=1.0, seed=7, n_null=100, normalize_size=True, **RELAXED)
     assert result.n_motifs == 0
+
+
+def test_continuous_mode_recovers_planted_motifs():
+    rng = np.random.default_rng(1)
+    planted = np.array([[1, 1, 1, -1, -1, -1, 1, 1], [1, -1, -1, 1, 1, -1, -1, 1]], dtype=float)
+    result = get_motifs(_planted_sessions(rng, planted), fs=1.0, seed=0, binarize=False)
+    assert result.n_motifs >= 1
+    for motif in planted:
+        best = max(abs(np.corrcoef(motif, m)[0, 1]) for m in result.motifs.T)
+        assert best > 0.9
+
+
+def test_continuous_mode_finds_nothing_in_smooth_noise():
+    rng = np.random.default_rng(4)
+    result = get_motifs(_smooth_noise(rng, 10, 5, 330), fs=1.0, seed=4, n_null=100, binarize=False, **RELAXED)
+    assert result.n_motifs == 0
