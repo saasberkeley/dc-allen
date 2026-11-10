@@ -159,3 +159,133 @@ def ensemble_targets(X, clusters, rate):
     for i, c in enumerate(clusters):
         out[f"ensemble {i + 1} ({len(c)} units)"] = group_support(X[:, c])
     return out
+
+
+# ---------- opponency: do opposite motif poles recruit opposite neuron groups? ----------
+
+def remove_global(R):
+    """z-score each neuron, then regress the population mean out of it (removes shared gain changes)."""
+    Z = (R - R.mean(0)) / (R.std(0) + 1e-12)
+    pop = Z.mean(1)
+    pop = pop - pop.mean()
+    beta = (Z * pop[:, None]).sum(0) / (pop @ pop + 1e-12)
+    return Z - np.outer(pop, beta)
+
+
+def _shifts(n, rng, n_shift, min_shift=60):
+    return rng.integers(min_shift, max(min_shift + 1, n - min_shift), n_shift)
+
+
+def pole_contrasts(x, R, rng, n_shift=1000, alpha=0.05):
+    """Per neuron: mean activity in + pole seconds (x > 0) minus - pole seconds. The null circularly shifts
+    the pole sequence, the same shift for all neurons. A neuron counts as +preferring (-preferring) when its
+    difference is above the (1 - alpha/2) quantile (below the alpha/2 quantile) of its own null. The same
+    rule applied to each null shift gives the null distribution of the counts."""
+    s = np.sign(x)
+    def diff(sig):
+        return R[sig > 0].mean(0) - R[sig < 0].mean(0)
+    d = diff(s)
+    ks = _shifts(s.size, rng, n_shift)
+    null = np.array([diff(np.roll(s, k)) for k in ks])
+    hi, lo = np.quantile(null, 1 - alpha / 2, axis=0), np.quantile(null, alpha / 2, axis=0)
+    plus, minus = d > hi, d < lo
+    null_plus, null_minus = (null > hi).sum(1), (null < lo).sum(1)
+    both_null = np.minimum(null_plus, null_minus)
+    return {
+        "d": d, "plus": plus, "minus": minus,
+        "n_plus": int(plus.sum()), "n_minus": int(minus.sum()),
+        "p_plus": float((1 + (null_plus >= plus.sum()).sum()) / (n_shift + 1)),
+        "p_minus": float((1 + (null_minus >= minus.sum()).sum()) / (n_shift + 1)),
+        "p_both": float((1 + (both_null >= min(plus.sum(), minus.sum())).sum()) / (n_shift + 1)),
+        "null_plus_95": float(np.percentile(null_plus, 95)), "null_minus_95": float(np.percentile(null_minus, 95)),
+    }
+
+
+def heldout_opponency(x, R, rng, n_shift=200, n_folds=5, block=60, gap=10, q=0.75):
+    """Groups A (+preferring) and B (-preferring) are defined on training blocks: neurons whose training
+    pole difference has the right sign and is in the top quarter by size. On held-out blocks, correlate the
+    motif expression with A's mean activity, B's mean activity and A - B. Null: the same after circularly
+    shifting x relative to the neurons."""
+    i = np.arange(x.size)
+    fid = (i // block) % n_folds
+    inner = ((i % block) >= gap) & ((i % block) < block - gap)
+
+    def run(xx):
+        A = np.full(xx.size, np.nan); B = np.full(xx.size, np.nan)
+        for f in range(n_folds):
+            tr, te = fid != f, (fid == f) & inner
+            s = np.sign(xx[tr])
+            d = R[tr][s > 0].mean(0) - R[tr][s < 0].mean(0)
+            cut = np.quantile(np.abs(d), q)
+            a, b = (d > 0) & (np.abs(d) >= cut), (d < 0) & (np.abs(d) >= cut)
+            if a.any():
+                A[te] = R[te][:, a].mean(1)
+            if b.any():
+                B[te] = R[te][:, b].mean(1)
+        ok = np.isfinite(A) & np.isfinite(B)
+        c = lambda u: float(np.corrcoef(xx[ok], u[ok])[0, 1])
+        return c(A), c(B), c(A - B)
+
+    real = run(x)
+    null = np.array([run(np.roll(x, k)) for k in _shifts(x.size, rng, n_shift)])
+    return {"r_A": real[0], "r_B": real[1], "r_AminusB": real[2],
+            "p_A": float((1 + (null[:, 0] >= real[0]).sum()) / (n_shift + 1)),
+            "p_B": float((1 + (null[:, 1] <= real[1]).sum()) / (n_shift + 1)),
+            "p_AminusB": float((1 + (null[:, 2] >= real[2]).sum()) / (n_shift + 1)),
+            "null95_AminusB": float(np.percentile(null[:, 2], 95))}
+
+
+def ensemble_alternation(X, clusters):
+    """Correlation between every pair of getClust ensembles' activity (negative = they alternate)."""
+    sup = [group_support(X[:, c]) for c in clusters]
+    k = len(sup)
+    return np.array([[np.corrcoef(sup[a], sup[b])[0, 1] for b in range(k)] for a in range(k)]) if k else np.zeros((0, 0))
+
+
+# ---------- does a motif's baseline shift go with a shift in its neuron populations? ----------
+
+def _corr_cols(R, x):
+    Rc, xc = R - R.mean(0), x - x.mean()
+    return (Rc * xc[:, None]).sum(0) / (np.sqrt((Rc ** 2).sum(0) * (xc @ xc)) + 1e-12)
+
+
+def slow_opponency(x, base, R, t, rng, n_shift=500, min_shift=300):
+    """(a) Groups A (+preferring) and B (-preferring) are defined on the fast parts (both detrended).
+    Then: does the slow part of A - B (its 5-min local-linear baseline) follow the motif's baseline?
+    Null: circular shifts of at least min_shift seconds."""
+    Rf, xf = detrend(R, t), detrend(x, t)
+    pc = pole_contrasts(xf, Rf, rng, n_shift=200)
+    a, b = pc["plus"], pc["minus"]
+    if not a.any() or not b.any():
+        return {"n_A": int(a.sum()), "n_B": int(b.sum()), "r": np.nan, "p": np.nan}
+    ab = R[:, a].mean(1) - R[:, b].mean(1)
+    slow = ab - detrend(ab, t)
+    r = float(np.corrcoef(base, slow)[0, 1])
+    null = np.array([np.corrcoef(np.roll(base, k), slow)[0, 1] for k in _shifts(base.size, rng, n_shift, min_shift)])
+    return {"n_A": int(a.sum()), "n_B": int(b.sum()), "r": r,
+            "p": float((1 + (np.abs(null) >= abs(r)).sum()) / (n_shift + 1)), "null95": float(np.percentile(np.abs(null), 95))}
+
+
+def membership_shift(x, base, R, t, rng, n_shift=200, min_shift=300, block=60):
+    """(b) Split seconds into thirds by the motif's baseline. In each third, each neuron's coupling is its
+    correlation with the motif's fast expression (both detrended). Each third is split into even and odd
+    60-s blocks. within = r(coupling, same third, other half); between = r(coupling, low third, high third),
+    also across halves so both use the same amount of data. reorganisation = within - between: about 0 if
+    the same neurons go on and off at low and high baseline. Null: circularly shifted baseline."""
+    Rf, xf = detrend(R, t), detrend(x, t)
+    half = (np.arange(t.size) // block) % 2 == 0
+
+    def index(bb):
+        lo, hi = np.quantile(bb, [1 / 3, 2 / 3])
+        thirds = {"low": bb <= lo, "high": bb >= hi}
+        c = {(k, h): _corr_cols(Rf[m & (half if h else ~half)], xf[m & (half if h else ~half)])
+             for k, m in thirds.items() for h in (True, False)}
+        r = lambda u, v: np.corrcoef(u, v)[0, 1]
+        within = (r(c["low", True], c["low", False]) + r(c["high", True], c["high", False])) / 2
+        between = (r(c["low", True], c["high", False]) + r(c["low", False], c["high", True])) / 2
+        return within, between
+
+    w, b = index(base)
+    null = np.array([np.subtract(*index(np.roll(base, k))) for k in _shifts(base.size, rng, n_shift, min_shift)])
+    return {"within": float(w), "between": float(b), "reorganisation": float(w - b),
+            "p": float((1 + (null >= w - b).sum()) / (n_shift + 1)), "null95": float(np.percentile(null, 95))}
