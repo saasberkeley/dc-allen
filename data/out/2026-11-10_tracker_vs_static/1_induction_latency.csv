@@ -1,0 +1,12 @@
+output,latency after switch-on (s),direction of change
+Isoflurane level,0.677446264214268,1.0
+Pupil,59.677251291619996,-1.0
+Running speed,97.67711298211452,-1.0
+Broadband power,84.67715740731319,-1.0
+Original (awake),96.67711545786278,-1.0
+Relaxed (awake),97.67711298211452,-1.0
+Relaxed (whole session),102.67710060337231,-1.0
+Relaxed (isoflurane),61.67724569427537,-1.0
+Tracker M1 direction,87.67714578207233,-1.0
+Tracker M2 direction,52.67727088232459,1.0
+Tracker M3 direction,204.67679153383096,1.0

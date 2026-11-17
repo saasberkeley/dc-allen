@@ -1,0 +1,101 @@
+axis,measure,covariate,r,p
+Tracker M1 (broadband),+ pole,isoflurane level (whole session),-0.1910617262953763,0.6347305389221557
+Tracker M1 (broadband),+ pole,isoflurane level (within maintenance),-0.6767971946230277,0.001996007984031936
+Tracker M1 (broadband),+ pole,pupil (within awake),0.5125928455562195,0.17964071856287425
+Tracker M1 (broadband),+ pole,pupil (within isoflurane),-0.4909409701928697,0.001996007984031936
+Tracker M1 (broadband),+ pole,running speed (within awake),0.183727482284641,0.7485029940119761
+Tracker M1 (broadband),− pole,isoflurane level (whole session),-0.8450416151961281,0.001996007984031936
+Tracker M1 (broadband),− pole,isoflurane level (within maintenance),-0.6462887200467564,0.001996007984031936
+Tracker M1 (broadband),− pole,pupil (within awake),0.2803722359771194,0.5988023952095808
+Tracker M1 (broadband),− pole,pupil (within isoflurane),-0.7203389830508476,0.001996007984031936
+Tracker M1 (broadband),− pole,running speed (within awake),0.3228037223597712,0.6686626746506986
+Tracker M1 (broadband),midpoint,isoflurane level (whole session),-0.5599603086207247,0.07784431137724551
+Tracker M1 (broadband),midpoint,isoflurane level (within maintenance),-0.6978375219170077,0.001996007984031936
+Tracker M1 (broadband),midpoint,pupil (within awake),0.40911807393494404,0.2275449101796407
+Tracker M1 (broadband),midpoint,pupil (within isoflurane),-0.6365867913500879,0.001996007984031936
+Tracker M1 (broadband),midpoint,running speed (within awake),0.28762913002646634,0.7025948103792415
+Tracker M1 (broadband),separation,isoflurane level (whole session),0.6712338753771694,0.029940119760479042
+Tracker M1 (broadband),separation,isoflurane level (within maintenance),-0.24932787843366455,0.5948103792415169
+Tracker M1 (broadband),separation,pupil (within awake),0.42371723725774774,0.4151696606786427
+Tracker M1 (broadband),separation,pupil (within isoflurane),0.004208065458796027,0.9780439121756487
+Tracker M1 (broadband),separation,running speed (within awake),-0.18150772645778196,0.7984031936127745
+Tracker M1 (broadband),asymmetry,isoflurane level (whole session),0.1861404183795387,0.6447105788423154
+Tracker M1 (broadband),asymmetry,isoflurane level (within maintenance),0.3077147866744594,0.2694610778443114
+Tracker M1 (broadband),asymmetry,pupil (within awake),0.19653376590113547,0.44510978043912175
+Tracker M1 (broadband),asymmetry,pupil (within isoflurane),0.17235534774985392,0.7744510978043913
+Tracker M1 (broadband),asymmetry,running speed (within awake),-0.2618458123452574,0.32934131736526945
+Tracker M2,+ pole,isoflurane level (whole session),0.6250541706324296,0.001996007984031936
+Tracker M2,+ pole,isoflurane level (within maintenance),-0.40029222676797205,0.3073852295409182
+Tracker M2,+ pole,pupil (within awake),0.01434303765047383,1.0
+Tracker M2,+ pole,pupil (within isoflurane),-0.1784921098772648,0.874251497005988
+Tracker M2,+ pole,running speed (within awake),0.553402202680782,0.001996007984031936
+Tracker M2,− pole,isoflurane level (whole session),0.5414511654279988,0.3013972055888224
+Tracker M2,− pole,isoflurane level (within maintenance),-0.3410286382232613,0.17964071856287425
+Tracker M2,− pole,pupil (within awake),-0.1420643729189789,0.906187624750499
+Tracker M2,− pole,pupil (within isoflurane),-0.4444769140853303,0.001996007984031936
+Tracker M2,− pole,running speed (within awake),0.49978656193972504,0.001996007984031936
+Tracker M2,midpoint,isoflurane level (whole session),0.5991899718515219,0.07385229540918163
+Tracker M2,midpoint,isoflurane level (within maintenance),-0.44798363530099367,0.15568862275449102
+Tracker M2,midpoint,pupil (within awake),-0.06514129599590199,0.9660678642714571
+Tracker M2,midpoint,pupil (within isoflurane),-0.3082407948568089,0.6307385229540918
+Tracker M2,midpoint,running speed (within awake),0.5412789208571672,0.001996007984031936
+Tracker M2,separation,isoflurane level (whole session),0.5286203195561047,0.02594810379241517
+Tracker M2,separation,isoflurane level (within maintenance),-0.2901227352425483,0.48502994011976047
+Tracker M2,separation,pupil (within awake),0.28916588406044563,0.49500998003992014
+Tracker M2,separation,pupil (within isoflurane),-0.022326125073056695,0.9760479041916168
+Tracker M2,separation,running speed (within awake),0.1376248612652608,0.5548902195608783
+Tracker M2,asymmetry,isoflurane level (whole session),0.6063749215285231,0.043912175648702596
+Tracker M2,asymmetry,isoflurane level (within maintenance),-0.015546464056107543,0.936127744510978
+Tracker M2,asymmetry,pupil (within awake),0.07128831213181933,0.8702594810379242
+Tracker M2,asymmetry,pupil (within isoflurane),-0.022618351841028644,0.9540918163672655
+Tracker M2,asymmetry,running speed (within awake),0.45948945615982245,0.08582834331337326
+Tracker M3,+ pole,isoflurane level (whole session),0.5601061136874507,0.15768463073852296
+Tracker M3,+ pole,isoflurane level (within maintenance),-0.7379310344827588,0.001996007984031936
+Tracker M3,+ pole,pupil (within awake),0.0012806283616494493,1.0
+Tracker M3,+ pole,pupil (within isoflurane),-0.36247808299240214,0.4630738522954092
+Tracker M3,+ pole,running speed (within awake),0.5153248527277384,0.15568862275449102
+Tracker M3,− pole,isoflurane level (whole session),0.43328810676171,0.5508982035928144
+Tracker M3,− pole,isoflurane level (within maintenance),-0.7617182933956752,0.001996007984031936
+Tracker M3,− pole,pupil (within awake),0.19124050200631776,0.7664670658682635
+Tracker M3,− pole,pupil (within isoflurane),-0.6928112215078902,0.001996007984031936
+Tracker M3,− pole,running speed (within awake),0.5212157431913258,0.12375249500998003
+Tracker M3,midpoint,isoflurane level (whole session),0.5494461432534781,0.1437125748502994
+Tracker M3,midpoint,isoflurane level (within maintenance),-0.7684979544126243,0.001996007984031936
+Tracker M3,midpoint,pupil (within awake),0.0700076837701699,0.9401197604790419
+Tracker M3,midpoint,pupil (within isoflurane),-0.49216832261835186,0.19760479041916168
+Tracker M3,midpoint,running speed (within awake),0.5074703321096218,0.12574850299401197
+Tracker M3,separation,isoflurane level (whole session),0.6452967740628988,0.031936127744510975
+Tracker M3,separation,isoflurane level (within maintenance),-0.3345412039742841,0.530938123752495
+Tracker M3,separation,pupil (within awake),-0.05361564074105695,0.9201596806387226
+Tracker M3,separation,pupil (within isoflurane),0.06002337814143777,0.8323353293413174
+Tracker M3,separation,running speed (within awake),0.3225475966874413,0.21157684630738524
+Tracker M3,asymmetry,isoflurane level (whole session),0.5467730503635002,0.041916167664670656
+Tracker M3,asymmetry,isoflurane level (within maintenance),0.30543541788427825,0.17564870259481039
+Tracker M3,asymmetry,pupil (within awake),0.6435584393409033,0.001996007984031936
+Tracker M3,asymmetry,pupil (within isoflurane),0.3661016949152543,0.033932135728542916
+Tracker M3,asymmetry,running speed (within awake),-0.13173397080167334,0.6906187624750499
+Original (awake),+ pole,isoflurane level (whole session),-0.02482741302816502,0.9281437125748503
+Original (awake),+ pole,isoflurane level (within maintenance),-0.6846873173582702,0.001996007984031936
+Original (awake),+ pole,pupil (within awake),0.007939895842226586,1.0
+Original (awake),+ pole,pupil (within isoflurane),-0.3879602571595559,0.3333333333333333
+Original (awake),+ pole,running speed (within awake),0.5687697430205754,0.09580838323353294
+Original (awake),− pole,isoflurane level (whole session),-0.7192928454263786,0.09181636726546906
+Original (awake),− pole,isoflurane level (within maintenance),-0.7072472238457044,0.001996007984031936
+Original (awake),− pole,pupil (within awake),0.07188593870058908,0.9620758483033932
+Original (awake),− pole,pupil (within isoflurane),-0.6967270601987143,0.001996007984031936
+Original (awake),− pole,running speed (within awake),0.5455476820626654,0.1596806387225549
+Original (awake),midpoint,isoflurane level (whole session),-0.40823393612928055,0.22954091816367264
+Original (awake),midpoint,isoflurane level (within maintenance),-0.7364114552893046,0.001996007984031936
+Original (awake),midpoint,pupil (within awake),0.038589601297703405,0.9740518962075848
+Original (awake),midpoint,pupil (within isoflurane),-0.5338983050847459,0.0718562874251497
+Original (awake),midpoint,running speed (within awake),0.578758644241441,0.1157684630738523
+Original (awake),separation,isoflurane level (whole session),0.6289747068710638,0.001996007984031936
+Original (awake),separation,isoflurane level (within maintenance),-0.2894213909994156,0.5848303393213573
+Original (awake),separation,pupil (within awake),0.05361564074105695,0.9580838323353293
+Original (awake),separation,pupil (within isoflurane),0.032144944476914086,0.9840319361277445
+Original (awake),separation,running speed (within awake),0.3297191155126782,0.16167664670658682
+Original (awake),asymmetry,isoflurane level (whole session),0.30779044571798875,0.3872255489021956
+Original (awake),asymmetry,isoflurane level (within maintenance),0.27066043249561667,0.3073852295409182
+Original (awake),asymmetry,pupil (within awake),0.06992230854605992,0.8023952095808383
+Original (awake),asymmetry,pupil (within isoflurane),0.27738164815897143,0.5109780439121756
+Original (awake),asymmetry,running speed (within awake),-0.03329633740288568,0.9161676646706587

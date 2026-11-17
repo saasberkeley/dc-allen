@@ -1,0 +1,1366 @@
+window,kind,rep,scope,target,|r|
+1 min,real,0,pooled,Isoflurane level (whole session),0.7818844502854262
+1 min,real,0,pooled,Isoflurane level (within maintenance),0.6961310206215083
+1 min,real,0,pooled,Pupil (within awake),0.5058460484545619
+1 min,real,0,pooled,Pupil (within maintenance),0.6472028977903024
+1 min,real,0,pooled,Running speed (within awake),0.295666853198313
+1 min,real,0,within,"Dose, inside the isoflurane
+stimulation block only",0.7039233585606369
+1 min,real,0,within,"Pupil, within each
+maintenance segment",0.41944362789832845
+1 min,real,0,within,"Pupil, within each
+awake segment",0.6366435095005
+1 min,real,0,within,"Running, within each
+awake segment",0.2736324637957347
+1 min,surrogate,0,pooled,Isoflurane level (whole session),0.7870328371772839
+1 min,surrogate,0,pooled,Isoflurane level (within maintenance),0.5158492494120165
+1 min,surrogate,0,pooled,Pupil (within awake),0.40543452411427733
+1 min,surrogate,0,pooled,Pupil (within maintenance),0.32484529180770133
+1 min,surrogate,0,pooled,Running speed (within awake),0.1412930210288451
+1 min,surrogate,0,within,"Dose, inside the isoflurane
+stimulation block only",0.33490482548428135
+1 min,surrogate,0,within,"Pupil, within each
+maintenance segment",0.1719483948923933
+1 min,surrogate,0,within,"Pupil, within each
+awake segment",0.1282038318003813
+1 min,surrogate,0,within,"Running, within each
+awake segment",0.06549645449776378
+1 min,surrogate,1,pooled,Isoflurane level (whole session),0.8210820680716547
+1 min,surrogate,1,pooled,Isoflurane level (within maintenance),0.7155646882592739
+1 min,surrogate,1,pooled,Pupil (within awake),0.4252683509974568
+1 min,surrogate,1,pooled,Pupil (within maintenance),0.6142670322177631
+1 min,surrogate,1,pooled,Running speed (within awake),0.11496199365239097
+1 min,surrogate,1,within,"Dose, inside the isoflurane
+stimulation block only",0.7322843082271941
+1 min,surrogate,1,within,"Pupil, within each
+maintenance segment",0.3689590145832913
+1 min,surrogate,1,within,"Pupil, within each
+awake segment",0.3129098356377527
+1 min,surrogate,1,within,"Running, within each
+awake segment",0.039626094527167546
+1 min,surrogate,2,pooled,Isoflurane level (whole session),0.8016228930172627
+1 min,surrogate,2,pooled,Isoflurane level (within maintenance),0.537237842919914
+1 min,surrogate,2,pooled,Pupil (within awake),0.4244227499995906
+1 min,surrogate,2,pooled,Pupil (within maintenance),0.4736002595524295
+1 min,surrogate,2,pooled,Running speed (within awake),0.14057078090154687
+1 min,surrogate,2,within,"Dose, inside the isoflurane
+stimulation block only",0.3808376443748603
+1 min,surrogate,2,within,"Pupil, within each
+maintenance segment",0.26499769570421994
+1 min,surrogate,2,within,"Pupil, within each
+awake segment",0.08309786781227392
+1 min,surrogate,2,within,"Running, within each
+awake segment",0.05523838842980535
+1 min,surrogate,3,pooled,Isoflurane level (whole session),0.7747871670515944
+1 min,surrogate,3,pooled,Isoflurane level (within maintenance),0.3525677463170004
+1 min,surrogate,3,pooled,Pupil (within awake),0.38022200159780806
+1 min,surrogate,3,pooled,Pupil (within maintenance),0.37236230550051697
+1 min,surrogate,3,pooled,Running speed (within awake),0.15874340855132016
+1 min,surrogate,3,within,"Dose, inside the isoflurane
+stimulation block only",0.3367146039156158
+1 min,surrogate,3,within,"Pupil, within each
+maintenance segment",0.10699238226713648
+1 min,surrogate,3,within,"Pupil, within each
+awake segment",0.1904711312390353
+1 min,surrogate,3,within,"Running, within each
+awake segment",0.0957337979818079
+1 min,surrogate,4,pooled,Isoflurane level (whole session),0.7930522771417191
+1 min,surrogate,4,pooled,Isoflurane level (within maintenance),0.46559675182126325
+1 min,surrogate,4,pooled,Pupil (within awake),0.37626494578962016
+1 min,surrogate,4,pooled,Pupil (within maintenance),0.41600594681831093
+1 min,surrogate,4,pooled,Running speed (within awake),0.12618019477264428
+1 min,surrogate,4,within,"Dose, inside the isoflurane
+stimulation block only",0.15193922926997783
+1 min,surrogate,4,within,"Pupil, within each
+maintenance segment",0.2370640940830697
+1 min,surrogate,4,within,"Pupil, within each
+awake segment",0.17106720126573838
+1 min,surrogate,4,within,"Running, within each
+awake segment",0.05402098060074225
+1 min,surrogate,5,pooled,Isoflurane level (whole session),0.7906787966439033
+1 min,surrogate,5,pooled,Isoflurane level (within maintenance),0.60465000774345
+1 min,surrogate,5,pooled,Pupil (within awake),0.4150422816078051
+1 min,surrogate,5,pooled,Pupil (within maintenance),0.38866773105569236
+1 min,surrogate,5,pooled,Running speed (within awake),0.19068166593243827
+1 min,surrogate,5,within,"Dose, inside the isoflurane
+stimulation block only",0.3498399385503931
+1 min,surrogate,5,within,"Pupil, within each
+maintenance segment",0.2262489522364928
+1 min,surrogate,5,within,"Pupil, within each
+awake segment",0.18000345515134947
+1 min,surrogate,5,within,"Running, within each
+awake segment",0.11825105261395144
+1 min,surrogate,6,pooled,Isoflurane level (whole session),0.803014229473832
+1 min,surrogate,6,pooled,Isoflurane level (within maintenance),0.537071820642052
+1 min,surrogate,6,pooled,Pupil (within awake),0.4806928181632514
+1 min,surrogate,6,pooled,Pupil (within maintenance),0.43263505890757586
+1 min,surrogate,6,pooled,Running speed (within awake),0.15224068546572758
+1 min,surrogate,6,within,"Dose, inside the isoflurane
+stimulation block only",0.22667631673335573
+1 min,surrogate,6,within,"Pupil, within each
+maintenance segment",0.20877570541061505
+1 min,surrogate,6,within,"Pupil, within each
+awake segment",0.19476402704158002
+1 min,surrogate,6,within,"Running, within each
+awake segment",0.06491750980574136
+1 min,surrogate,7,pooled,Isoflurane level (whole session),0.7928968824631808
+1 min,surrogate,7,pooled,Isoflurane level (within maintenance),0.5273759660997445
+1 min,surrogate,7,pooled,Pupil (within awake),0.37970254106435675
+1 min,surrogate,7,pooled,Pupil (within maintenance),0.5066311627505328
+1 min,surrogate,7,pooled,Running speed (within awake),0.1821447470071693
+1 min,surrogate,7,within,"Dose, inside the isoflurane
+stimulation block only",0.32827394269555643
+1 min,surrogate,7,within,"Pupil, within each
+maintenance segment",0.23965636606145158
+1 min,surrogate,7,within,"Pupil, within each
+awake segment",0.14435781622581453
+1 min,surrogate,7,within,"Running, within each
+awake segment",0.07720138602596181
+1 min,surrogate,8,pooled,Isoflurane level (whole session),0.8044122009224096
+1 min,surrogate,8,pooled,Isoflurane level (within maintenance),0.5244845021529837
+1 min,surrogate,8,pooled,Pupil (within awake),0.5060869457412551
+1 min,surrogate,8,pooled,Pupil (within maintenance),0.4025729858283107
+1 min,surrogate,8,pooled,Running speed (within awake),0.08294529135379608
+1 min,surrogate,8,within,"Dose, inside the isoflurane
+stimulation block only",0.27376794091200374
+1 min,surrogate,8,within,"Pupil, within each
+maintenance segment",0.16310997206048453
+1 min,surrogate,8,within,"Pupil, within each
+awake segment",0.2940759821845204
+1 min,surrogate,8,within,"Running, within each
+awake segment",0.10024766180836658
+1 min,surrogate,9,pooled,Isoflurane level (whole session),0.8144404136041126
+1 min,surrogate,9,pooled,Isoflurane level (within maintenance),0.6763946176116721
+1 min,surrogate,9,pooled,Pupil (within awake),0.4262097511572358
+1 min,surrogate,9,pooled,Pupil (within maintenance),0.42308261599512925
+1 min,surrogate,9,pooled,Running speed (within awake),0.14083925226829466
+1 min,surrogate,9,within,"Dose, inside the isoflurane
+stimulation block only",0.5270186530292111
+1 min,surrogate,9,within,"Pupil, within each
+maintenance segment",0.09138820575483078
+1 min,surrogate,9,within,"Pupil, within each
+awake segment",0.14636199551789186
+1 min,surrogate,9,within,"Running, within each
+awake segment",0.07411296675976493
+1 min,surrogate,10,pooled,Isoflurane level (whole session),0.7863770831641214
+1 min,surrogate,10,pooled,Isoflurane level (within maintenance),0.3873586586134414
+1 min,surrogate,10,pooled,Pupil (within awake),0.39845092512000846
+1 min,surrogate,10,pooled,Pupil (within maintenance),0.32941339161775757
+1 min,surrogate,10,pooled,Running speed (within awake),0.10095817243595318
+1 min,surrogate,10,within,"Dose, inside the isoflurane
+stimulation block only",0.3132169195664134
+1 min,surrogate,10,within,"Pupil, within each
+maintenance segment",0.2224292461888189
+1 min,surrogate,10,within,"Pupil, within each
+awake segment",0.11755090320939585
+1 min,surrogate,10,within,"Running, within each
+awake segment",0.07153964693229217
+1 min,surrogate,11,pooled,Isoflurane level (whole session),0.7966242813825933
+1 min,surrogate,11,pooled,Isoflurane level (within maintenance),0.5496180882419093
+1 min,surrogate,11,pooled,Pupil (within awake),0.4986003893057493
+1 min,surrogate,11,pooled,Pupil (within maintenance),0.5671790040132934
+1 min,surrogate,11,pooled,Running speed (within awake),0.16002699275863963
+1 min,surrogate,11,within,"Dose, inside the isoflurane
+stimulation block only",0.3211758378735288
+1 min,surrogate,11,within,"Pupil, within each
+maintenance segment",0.26710956648569656
+1 min,surrogate,11,within,"Pupil, within each
+awake segment",0.24066869594375556
+1 min,surrogate,11,within,"Running, within each
+awake segment",0.08500653672622786
+1 min,surrogate,12,pooled,Isoflurane level (whole session),0.7917797213067141
+1 min,surrogate,12,pooled,Isoflurane level (within maintenance),0.44928061025714056
+1 min,surrogate,12,pooled,Pupil (within awake),0.4574319915780014
+1 min,surrogate,12,pooled,Pupil (within maintenance),0.3018871902911937
+1 min,surrogate,12,pooled,Running speed (within awake),0.11216499399033932
+1 min,surrogate,12,within,"Dose, inside the isoflurane
+stimulation block only",0.3535613884717987
+1 min,surrogate,12,within,"Pupil, within each
+maintenance segment",0.35577971330896535
+1 min,surrogate,12,within,"Pupil, within each
+awake segment",0.2752323899663386
+1 min,surrogate,12,within,"Running, within each
+awake segment",0.10014285980298532
+1 min,surrogate,13,pooled,Isoflurane level (whole session),0.7945458163944322
+1 min,surrogate,13,pooled,Isoflurane level (within maintenance),0.601583319091007
+1 min,surrogate,13,pooled,Pupil (within awake),0.40289132934924193
+1 min,surrogate,13,pooled,Pupil (within maintenance),0.4077464053879434
+1 min,surrogate,13,pooled,Running speed (within awake),0.15993738848619016
+1 min,surrogate,13,within,"Dose, inside the isoflurane
+stimulation block only",0.3760943653483136
+1 min,surrogate,13,within,"Pupil, within each
+maintenance segment",0.06037250094807741
+1 min,surrogate,13,within,"Pupil, within each
+awake segment",0.16893760002809222
+1 min,surrogate,13,within,"Running, within each
+awake segment",0.08852748482898508
+1 min,surrogate,14,pooled,Isoflurane level (whole session),0.7953404439078369
+1 min,surrogate,14,pooled,Isoflurane level (within maintenance),0.5159634824939668
+1 min,surrogate,14,pooled,Pupil (within awake),0.39387995102952866
+1 min,surrogate,14,pooled,Pupil (within maintenance),0.4871602171486776
+1 min,surrogate,14,pooled,Running speed (within awake),0.17742525286306646
+1 min,surrogate,14,within,"Dose, inside the isoflurane
+stimulation block only",0.18495275004525158
+1 min,surrogate,14,within,"Pupil, within each
+maintenance segment",0.2607796107417284
+1 min,surrogate,14,within,"Pupil, within each
+awake segment",0.19690253745353434
+1 min,surrogate,14,within,"Running, within each
+awake segment",0.09713389248610854
+1 min,surrogate,15,pooled,Isoflurane level (whole session),0.7956885550233679
+1 min,surrogate,15,pooled,Isoflurane level (within maintenance),0.5793356368103963
+1 min,surrogate,15,pooled,Pupil (within awake),0.4201888611731007
+1 min,surrogate,15,pooled,Pupil (within maintenance),0.4215190668184708
+1 min,surrogate,15,pooled,Running speed (within awake),0.12614045960780243
+1 min,surrogate,15,within,"Dose, inside the isoflurane
+stimulation block only",0.4539481567047224
+1 min,surrogate,15,within,"Pupil, within each
+maintenance segment",0.09691875702290426
+1 min,surrogate,15,within,"Pupil, within each
+awake segment",0.24096578589006484
+1 min,surrogate,15,within,"Running, within each
+awake segment",0.06463067468843521
+1 min,surrogate,16,pooled,Isoflurane level (whole session),0.8010827835790472
+1 min,surrogate,16,pooled,Isoflurane level (within maintenance),0.5500442828757051
+1 min,surrogate,16,pooled,Pupil (within awake),0.46813981171094204
+1 min,surrogate,16,pooled,Pupil (within maintenance),0.3749827720173009
+1 min,surrogate,16,pooled,Running speed (within awake),0.1807245076243855
+1 min,surrogate,16,within,"Dose, inside the isoflurane
+stimulation block only",0.12233676754108577
+1 min,surrogate,16,within,"Pupil, within each
+maintenance segment",0.14383563398173338
+1 min,surrogate,16,within,"Pupil, within each
+awake segment",0.24337953376337532
+1 min,surrogate,16,within,"Running, within each
+awake segment",0.13033383033665583
+1 min,surrogate,17,pooled,Isoflurane level (whole session),0.7958069797891317
+1 min,surrogate,17,pooled,Isoflurane level (within maintenance),0.5247992463189068
+1 min,surrogate,17,pooled,Pupil (within awake),0.4563216592639074
+1 min,surrogate,17,pooled,Pupil (within maintenance),0.4200983165682176
+1 min,surrogate,17,pooled,Running speed (within awake),0.13619834513601806
+1 min,surrogate,17,within,"Dose, inside the isoflurane
+stimulation block only",0.219870859331048
+1 min,surrogate,17,within,"Pupil, within each
+maintenance segment",0.13978802139526858
+1 min,surrogate,17,within,"Pupil, within each
+awake segment",0.1431685907961467
+1 min,surrogate,17,within,"Running, within each
+awake segment",0.07142847012196571
+1 min,surrogate,18,pooled,Isoflurane level (whole session),0.7877891406724664
+1 min,surrogate,18,pooled,Isoflurane level (within maintenance),0.5186647454011919
+1 min,surrogate,18,pooled,Pupil (within awake),0.389615187080379
+1 min,surrogate,18,pooled,Pupil (within maintenance),0.47408872962728776
+1 min,surrogate,18,pooled,Running speed (within awake),0.16576330593591002
+1 min,surrogate,18,within,"Dose, inside the isoflurane
+stimulation block only",0.32993563695969585
+1 min,surrogate,18,within,"Pupil, within each
+maintenance segment",0.18724833893245135
+1 min,surrogate,18,within,"Pupil, within each
+awake segment",0.07251585066397744
+1 min,surrogate,18,within,"Running, within each
+awake segment",0.08065393160565855
+1 min,surrogate,19,pooled,Isoflurane level (whole session),0.7883398891206951
+1 min,surrogate,19,pooled,Isoflurane level (within maintenance),0.47928488610806574
+1 min,surrogate,19,pooled,Pupil (within awake),0.38874073103250467
+1 min,surrogate,19,pooled,Pupil (within maintenance),0.23947748840224864
+1 min,surrogate,19,pooled,Running speed (within awake),0.12469239341496521
+1 min,surrogate,19,within,"Dose, inside the isoflurane
+stimulation block only",0.2357477900666578
+1 min,surrogate,19,within,"Pupil, within each
+maintenance segment",0.32465335711791854
+1 min,surrogate,19,within,"Pupil, within each
+awake segment",0.3004053469828601
+1 min,surrogate,19,within,"Running, within each
+awake segment",0.1471216213047105
+2 min,real,0,pooled,Isoflurane level (whole session),0.7991677390982102
+2 min,real,0,pooled,Isoflurane level (within maintenance),0.7067640698123058
+2 min,real,0,pooled,Pupil (within awake),0.5325873220114219
+2 min,real,0,pooled,Pupil (within maintenance),0.6719255532687597
+2 min,real,0,pooled,Running speed (within awake),0.28026368965860704
+2 min,real,0,within,"Dose, inside the isoflurane
+stimulation block only",0.7416930898153153
+2 min,real,0,within,"Pupil, within each
+maintenance segment",0.4420318004931054
+2 min,real,0,within,"Pupil, within each
+awake segment",0.6433417229519061
+2 min,real,0,within,"Running, within each
+awake segment",0.26755872142959475
+2 min,surrogate,0,pooled,Isoflurane level (whole session),0.790339999919093
+2 min,surrogate,0,pooled,Isoflurane level (within maintenance),0.569108340304179
+2 min,surrogate,0,pooled,Pupil (within awake),0.43663374489700185
+2 min,surrogate,0,pooled,Pupil (within maintenance),0.3427758480842373
+2 min,surrogate,0,pooled,Running speed (within awake),0.15811340108846308
+2 min,surrogate,0,within,"Dose, inside the isoflurane
+stimulation block only",0.4423246709230709
+2 min,surrogate,0,within,"Pupil, within each
+maintenance segment",0.2288436457023084
+2 min,surrogate,0,within,"Pupil, within each
+awake segment",0.1723703704573886
+2 min,surrogate,0,within,"Running, within each
+awake segment",0.06965434582288127
+2 min,surrogate,1,pooled,Isoflurane level (whole session),0.8248022294704881
+2 min,surrogate,1,pooled,Isoflurane level (within maintenance),0.7421557589336439
+2 min,surrogate,1,pooled,Pupil (within awake),0.4578642917204233
+2 min,surrogate,1,pooled,Pupil (within maintenance),0.6677754633631803
+2 min,surrogate,1,pooled,Running speed (within awake),0.12559261943951558
+2 min,surrogate,1,within,"Dose, inside the isoflurane
+stimulation block only",0.8130358277886396
+2 min,surrogate,1,within,"Pupil, within each
+maintenance segment",0.443366439489748
+2 min,surrogate,1,within,"Pupil, within each
+awake segment",0.2855308147176266
+2 min,surrogate,1,within,"Running, within each
+awake segment",0.057288322809265164
+2 min,surrogate,2,pooled,Isoflurane level (whole session),0.8046773387657823
+2 min,surrogate,2,pooled,Isoflurane level (within maintenance),0.5793147096426984
+2 min,surrogate,2,pooled,Pupil (within awake),0.43177381558497113
+2 min,surrogate,2,pooled,Pupil (within maintenance),0.5295879205850939
+2 min,surrogate,2,pooled,Running speed (within awake),0.15347054245643052
+2 min,surrogate,2,within,"Dose, inside the isoflurane
+stimulation block only",0.558290457817151
+2 min,surrogate,2,within,"Pupil, within each
+maintenance segment",0.3389655878007271
+2 min,surrogate,2,within,"Pupil, within each
+awake segment",0.08662129231555502
+2 min,surrogate,2,within,"Running, within each
+awake segment",0.07803560569061883
+2 min,surrogate,3,pooled,Isoflurane level (whole session),0.7765043747820652
+2 min,surrogate,3,pooled,Isoflurane level (within maintenance),0.3787627202030343
+2 min,surrogate,3,pooled,Pupil (within awake),0.4076194753425628
+2 min,surrogate,3,pooled,Pupil (within maintenance),0.40060805117576803
+2 min,surrogate,3,pooled,Running speed (within awake),0.18769385476750983
+2 min,surrogate,3,within,"Dose, inside the isoflurane
+stimulation block only",0.3682011947859997
+2 min,surrogate,3,within,"Pupil, within each
+maintenance segment",0.11576558805123816
+2 min,surrogate,3,within,"Pupil, within each
+awake segment",0.2301368557741568
+2 min,surrogate,3,within,"Running, within each
+awake segment",0.10840554087590228
+2 min,surrogate,4,pooled,Isoflurane level (whole session),0.7971933845089394
+2 min,surrogate,4,pooled,Isoflurane level (within maintenance),0.5049208434662485
+2 min,surrogate,4,pooled,Pupil (within awake),0.3665065799503914
+2 min,surrogate,4,pooled,Pupil (within maintenance),0.43705305339945805
+2 min,surrogate,4,pooled,Running speed (within awake),0.1315574631000072
+2 min,surrogate,4,within,"Dose, inside the isoflurane
+stimulation block only",0.22790828966310284
+2 min,surrogate,4,within,"Pupil, within each
+maintenance segment",0.295985013290907
+2 min,surrogate,4,within,"Pupil, within each
+awake segment",0.2404554494397876
+2 min,surrogate,4,within,"Running, within each
+awake segment",0.043298123916519056
+2 min,surrogate,5,pooled,Isoflurane level (whole session),0.7940369345493326
+2 min,surrogate,5,pooled,Isoflurane level (within maintenance),0.6346639850555917
+2 min,surrogate,5,pooled,Pupil (within awake),0.4222598884336416
+2 min,surrogate,5,pooled,Pupil (within maintenance),0.40781624897700125
+2 min,surrogate,5,pooled,Running speed (within awake),0.2021336348791271
+2 min,surrogate,5,within,"Dose, inside the isoflurane
+stimulation block only",0.3702380992183966
+2 min,surrogate,5,within,"Pupil, within each
+maintenance segment",0.24948568137689023
+2 min,surrogate,5,within,"Pupil, within each
+awake segment",0.19587032840055413
+2 min,surrogate,5,within,"Running, within each
+awake segment",0.1085709415261304
+2 min,surrogate,6,pooled,Isoflurane level (whole session),0.8116244065730657
+2 min,surrogate,6,pooled,Isoflurane level (within maintenance),0.5946607237475514
+2 min,surrogate,6,pooled,Pupil (within awake),0.489709109342069
+2 min,surrogate,6,pooled,Pupil (within maintenance),0.46452794153865085
+2 min,surrogate,6,pooled,Running speed (within awake),0.1847653273444955
+2 min,surrogate,6,within,"Dose, inside the isoflurane
+stimulation block only",0.3155802737424984
+2 min,surrogate,6,within,"Pupil, within each
+maintenance segment",0.2651440319751434
+2 min,surrogate,6,within,"Pupil, within each
+awake segment",0.24316109480669623
+2 min,surrogate,6,within,"Running, within each
+awake segment",0.12960499837473455
+2 min,surrogate,7,pooled,Isoflurane level (whole session),0.808491035479489
+2 min,surrogate,7,pooled,Isoflurane level (within maintenance),0.6030848494931201
+2 min,surrogate,7,pooled,Pupil (within awake),0.41119231969494924
+2 min,surrogate,7,pooled,Pupil (within maintenance),0.5335305090613353
+2 min,surrogate,7,pooled,Running speed (within awake),0.18559716109657265
+2 min,surrogate,7,within,"Dose, inside the isoflurane
+stimulation block only",0.4728841784703019
+2 min,surrogate,7,within,"Pupil, within each
+maintenance segment",0.27098201229215985
+2 min,surrogate,7,within,"Pupil, within each
+awake segment",0.17034033458884604
+2 min,surrogate,7,within,"Running, within each
+awake segment",0.08693857379819327
+2 min,surrogate,8,pooled,Isoflurane level (whole session),0.8101414427750573
+2 min,surrogate,8,pooled,Isoflurane level (within maintenance),0.5610926306127639
+2 min,surrogate,8,pooled,Pupil (within awake),0.5143096212459043
+2 min,surrogate,8,pooled,Pupil (within maintenance),0.43964222065818864
+2 min,surrogate,8,pooled,Running speed (within awake),0.10029560521942071
+2 min,surrogate,8,within,"Dose, inside the isoflurane
+stimulation block only",0.3552588422666733
+2 min,surrogate,8,within,"Pupil, within each
+maintenance segment",0.2558757516188774
+2 min,surrogate,8,within,"Pupil, within each
+awake segment",0.36021942954516517
+2 min,surrogate,8,within,"Running, within each
+awake segment",0.1397801181034819
+2 min,surrogate,9,pooled,Isoflurane level (whole session),0.8158848871830681
+2 min,surrogate,9,pooled,Isoflurane level (within maintenance),0.7090981609633528
+2 min,surrogate,9,pooled,Pupil (within awake),0.4585011239536648
+2 min,surrogate,9,pooled,Pupil (within maintenance),0.43979378793334456
+2 min,surrogate,9,pooled,Running speed (within awake),0.1743132144762017
+2 min,surrogate,9,within,"Dose, inside the isoflurane
+stimulation block only",0.650480958487102
+2 min,surrogate,9,within,"Pupil, within each
+maintenance segment",0.10355303564196498
+2 min,surrogate,9,within,"Pupil, within each
+awake segment",0.14504997370689848
+2 min,surrogate,9,within,"Running, within each
+awake segment",0.09263482874038513
+2 min,surrogate,10,pooled,Isoflurane level (whole session),0.7927329507838281
+2 min,surrogate,10,pooled,Isoflurane level (within maintenance),0.4250198839843185
+2 min,surrogate,10,pooled,Pupil (within awake),0.4017603809831136
+2 min,surrogate,10,pooled,Pupil (within maintenance),0.3590600486028264
+2 min,surrogate,10,pooled,Running speed (within awake),0.12322838048938026
+2 min,surrogate,10,within,"Dose, inside the isoflurane
+stimulation block only",0.36342368650207685
+2 min,surrogate,10,within,"Pupil, within each
+maintenance segment",0.25125002351019243
+2 min,surrogate,10,within,"Pupil, within each
+awake segment",0.16967837003615793
+2 min,surrogate,10,within,"Running, within each
+awake segment",0.06921355147820636
+2 min,surrogate,11,pooled,Isoflurane level (whole session),0.7970880437116653
+2 min,surrogate,11,pooled,Isoflurane level (within maintenance),0.6066865462956548
+2 min,surrogate,11,pooled,Pupil (within awake),0.522066540811733
+2 min,surrogate,11,pooled,Pupil (within maintenance),0.5944227391094243
+2 min,surrogate,11,pooled,Running speed (within awake),0.17133745835550174
+2 min,surrogate,11,within,"Dose, inside the isoflurane
+stimulation block only",0.3955671324235795
+2 min,surrogate,11,within,"Pupil, within each
+maintenance segment",0.31860411214111795
+2 min,surrogate,11,within,"Pupil, within each
+awake segment",0.35438388219880423
+2 min,surrogate,11,within,"Running, within each
+awake segment",0.07065616082387165
+2 min,surrogate,12,pooled,Isoflurane level (whole session),0.7925637479230726
+2 min,surrogate,12,pooled,Isoflurane level (within maintenance),0.4582820427466717
+2 min,surrogate,12,pooled,Pupil (within awake),0.5127898946105625
+2 min,surrogate,12,pooled,Pupil (within maintenance),0.34599091712981656
+2 min,surrogate,12,pooled,Running speed (within awake),0.11908738248573508
+2 min,surrogate,12,within,"Dose, inside the isoflurane
+stimulation block only",0.40137912864537334
+2 min,surrogate,12,within,"Pupil, within each
+maintenance segment",0.45139475250095684
+2 min,surrogate,12,within,"Pupil, within each
+awake segment",0.3654865634408979
+2 min,surrogate,12,within,"Running, within each
+awake segment",0.14835802912768667
+2 min,surrogate,13,pooled,Isoflurane level (whole session),0.8063311871127844
+2 min,surrogate,13,pooled,Isoflurane level (within maintenance),0.6445785686726546
+2 min,surrogate,13,pooled,Pupil (within awake),0.40535245437702094
+2 min,surrogate,13,pooled,Pupil (within maintenance),0.433319107900529
+2 min,surrogate,13,pooled,Running speed (within awake),0.2075212951812829
+2 min,surrogate,13,within,"Dose, inside the isoflurane
+stimulation block only",0.47859659118878184
+2 min,surrogate,13,within,"Pupil, within each
+maintenance segment",0.0700756715768298
+2 min,surrogate,13,within,"Pupil, within each
+awake segment",0.30352974050873577
+2 min,surrogate,13,within,"Running, within each
+awake segment",0.1080908701118294
+2 min,surrogate,14,pooled,Isoflurane level (whole session),0.799044104044167
+2 min,surrogate,14,pooled,Isoflurane level (within maintenance),0.5730211544947369
+2 min,surrogate,14,pooled,Pupil (within awake),0.4328252218673043
+2 min,surrogate,14,pooled,Pupil (within maintenance),0.5190666718399375
+2 min,surrogate,14,pooled,Running speed (within awake),0.19081066533300328
+2 min,surrogate,14,within,"Dose, inside the isoflurane
+stimulation block only",0.22058346519831648
+2 min,surrogate,14,within,"Pupil, within each
+maintenance segment",0.29050447830506454
+2 min,surrogate,14,within,"Pupil, within each
+awake segment",0.27982689445688474
+2 min,surrogate,14,within,"Running, within each
+awake segment",0.14016786990008334
+2 min,surrogate,15,pooled,Isoflurane level (whole session),0.8108480774276451
+2 min,surrogate,15,pooled,Isoflurane level (within maintenance),0.6440907105741503
+2 min,surrogate,15,pooled,Pupil (within awake),0.44677540741547533
+2 min,surrogate,15,pooled,Pupil (within maintenance),0.5069957928053068
+2 min,surrogate,15,pooled,Running speed (within awake),0.13241082838761217
+2 min,surrogate,15,within,"Dose, inside the isoflurane
+stimulation block only",0.6352936075055071
+2 min,surrogate,15,within,"Pupil, within each
+maintenance segment",0.18630523974218813
+2 min,surrogate,15,within,"Pupil, within each
+awake segment",0.354103577412597
+2 min,surrogate,15,within,"Running, within each
+awake segment",0.0738910977444671
+2 min,surrogate,16,pooled,Isoflurane level (whole session),0.8030702155993049
+2 min,surrogate,16,pooled,Isoflurane level (within maintenance),0.574822324032111
+2 min,surrogate,16,pooled,Pupil (within awake),0.4828079165870969
+2 min,surrogate,16,pooled,Pupil (within maintenance),0.39287441847358745
+2 min,surrogate,16,pooled,Running speed (within awake),0.1865182113661214
+2 min,surrogate,16,within,"Dose, inside the isoflurane
+stimulation block only",0.1395374618891201
+2 min,surrogate,16,within,"Pupil, within each
+maintenance segment",0.16268763954281798
+2 min,surrogate,16,within,"Pupil, within each
+awake segment",0.30419435607540135
+2 min,surrogate,16,within,"Running, within each
+awake segment",0.13515571229607726
+2 min,surrogate,17,pooled,Isoflurane level (whole session),0.8044355128133276
+2 min,surrogate,17,pooled,Isoflurane level (within maintenance),0.560378228319666
+2 min,surrogate,17,pooled,Pupil (within awake),0.5315945345966967
+2 min,surrogate,17,pooled,Pupil (within maintenance),0.43448212473269615
+2 min,surrogate,17,pooled,Running speed (within awake),0.15288193888334722
+2 min,surrogate,17,within,"Dose, inside the isoflurane
+stimulation block only",0.2661104813128922
+2 min,surrogate,17,within,"Pupil, within each
+maintenance segment",0.16345241536691865
+2 min,surrogate,17,within,"Pupil, within each
+awake segment",0.1933800128811319
+2 min,surrogate,17,within,"Running, within each
+awake segment",0.10558602562193434
+2 min,surrogate,18,pooled,Isoflurane level (whole session),0.7911262130604015
+2 min,surrogate,18,pooled,Isoflurane level (within maintenance),0.5647495354383254
+2 min,surrogate,18,pooled,Pupil (within awake),0.4119113761311944
+2 min,surrogate,18,pooled,Pupil (within maintenance),0.5217619405296451
+2 min,surrogate,18,pooled,Running speed (within awake),0.1775374261011799
+2 min,surrogate,18,within,"Dose, inside the isoflurane
+stimulation block only",0.3863046912625901
+2 min,surrogate,18,within,"Pupil, within each
+maintenance segment",0.27535578307009007
+2 min,surrogate,18,within,"Pupil, within each
+awake segment",0.05213375379477771
+2 min,surrogate,18,within,"Running, within each
+awake segment",0.08971421477082862
+2 min,surrogate,19,pooled,Isoflurane level (whole session),0.7907594465079454
+2 min,surrogate,19,pooled,Isoflurane level (within maintenance),0.5083660035032507
+2 min,surrogate,19,pooled,Pupil (within awake),0.39967442639306644
+2 min,surrogate,19,pooled,Pupil (within maintenance),0.24818096208605578
+2 min,surrogate,19,pooled,Running speed (within awake),0.16048976153491032
+2 min,surrogate,19,within,"Dose, inside the isoflurane
+stimulation block only",0.30468361636874897
+2 min,surrogate,19,within,"Pupil, within each
+maintenance segment",0.41891594552936073
+2 min,surrogate,19,within,"Pupil, within each
+awake segment",0.3832257647975118
+2 min,surrogate,19,within,"Running, within each
+awake segment",0.18666965389755377
+5 min,real,0,pooled,Isoflurane level (whole session),0.7985794828422973
+5 min,real,0,pooled,Isoflurane level (within maintenance),0.718555231541582
+5 min,real,0,pooled,Pupil (within awake),0.5894444961020023
+5 min,real,0,pooled,Pupil (within maintenance),0.6690683338223001
+5 min,real,0,pooled,Running speed (within awake),0.25644711404670323
+5 min,real,0,within,"Dose, inside the isoflurane
+stimulation block only",0.7946092893199591
+5 min,real,0,within,"Pupil, within each
+maintenance segment",0.4252949858972987
+5 min,real,0,within,"Pupil, within each
+awake segment",0.653670635777812
+5 min,real,0,within,"Running, within each
+awake segment",0.2406358498805708
+5 min,surrogate,0,pooled,Isoflurane level (whole session),0.7955433806851006
+5 min,surrogate,0,pooled,Isoflurane level (within maintenance),0.6788416294280498
+5 min,surrogate,0,pooled,Pupil (within awake),0.5090446710787525
+5 min,surrogate,0,pooled,Pupil (within maintenance),0.39547952329319075
+5 min,surrogate,0,pooled,Running speed (within awake),0.18666376122368397
+5 min,surrogate,0,within,"Dose, inside the isoflurane
+stimulation block only",0.7108573229186929
+5 min,surrogate,0,within,"Pupil, within each
+maintenance segment",0.32573007074191146
+5 min,surrogate,0,within,"Pupil, within each
+awake segment",0.3688594312048846
+5 min,surrogate,0,within,"Running, within each
+awake segment",0.12825803195789165
+5 min,surrogate,1,pooled,Isoflurane level (whole session),0.8292117797255024
+5 min,surrogate,1,pooled,Isoflurane level (within maintenance),0.7760732127678039
+5 min,surrogate,1,pooled,Pupil (within awake),0.4478788930441367
+5 min,surrogate,1,pooled,Pupil (within maintenance),0.7200655605883074
+5 min,surrogate,1,pooled,Running speed (within awake),0.13743487631951146
+5 min,surrogate,1,within,"Dose, inside the isoflurane
+stimulation block only",0.8612824045671347
+5 min,surrogate,1,within,"Pupil, within each
+maintenance segment",0.5655397636620217
+5 min,surrogate,1,within,"Pupil, within each
+awake segment",0.30769507482069725
+5 min,surrogate,1,within,"Running, within each
+awake segment",0.06510784059141675
+5 min,surrogate,2,pooled,Isoflurane level (whole session),0.8087397076796353
+5 min,surrogate,2,pooled,Isoflurane level (within maintenance),0.6370842664718496
+5 min,surrogate,2,pooled,Pupil (within awake),0.42833606160286486
+5 min,surrogate,2,pooled,Pupil (within maintenance),0.5504408743348308
+5 min,surrogate,2,pooled,Running speed (within awake),0.1591290939708932
+5 min,surrogate,2,within,"Dose, inside the isoflurane
+stimulation block only",0.6342074734847324
+5 min,surrogate,2,within,"Pupil, within each
+maintenance segment",0.3319026489496655
+5 min,surrogate,2,within,"Pupil, within each
+awake segment",0.09630648345309446
+5 min,surrogate,2,within,"Running, within each
+awake segment",0.06357795067542073
+5 min,surrogate,3,pooled,Isoflurane level (whole session),0.7772378100603289
+5 min,surrogate,3,pooled,Isoflurane level (within maintenance),0.4151059188875169
+5 min,surrogate,3,pooled,Pupil (within awake),0.4426732354556117
+5 min,surrogate,3,pooled,Pupil (within maintenance),0.40052453542900684
+5 min,surrogate,3,pooled,Running speed (within awake),0.20584988282815983
+5 min,surrogate,3,within,"Dose, inside the isoflurane
+stimulation block only",0.497081457505387
+5 min,surrogate,3,within,"Pupil, within each
+maintenance segment",0.17595331237277653
+5 min,surrogate,3,within,"Pupil, within each
+awake segment",0.30033772173709794
+5 min,surrogate,3,within,"Running, within each
+awake segment",0.15119747929983057
+5 min,surrogate,4,pooled,Isoflurane level (whole session),0.7955531213277125
+5 min,surrogate,4,pooled,Isoflurane level (within maintenance),0.5369066808219768
+5 min,surrogate,4,pooled,Pupil (within awake),0.39444112968627765
+5 min,surrogate,4,pooled,Pupil (within maintenance),0.5278845771041651
+5 min,surrogate,4,pooled,Running speed (within awake),0.14035342461897637
+5 min,surrogate,4,within,"Dose, inside the isoflurane
+stimulation block only",0.2657911145487528
+5 min,surrogate,4,within,"Pupil, within each
+maintenance segment",0.41427998323707227
+5 min,surrogate,4,within,"Pupil, within each
+awake segment",0.3977135724456941
+5 min,surrogate,4,within,"Running, within each
+awake segment",0.0502588446601596
+5 min,surrogate,5,pooled,Isoflurane level (whole session),0.7926071494576176
+5 min,surrogate,5,pooled,Isoflurane level (within maintenance),0.720819261215754
+5 min,surrogate,5,pooled,Pupil (within awake),0.42157045513452146
+5 min,surrogate,5,pooled,Pupil (within maintenance),0.4196896423933438
+5 min,surrogate,5,pooled,Running speed (within awake),0.15061935642214125
+5 min,surrogate,5,within,"Dose, inside the isoflurane
+stimulation block only",0.5241645774791781
+5 min,surrogate,5,within,"Pupil, within each
+maintenance segment",0.279602258645784
+5 min,surrogate,5,within,"Pupil, within each
+awake segment",0.3560289176697857
+5 min,surrogate,5,within,"Running, within each
+awake segment",0.06257188203413576
+5 min,surrogate,6,pooled,Isoflurane level (whole session),0.8137964712738687
+5 min,surrogate,6,pooled,Isoflurane level (within maintenance),0.6264453912661471
+5 min,surrogate,6,pooled,Pupil (within awake),0.517289528147557
+5 min,surrogate,6,pooled,Pupil (within maintenance),0.5412351677732485
+5 min,surrogate,6,pooled,Running speed (within awake),0.1766553174596224
+5 min,surrogate,6,within,"Dose, inside the isoflurane
+stimulation block only",0.5751657054578166
+5 min,surrogate,6,within,"Pupil, within each
+maintenance segment",0.363190724679467
+5 min,surrogate,6,within,"Pupil, within each
+awake segment",0.37041411693828596
+5 min,surrogate,6,within,"Running, within each
+awake segment",0.14958604490081467
+5 min,surrogate,7,pooled,Isoflurane level (whole session),0.8225349478339784
+5 min,surrogate,7,pooled,Isoflurane level (within maintenance),0.7027772098758344
+5 min,surrogate,7,pooled,Pupil (within awake),0.4211942196961078
+5 min,surrogate,7,pooled,Pupil (within maintenance),0.5123934174768385
+5 min,surrogate,7,pooled,Running speed (within awake),0.17918937152846184
+5 min,surrogate,7,within,"Dose, inside the isoflurane
+stimulation block only",0.721498506941857
+5 min,surrogate,7,within,"Pupil, within each
+maintenance segment",0.201603438983123
+5 min,surrogate,7,within,"Pupil, within each
+awake segment",0.16985019603733142
+5 min,surrogate,7,within,"Running, within each
+awake segment",0.13656389698810104
+5 min,surrogate,8,pooled,Isoflurane level (whole session),0.8131108415826335
+5 min,surrogate,8,pooled,Isoflurane level (within maintenance),0.6249123429910599
+5 min,surrogate,8,pooled,Pupil (within awake),0.5521030650383997
+5 min,surrogate,8,pooled,Pupil (within maintenance),0.5276487890370124
+5 min,surrogate,8,pooled,Running speed (within awake),0.125513096443021
+5 min,surrogate,8,within,"Dose, inside the isoflurane
+stimulation block only",0.516900194954252
+5 min,surrogate,8,within,"Pupil, within each
+maintenance segment",0.3456980645093833
+5 min,surrogate,8,within,"Pupil, within each
+awake segment",0.42333780414881556
+5 min,surrogate,8,within,"Running, within each
+awake segment",0.13929830302892038
+5 min,surrogate,9,pooled,Isoflurane level (whole session),0.8195751113030347
+5 min,surrogate,9,pooled,Isoflurane level (within maintenance),0.7525184735678649
+5 min,surrogate,9,pooled,Pupil (within awake),0.45602674173518587
+5 min,surrogate,9,pooled,Pupil (within maintenance),0.44511197928573243
+5 min,surrogate,9,pooled,Running speed (within awake),0.14921654374484192
+5 min,surrogate,9,within,"Dose, inside the isoflurane
+stimulation block only",0.6958245449777146
+5 min,surrogate,9,within,"Pupil, within each
+maintenance segment",0.1778994141497752
+5 min,surrogate,9,within,"Pupil, within each
+awake segment",0.1911076757488929
+5 min,surrogate,9,within,"Running, within each
+awake segment",0.13855916321771652
+5 min,surrogate,10,pooled,Isoflurane level (whole session),0.800502051617657
+5 min,surrogate,10,pooled,Isoflurane level (within maintenance),0.4697358908643949
+5 min,surrogate,10,pooled,Pupil (within awake),0.48903398444905805
+5 min,surrogate,10,pooled,Pupil (within maintenance),0.3904573728974581
+5 min,surrogate,10,pooled,Running speed (within awake),0.13790751464408732
+5 min,surrogate,10,within,"Dose, inside the isoflurane
+stimulation block only",0.40768736036898423
+5 min,surrogate,10,within,"Pupil, within each
+maintenance segment",0.2996829307117134
+5 min,surrogate,10,within,"Pupil, within each
+awake segment",0.14840799897382562
+5 min,surrogate,10,within,"Running, within each
+awake segment",0.09090776418102868
+5 min,surrogate,11,pooled,Isoflurane level (whole session),0.8020307371232713
+5 min,surrogate,11,pooled,Isoflurane level (within maintenance),0.6965790522682466
+5 min,surrogate,11,pooled,Pupil (within awake),0.5061747186932491
+5 min,surrogate,11,pooled,Pupil (within maintenance),0.6334931128706853
+5 min,surrogate,11,pooled,Running speed (within awake),0.18285727982821778
+5 min,surrogate,11,within,"Dose, inside the isoflurane
+stimulation block only",0.568664965345607
+5 min,surrogate,11,within,"Pupil, within each
+maintenance segment",0.36697343754412737
+5 min,surrogate,11,within,"Pupil, within each
+awake segment",0.4203238257085839
+5 min,surrogate,11,within,"Running, within each
+awake segment",0.12232890912014223
+5 min,surrogate,12,pooled,Isoflurane level (whole session),0.7819058789038901
+5 min,surrogate,12,pooled,Isoflurane level (within maintenance),0.45823089776191184
+5 min,surrogate,12,pooled,Pupil (within awake),0.5122600611896189
+5 min,surrogate,12,pooled,Pupil (within maintenance),0.28978817609804447
+5 min,surrogate,12,pooled,Running speed (within awake),0.13083898670562044
+5 min,surrogate,12,within,"Dose, inside the isoflurane
+stimulation block only",0.6442647540598642
+5 min,surrogate,12,within,"Pupil, within each
+maintenance segment",0.6347052913994868
+5 min,surrogate,12,within,"Pupil, within each
+awake segment",0.3963126101761519
+5 min,surrogate,12,within,"Running, within each
+awake segment",0.08544485078222497
+5 min,surrogate,13,pooled,Isoflurane level (whole session),0.8198820841403767
+5 min,surrogate,13,pooled,Isoflurane level (within maintenance),0.7153215843480425
+5 min,surrogate,13,pooled,Pupil (within awake),0.374408408181868
+5 min,surrogate,13,pooled,Pupil (within maintenance),0.406770630295786
+5 min,surrogate,13,pooled,Running speed (within awake),0.21132270713108667
+5 min,surrogate,13,within,"Dose, inside the isoflurane
+stimulation block only",0.619716880396558
+5 min,surrogate,13,within,"Pupil, within each
+maintenance segment",0.09709185374743845
+5 min,surrogate,13,within,"Pupil, within each
+awake segment",0.4907209808762172
+5 min,surrogate,13,within,"Running, within each
+awake segment",0.1599762293756502
+5 min,surrogate,14,pooled,Isoflurane level (whole session),0.8055305286860622
+5 min,surrogate,14,pooled,Isoflurane level (within maintenance),0.622767511526612
+5 min,surrogate,14,pooled,Pupil (within awake),0.4802717618547813
+5 min,surrogate,14,pooled,Pupil (within maintenance),0.5432866116458074
+5 min,surrogate,14,pooled,Running speed (within awake),0.18707953353109347
+5 min,surrogate,14,within,"Dose, inside the isoflurane
+stimulation block only",0.3526282380648564
+5 min,surrogate,14,within,"Pupil, within each
+maintenance segment",0.31726225885211573
+5 min,surrogate,14,within,"Pupil, within each
+awake segment",0.24292425993382244
+5 min,surrogate,14,within,"Running, within each
+awake segment",0.1700943028182808
+5 min,surrogate,15,pooled,Isoflurane level (whole session),0.822968678865465
+5 min,surrogate,15,pooled,Isoflurane level (within maintenance),0.7170004017555694
+5 min,surrogate,15,pooled,Pupil (within awake),0.49415687490691584
+5 min,surrogate,15,pooled,Pupil (within maintenance),0.5748697983705712
+5 min,surrogate,15,pooled,Running speed (within awake),0.12635855852775518
+5 min,surrogate,15,within,"Dose, inside the isoflurane
+stimulation block only",0.8515739491612806
+5 min,surrogate,15,within,"Pupil, within each
+maintenance segment",0.35534386011289015
+5 min,surrogate,15,within,"Pupil, within each
+awake segment",0.510961344287577
+5 min,surrogate,15,within,"Running, within each
+awake segment",0.12437289533117302
+5 min,surrogate,16,pooled,Isoflurane level (whole session),0.8020565529449877
+5 min,surrogate,16,pooled,Isoflurane level (within maintenance),0.5472662902518124
+5 min,surrogate,16,pooled,Pupil (within awake),0.4636351302898662
+5 min,surrogate,16,pooled,Pupil (within maintenance),0.41311495960719186
+5 min,surrogate,16,pooled,Running speed (within awake),0.18494053073747654
+5 min,surrogate,16,within,"Dose, inside the isoflurane
+stimulation block only",0.12494969772857487
+5 min,surrogate,16,within,"Pupil, within each
+maintenance segment",0.12964889165611707
+5 min,surrogate,16,within,"Pupil, within each
+awake segment",0.33817436857418637
+5 min,surrogate,16,within,"Running, within each
+awake segment",0.15524110025804358
+5 min,surrogate,17,pooled,Isoflurane level (whole session),0.8086729223416463
+5 min,surrogate,17,pooled,Isoflurane level (within maintenance),0.613627707426356
+5 min,surrogate,17,pooled,Pupil (within awake),0.574208214599136
+5 min,surrogate,17,pooled,Pupil (within maintenance),0.40818559452166653
+5 min,surrogate,17,pooled,Running speed (within awake),0.17291973301463573
+5 min,surrogate,17,within,"Dose, inside the isoflurane
+stimulation block only",0.3317657410218849
+5 min,surrogate,17,within,"Pupil, within each
+maintenance segment",0.11831581204309127
+5 min,surrogate,17,within,"Pupil, within each
+awake segment",0.2930282385430988
+5 min,surrogate,17,within,"Running, within each
+awake segment",0.16195521272394553
+5 min,surrogate,18,pooled,Isoflurane level (whole session),0.794993679214504
+5 min,surrogate,18,pooled,Isoflurane level (within maintenance),0.6266964237249123
+5 min,surrogate,18,pooled,Pupil (within awake),0.5000141117892384
+5 min,surrogate,18,pooled,Pupil (within maintenance),0.5965388299829032
+5 min,surrogate,18,pooled,Running speed (within awake),0.17107236720831007
+5 min,surrogate,18,within,"Dose, inside the isoflurane
+stimulation block only",0.6047259547889839
+5 min,surrogate,18,within,"Pupil, within each
+maintenance segment",0.40968950472411275
+5 min,surrogate,18,within,"Pupil, within each
+awake segment",0.20680507285571464
+5 min,surrogate,18,within,"Running, within each
+awake segment",0.06750303242728825
+5 min,surrogate,19,pooled,Isoflurane level (whole session),0.7996880415555307
+5 min,surrogate,19,pooled,Isoflurane level (within maintenance),0.5714223002203409
+5 min,surrogate,19,pooled,Pupil (within awake),0.49785473542299913
+5 min,surrogate,19,pooled,Pupil (within maintenance),0.2936016891873641
+5 min,surrogate,19,pooled,Running speed (within awake),0.1716909502147967
+5 min,surrogate,19,within,"Dose, inside the isoflurane
+stimulation block only",0.4556196524340253
+5 min,surrogate,19,within,"Pupil, within each
+maintenance segment",0.5063014609130094
+5 min,surrogate,19,within,"Pupil, within each
+awake segment",0.5097667814830998
+5 min,surrogate,19,within,"Running, within each
+awake segment",0.19051449016325037
+10 min,real,0,pooled,Isoflurane level (whole session),0.8056904965833853
+10 min,real,0,pooled,Isoflurane level (within maintenance),0.7813683741774986
+10 min,real,0,pooled,Pupil (within awake),0.5699879106286743
+10 min,real,0,pooled,Pupil (within maintenance),0.65127692109498
+10 min,real,0,pooled,Running speed (within awake),0.23600717205250807
+10 min,real,0,within,"Dose, inside the isoflurane
+stimulation block only",0.896071034723519
+10 min,real,0,within,"Pupil, within each
+maintenance segment",0.4735737484943308
+10 min,real,0,within,"Pupil, within each
+awake segment",0.6038934349367118
+10 min,real,0,within,"Running, within each
+awake segment",0.21181247135942743
+10 min,surrogate,0,pooled,Isoflurane level (whole session),0.8062600996601685
+10 min,surrogate,0,pooled,Isoflurane level (within maintenance),0.7367133548009203
+10 min,surrogate,0,pooled,Pupil (within awake),0.5646976291392929
+10 min,surrogate,0,pooled,Pupil (within maintenance),0.44291294174291024
+10 min,surrogate,0,pooled,Running speed (within awake),0.21890628608308893
+10 min,surrogate,0,within,"Dose, inside the isoflurane
+stimulation block only",0.7314281807220403
+10 min,surrogate,0,within,"Pupil, within each
+maintenance segment",0.3225486928730602
+10 min,surrogate,0,within,"Pupil, within each
+awake segment",0.423229855920046
+10 min,surrogate,0,within,"Running, within each
+awake segment",0.23276436162039843
+10 min,surrogate,1,pooled,Isoflurane level (whole session),0.8207665370371645
+10 min,surrogate,1,pooled,Isoflurane level (within maintenance),0.7354608924740595
+10 min,surrogate,1,pooled,Pupil (within awake),0.5276345623196655
+10 min,surrogate,1,pooled,Pupil (within maintenance),0.6834672237502202
+10 min,surrogate,1,pooled,Running speed (within awake),0.13351015722635606
+10 min,surrogate,1,within,"Dose, inside the isoflurane
+stimulation block only",0.8069691400702123
+10 min,surrogate,1,within,"Pupil, within each
+maintenance segment",0.5133951362462437
+10 min,surrogate,1,within,"Pupil, within each
+awake segment",0.3988639958674397
+10 min,surrogate,1,within,"Running, within each
+awake segment",0.09318926286410596
+10 min,surrogate,2,pooled,Isoflurane level (whole session),0.8137971216879545
+10 min,surrogate,2,pooled,Isoflurane level (within maintenance),0.6762401707756918
+10 min,surrogate,2,pooled,Pupil (within awake),0.38681755577006416
+10 min,surrogate,2,pooled,Pupil (within maintenance),0.603470034440075
+10 min,surrogate,2,pooled,Running speed (within awake),0.15782868536846525
+10 min,surrogate,2,within,"Dose, inside the isoflurane
+stimulation block only",0.7478469953995581
+10 min,surrogate,2,within,"Pupil, within each
+maintenance segment",0.42023388205527884
+10 min,surrogate,2,within,"Pupil, within each
+awake segment",0.3347201797192923
+10 min,surrogate,2,within,"Running, within each
+awake segment",0.10330748158230234
+10 min,surrogate,3,pooled,Isoflurane level (whole session),0.7843230025205492
+10 min,surrogate,3,pooled,Isoflurane level (within maintenance),0.5085150036284808
+10 min,surrogate,3,pooled,Pupil (within awake),0.4484554270807819
+10 min,surrogate,3,pooled,Pupil (within maintenance),0.4614177860840001
+10 min,surrogate,3,pooled,Running speed (within awake),0.1826862378202446
+10 min,surrogate,3,within,"Dose, inside the isoflurane
+stimulation block only",0.48179715406190154
+10 min,surrogate,3,within,"Pupil, within each
+maintenance segment",0.2195055028523691
+10 min,surrogate,3,within,"Pupil, within each
+awake segment",0.3708807869467256
+10 min,surrogate,3,within,"Running, within each
+awake segment",0.1323536530854817
+10 min,surrogate,4,pooled,Isoflurane level (whole session),0.7795318926595016
+10 min,surrogate,4,pooled,Isoflurane level (within maintenance),0.5047612613609511
+10 min,surrogate,4,pooled,Pupil (within awake),0.38304773330281966
+10 min,surrogate,4,pooled,Pupil (within maintenance),0.52531027032792
+10 min,surrogate,4,pooled,Running speed (within awake),0.16702252803171058
+10 min,surrogate,4,within,"Dose, inside the isoflurane
+stimulation block only",0.45864450906284276
+10 min,surrogate,4,within,"Pupil, within each
+maintenance segment",0.5084450882988293
+10 min,surrogate,4,within,"Pupil, within each
+awake segment",0.5105577330649549
+10 min,surrogate,4,within,"Running, within each
+awake segment",0.1299524508707199
+10 min,surrogate,5,pooled,Isoflurane level (whole session),0.8000455632709013
+10 min,surrogate,5,pooled,Isoflurane level (within maintenance),0.7375658577385772
+10 min,surrogate,5,pooled,Pupil (within awake),0.4116229521728445
+10 min,surrogate,5,pooled,Pupil (within maintenance),0.37900136165538945
+10 min,surrogate,5,pooled,Running speed (within awake),0.17376283852467816
+10 min,surrogate,5,within,"Dose, inside the isoflurane
+stimulation block only",0.5347546683753581
+10 min,surrogate,5,within,"Pupil, within each
+maintenance segment",0.2116830283913803
+10 min,surrogate,5,within,"Pupil, within each
+awake segment",0.604483764496628
+10 min,surrogate,5,within,"Running, within each
+awake segment",0.14198127621735374
+10 min,surrogate,6,pooled,Isoflurane level (whole session),0.8109263428893467
+10 min,surrogate,6,pooled,Isoflurane level (within maintenance),0.6644230716707055
+10 min,surrogate,6,pooled,Pupil (within awake),0.5397271654071081
+10 min,surrogate,6,pooled,Pupil (within maintenance),0.5762541608702627
+10 min,surrogate,6,pooled,Running speed (within awake),0.19517377801257443
+10 min,surrogate,6,within,"Dose, inside the isoflurane
+stimulation block only",0.7630949683531724
+10 min,surrogate,6,within,"Pupil, within each
+maintenance segment",0.4976452172618552
+10 min,surrogate,6,within,"Pupil, within each
+awake segment",0.576407831943684
+10 min,surrogate,6,within,"Running, within each
+awake segment",0.16244627276791895
+10 min,surrogate,7,pooled,Isoflurane level (whole session),0.8220585993975464
+10 min,surrogate,7,pooled,Isoflurane level (within maintenance),0.7003544410483545
+10 min,surrogate,7,pooled,Pupil (within awake),0.510061754506381
+10 min,surrogate,7,pooled,Pupil (within maintenance),0.5457081128945407
+10 min,surrogate,7,pooled,Running speed (within awake),0.16548283890764712
+10 min,surrogate,7,within,"Dose, inside the isoflurane
+stimulation block only",0.7343180569530167
+10 min,surrogate,7,within,"Pupil, within each
+maintenance segment",0.3116068055123174
+10 min,surrogate,7,within,"Pupil, within each
+awake segment",0.20722464494982568
+10 min,surrogate,7,within,"Running, within each
+awake segment",0.14193200235075143
+10 min,surrogate,8,pooled,Isoflurane level (whole session),0.8064238434031769
+10 min,surrogate,8,pooled,Isoflurane level (within maintenance),0.6318212952608356
+10 min,surrogate,8,pooled,Pupil (within awake),0.5488255337460204
+10 min,surrogate,8,pooled,Pupil (within maintenance),0.5807805886048101
+10 min,surrogate,8,pooled,Running speed (within awake),0.14240778195015671
+10 min,surrogate,8,within,"Dose, inside the isoflurane
+stimulation block only",0.6152789924947655
+10 min,surrogate,8,within,"Pupil, within each
+maintenance segment",0.4140871583337635
+10 min,surrogate,8,within,"Pupil, within each
+awake segment",0.5133043850230082
+10 min,surrogate,8,within,"Running, within each
+awake segment",0.15631132202371692
+10 min,surrogate,9,pooled,Isoflurane level (whole session),0.8225940926514378
+10 min,surrogate,9,pooled,Isoflurane level (within maintenance),0.757718127887359
+10 min,surrogate,9,pooled,Pupil (within awake),0.4739532701019044
+10 min,surrogate,9,pooled,Pupil (within maintenance),0.5843229932601266
+10 min,surrogate,9,pooled,Running speed (within awake),0.11388393831714755
+10 min,surrogate,9,within,"Dose, inside the isoflurane
+stimulation block only",0.8211623508928609
+10 min,surrogate,9,within,"Pupil, within each
+maintenance segment",0.3631528044431622
+10 min,surrogate,9,within,"Pupil, within each
+awake segment",0.506856648562406
+10 min,surrogate,9,within,"Running, within each
+awake segment",0.1729706869171631
+10 min,surrogate,10,pooled,Isoflurane level (whole session),0.7971740939233316
+10 min,surrogate,10,pooled,Isoflurane level (within maintenance),0.5409229936656541
+10 min,surrogate,10,pooled,Pupil (within awake),0.4923615545139396
+10 min,surrogate,10,pooled,Pupil (within maintenance),0.44678678842990294
+10 min,surrogate,10,pooled,Running speed (within awake),0.14922969383457746
+10 min,surrogate,10,within,"Dose, inside the isoflurane
+stimulation block only",0.26282594629661116
+10 min,surrogate,10,within,"Pupil, within each
+maintenance segment",0.31677895046456317
+10 min,surrogate,10,within,"Pupil, within each
+awake segment",0.19863877876287633
+10 min,surrogate,10,within,"Running, within each
+awake segment",0.09351769946009425
+10 min,surrogate,11,pooled,Isoflurane level (whole session),0.7966138365431433
+10 min,surrogate,11,pooled,Isoflurane level (within maintenance),0.7079955642538304
+10 min,surrogate,11,pooled,Pupil (within awake),0.49470618868550614
+10 min,surrogate,11,pooled,Pupil (within maintenance),0.5875204097568354
+10 min,surrogate,11,pooled,Running speed (within awake),0.20018652343474688
+10 min,surrogate,11,within,"Dose, inside the isoflurane
+stimulation block only",0.6975165926640157
+10 min,surrogate,11,within,"Pupil, within each
+maintenance segment",0.34167633379661333
+10 min,surrogate,11,within,"Pupil, within each
+awake segment",0.39203504995926514
+10 min,surrogate,11,within,"Running, within each
+awake segment",0.1488046214166651
+10 min,surrogate,12,pooled,Isoflurane level (whole session),0.7878546974654917
+10 min,surrogate,12,pooled,Isoflurane level (within maintenance),0.573801389205135
+10 min,surrogate,12,pooled,Pupil (within awake),0.5495119477169541
+10 min,surrogate,12,pooled,Pupil (within maintenance),0.3902823011252707
+10 min,surrogate,12,pooled,Running speed (within awake),0.14263388940660232
+10 min,surrogate,12,within,"Dose, inside the isoflurane
+stimulation block only",0.6397100149987344
+10 min,surrogate,12,within,"Pupil, within each
+maintenance segment",0.7622441149989325
+10 min,surrogate,12,within,"Pupil, within each
+awake segment",0.46812388689324447
+10 min,surrogate,12,within,"Running, within each
+awake segment",0.11025099689175843
+10 min,surrogate,13,pooled,Isoflurane level (whole session),0.8291995433745205
+10 min,surrogate,13,pooled,Isoflurane level (within maintenance),0.7420660916732658
+10 min,surrogate,13,pooled,Pupil (within awake),0.35607176441810046
+10 min,surrogate,13,pooled,Pupil (within maintenance),0.4046183014544714
+10 min,surrogate,13,pooled,Running speed (within awake),0.18951095129623707
+10 min,surrogate,13,within,"Dose, inside the isoflurane
+stimulation block only",0.7909078101088639
+10 min,surrogate,13,within,"Pupil, within each
+maintenance segment",0.25163684685721194
+10 min,surrogate,13,within,"Pupil, within each
+awake segment",0.4221492750521529
+10 min,surrogate,13,within,"Running, within each
+awake segment",0.14881664252791452
+10 min,surrogate,14,pooled,Isoflurane level (whole session),0.7970932281195228
+10 min,surrogate,14,pooled,Isoflurane level (within maintenance),0.6542963356040015
+10 min,surrogate,14,pooled,Pupil (within awake),0.5052512789764347
+10 min,surrogate,14,pooled,Pupil (within maintenance),0.5260699787454267
+10 min,surrogate,14,pooled,Running speed (within awake),0.20299573790880265
+10 min,surrogate,14,within,"Dose, inside the isoflurane
+stimulation block only",0.5293169641578064
+10 min,surrogate,14,within,"Pupil, within each
+maintenance segment",0.27276810951840025
+10 min,surrogate,14,within,"Pupil, within each
+awake segment",0.3539978730020575
+10 min,surrogate,14,within,"Running, within each
+awake segment",0.13985535317323464
+10 min,surrogate,15,pooled,Isoflurane level (whole session),0.8208925807564411
+10 min,surrogate,15,pooled,Isoflurane level (within maintenance),0.6960624543058748
+10 min,surrogate,15,pooled,Pupil (within awake),0.4846063386664273
+10 min,surrogate,15,pooled,Pupil (within maintenance),0.6008590226550292
+10 min,surrogate,15,pooled,Running speed (within awake),0.1306828617765662
+10 min,surrogate,15,within,"Dose, inside the isoflurane
+stimulation block only",0.7847974851667613
+10 min,surrogate,15,within,"Pupil, within each
+maintenance segment",0.4883890850603925
+10 min,surrogate,15,within,"Pupil, within each
+awake segment",0.564773335382596
+10 min,surrogate,15,within,"Running, within each
+awake segment",0.13654879115698712
+10 min,surrogate,16,pooled,Isoflurane level (whole session),0.818446645524464
+10 min,surrogate,16,pooled,Isoflurane level (within maintenance),0.662346279131574
+10 min,surrogate,16,pooled,Pupil (within awake),0.4723008644585961
+10 min,surrogate,16,pooled,Pupil (within maintenance),0.49067011289287427
+10 min,surrogate,16,pooled,Running speed (within awake),0.2134587694199997
+10 min,surrogate,16,within,"Dose, inside the isoflurane
+stimulation block only",0.47891133627018734
+10 min,surrogate,16,within,"Pupil, within each
+maintenance segment",0.1269476047545728
+10 min,surrogate,16,within,"Pupil, within each
+awake segment",0.40098340307267044
+10 min,surrogate,16,within,"Running, within each
+awake segment",0.18663786117058936
+10 min,surrogate,17,pooled,Isoflurane level (whole session),0.7993089520470363
+10 min,surrogate,17,pooled,Isoflurane level (within maintenance),0.68745266414391
+10 min,surrogate,17,pooled,Pupil (within awake),0.557028703089821
+10 min,surrogate,17,pooled,Pupil (within maintenance),0.4136889410776501
+10 min,surrogate,17,pooled,Running speed (within awake),0.160290606760843
+10 min,surrogate,17,within,"Dose, inside the isoflurane
+stimulation block only",0.4889686914300711
+10 min,surrogate,17,within,"Pupil, within each
+maintenance segment",0.24909344549284965
+10 min,surrogate,17,within,"Pupil, within each
+awake segment",0.3047684858191026
+10 min,surrogate,17,within,"Running, within each
+awake segment",0.17208201224418526
+10 min,surrogate,18,pooled,Isoflurane level (whole session),0.8045018721353135
+10 min,surrogate,18,pooled,Isoflurane level (within maintenance),0.7091830334798717
+10 min,surrogate,18,pooled,Pupil (within awake),0.5498776360078897
+10 min,surrogate,18,pooled,Pupil (within maintenance),0.6897980280206137
+10 min,surrogate,18,pooled,Running speed (within awake),0.14120879690089663
+10 min,surrogate,18,within,"Dose, inside the isoflurane
+stimulation block only",0.8068897407439132
+10 min,surrogate,18,within,"Pupil, within each
+maintenance segment",0.5485089282374508
+10 min,surrogate,18,within,"Pupil, within each
+awake segment",0.35035039942497886
+10 min,surrogate,18,within,"Running, within each
+awake segment",0.1385707000770793
+10 min,surrogate,19,pooled,Isoflurane level (whole session),0.8043118635385348
+10 min,surrogate,19,pooled,Isoflurane level (within maintenance),0.5873352870304013
+10 min,surrogate,19,pooled,Pupil (within awake),0.5423502599660911
+10 min,surrogate,19,pooled,Pupil (within maintenance),0.33214593924102154
+10 min,surrogate,19,pooled,Running speed (within awake),0.13435528705067176
+10 min,surrogate,19,within,"Dose, inside the isoflurane
+stimulation block only",0.5479427545054184
+10 min,surrogate,19,within,"Pupil, within each
+maintenance segment",0.4941889696674887
+10 min,surrogate,19,within,"Pupil, within each
+awake segment",0.5999153088694281
+10 min,surrogate,19,within,"Running, within each
+awake segment",0.21143819272279818
+20 min,real,0,pooled,Isoflurane level (whole session),0.8081147114692797
+20 min,real,0,pooled,Isoflurane level (within maintenance),0.7496524399653133
+20 min,real,0,pooled,Pupil (within awake),0.5771763280232726
+20 min,real,0,pooled,Pupil (within maintenance),0.6376378469530929
+20 min,real,0,pooled,Running speed (within awake),0.24010363337479493
+20 min,real,0,within,"Dose, inside the isoflurane
+stimulation block only",0.8368268565392093
+20 min,real,0,within,"Pupil, within each
+maintenance segment",0.486983801452176
+20 min,real,0,within,"Pupil, within each
+awake segment",0.6467199132450221
+20 min,real,0,within,"Running, within each
+awake segment",0.2118515303389709
+20 min,surrogate,0,pooled,Isoflurane level (whole session),0.8046061988446587
+20 min,surrogate,0,pooled,Isoflurane level (within maintenance),0.7322995098722799
+20 min,surrogate,0,pooled,Pupil (within awake),0.574138353311451
+20 min,surrogate,0,pooled,Pupil (within maintenance),0.391056496053179
+20 min,surrogate,0,pooled,Running speed (within awake),0.19270409798595556
+20 min,surrogate,0,within,"Dose, inside the isoflurane
+stimulation block only",0.8096536561882604
+20 min,surrogate,0,within,"Pupil, within each
+maintenance segment",0.2026839192306981
+20 min,surrogate,0,within,"Pupil, within each
+awake segment",0.4421984434472794
+20 min,surrogate,0,within,"Running, within each
+awake segment",0.20769916938247965
+20 min,surrogate,1,pooled,Isoflurane level (whole session),0.8174655437767607
+20 min,surrogate,1,pooled,Isoflurane level (within maintenance),0.746247671094894
+20 min,surrogate,1,pooled,Pupil (within awake),0.5385696443372721
+20 min,surrogate,1,pooled,Pupil (within maintenance),0.64229809925345
+20 min,surrogate,1,pooled,Running speed (within awake),0.15089561858876674
+20 min,surrogate,1,within,"Dose, inside the isoflurane
+stimulation block only",0.8026787010792792
+20 min,surrogate,1,within,"Pupil, within each
+maintenance segment",0.4525285990256881
+20 min,surrogate,1,within,"Pupil, within each
+awake segment",0.46573645970057953
+20 min,surrogate,1,within,"Running, within each
+awake segment",0.06842532089709882
+20 min,surrogate,2,pooled,Isoflurane level (whole session),0.8173931831624127
+20 min,surrogate,2,pooled,Isoflurane level (within maintenance),0.7314173283838544
+20 min,surrogate,2,pooled,Pupil (within awake),0.35587873242591606
+20 min,surrogate,2,pooled,Pupil (within maintenance),0.6827058640872028
+20 min,surrogate,2,pooled,Running speed (within awake),0.15277507580296526
+20 min,surrogate,2,within,"Dose, inside the isoflurane
+stimulation block only",0.8097261114169624
+20 min,surrogate,2,within,"Pupil, within each
+maintenance segment",0.5564528030535755
+20 min,surrogate,2,within,"Pupil, within each
+awake segment",0.4011301419983688
+20 min,surrogate,2,within,"Running, within each
+awake segment",0.14351581212371284
+20 min,surrogate,3,pooled,Isoflurane level (whole session),0.8010659781204916
+20 min,surrogate,3,pooled,Isoflurane level (within maintenance),0.6655218746115555
+20 min,surrogate,3,pooled,Pupil (within awake),0.4411858518977355
+20 min,surrogate,3,pooled,Pupil (within maintenance),0.5339548088709148
+20 min,surrogate,3,pooled,Running speed (within awake),0.17751413393890264
+20 min,surrogate,3,within,"Dose, inside the isoflurane
+stimulation block only",0.8224502032331581
+20 min,surrogate,3,within,"Pupil, within each
+maintenance segment",0.15404450381928708
+20 min,surrogate,3,within,"Pupil, within each
+awake segment",0.45986664145938677
+20 min,surrogate,3,within,"Running, within each
+awake segment",0.15646116016149003
+20 min,surrogate,4,pooled,Isoflurane level (whole session),0.7837396634436621
+20 min,surrogate,4,pooled,Isoflurane level (within maintenance),0.6922799554511637
+20 min,surrogate,4,pooled,Pupil (within awake),0.34671711902326974
+20 min,surrogate,4,pooled,Pupil (within maintenance),0.4352963700593612
+20 min,surrogate,4,pooled,Running speed (within awake),0.17515203418031314
+20 min,surrogate,4,within,"Dose, inside the isoflurane
+stimulation block only",0.8631271941097967
+20 min,surrogate,4,within,"Pupil, within each
+maintenance segment",0.4047536706243653
+20 min,surrogate,4,within,"Pupil, within each
+awake segment",0.5189845405340481
+20 min,surrogate,4,within,"Running, within each
+awake segment",0.13076506936654902
+20 min,surrogate,5,pooled,Isoflurane level (whole session),0.8074533879421975
+20 min,surrogate,5,pooled,Isoflurane level (within maintenance),0.7623377616810106
+20 min,surrogate,5,pooled,Pupil (within awake),0.491121269848122
+20 min,surrogate,5,pooled,Pupil (within maintenance),0.39662174504760644
+20 min,surrogate,5,pooled,Running speed (within awake),0.1944185058976446
+20 min,surrogate,5,within,"Dose, inside the isoflurane
+stimulation block only",0.646142420046815
+20 min,surrogate,5,within,"Pupil, within each
+maintenance segment",0.3244534471037937
+20 min,surrogate,5,within,"Pupil, within each
+awake segment",0.6376264892239124
+20 min,surrogate,5,within,"Running, within each
+awake segment",0.15361469399248678
+20 min,surrogate,6,pooled,Isoflurane level (whole session),0.8086414417067493
+20 min,surrogate,6,pooled,Isoflurane level (within maintenance),0.7449329054547806
+20 min,surrogate,6,pooled,Pupil (within awake),0.5443893181188713
+20 min,surrogate,6,pooled,Pupil (within maintenance),0.5322583510328638
+20 min,surrogate,6,pooled,Running speed (within awake),0.1738732090732871
+20 min,surrogate,6,within,"Dose, inside the isoflurane
+stimulation block only",0.8683538646294947
+20 min,surrogate,6,within,"Pupil, within each
+maintenance segment",0.4551648724676002
+20 min,surrogate,6,within,"Pupil, within each
+awake segment",0.5666167377462913
+20 min,surrogate,6,within,"Running, within each
+awake segment",0.17442663050966806
+20 min,surrogate,7,pooled,Isoflurane level (whole session),0.8181209999291866
+20 min,surrogate,7,pooled,Isoflurane level (within maintenance),0.6693963785975078
+20 min,surrogate,7,pooled,Pupil (within awake),0.492593764958031
+20 min,surrogate,7,pooled,Pupil (within maintenance),0.6109945925095409
+20 min,surrogate,7,pooled,Running speed (within awake),0.17558728507802598
+20 min,surrogate,7,within,"Dose, inside the isoflurane
+stimulation block only",0.8009944204947347
+20 min,surrogate,7,within,"Pupil, within each
+maintenance segment",0.3944607564378983
+20 min,surrogate,7,within,"Pupil, within each
+awake segment",0.34696043862980186
+20 min,surrogate,7,within,"Running, within each
+awake segment",0.15471905940432013
+20 min,surrogate,8,pooled,Isoflurane level (whole session),0.8116305394242401
+20 min,surrogate,8,pooled,Isoflurane level (within maintenance),0.7221065044008039
+20 min,surrogate,8,pooled,Pupil (within awake),0.5899429355084851
+20 min,surrogate,8,pooled,Pupil (within maintenance),0.6256751876359119
+20 min,surrogate,8,pooled,Running speed (within awake),0.1491451385066159
+20 min,surrogate,8,within,"Dose, inside the isoflurane
+stimulation block only",0.8456698124800418
+20 min,surrogate,8,within,"Pupil, within each
+maintenance segment",0.46554216522689795
+20 min,surrogate,8,within,"Pupil, within each
+awake segment",0.5599724339012636
+20 min,surrogate,8,within,"Running, within each
+awake segment",0.166536591514085
+20 min,surrogate,9,pooled,Isoflurane level (whole session),0.8260583477667893
+20 min,surrogate,9,pooled,Isoflurane level (within maintenance),0.7411848825607352
+20 min,surrogate,9,pooled,Pupil (within awake),0.42451244688079476
+20 min,surrogate,9,pooled,Pupil (within maintenance),0.5829665569987094
+20 min,surrogate,9,pooled,Running speed (within awake),0.14413622220903355
+20 min,surrogate,9,within,"Dose, inside the isoflurane
+stimulation block only",0.8342955040671545
+20 min,surrogate,9,within,"Pupil, within each
+maintenance segment",0.33614220882898965
+20 min,surrogate,9,within,"Pupil, within each
+awake segment",0.5381590482230213
+20 min,surrogate,9,within,"Running, within each
+awake segment",0.1472000591528168
+20 min,surrogate,10,pooled,Isoflurane level (whole session),0.8021407437764111
+20 min,surrogate,10,pooled,Isoflurane level (within maintenance),0.6567255467853484
+20 min,surrogate,10,pooled,Pupil (within awake),0.47966022170876227
+20 min,surrogate,10,pooled,Pupil (within maintenance),0.5300141862323849
+20 min,surrogate,10,pooled,Running speed (within awake),0.16381676145505256
+20 min,surrogate,10,within,"Dose, inside the isoflurane
+stimulation block only",0.5377119177843512
+20 min,surrogate,10,within,"Pupil, within each
+maintenance segment",0.3849338316064693
+20 min,surrogate,10,within,"Pupil, within each
+awake segment",0.4359920181850204
+20 min,surrogate,10,within,"Running, within each
+awake segment",0.10081945865976785
+20 min,surrogate,11,pooled,Isoflurane level (whole session),0.79349012696818
+20 min,surrogate,11,pooled,Isoflurane level (within maintenance),0.7089264054970962
+20 min,surrogate,11,pooled,Pupil (within awake),0.518245308114089
+20 min,surrogate,11,pooled,Pupil (within maintenance),0.5539264560766387
+20 min,surrogate,11,pooled,Running speed (within awake),0.17537537645244564
+20 min,surrogate,11,within,"Dose, inside the isoflurane
+stimulation block only",0.7852353645298855
+20 min,surrogate,11,within,"Pupil, within each
+maintenance segment",0.2175140091530883
+20 min,surrogate,11,within,"Pupil, within each
+awake segment",0.3739452884113466
+20 min,surrogate,11,within,"Running, within each
+awake segment",0.12606578867382423
+20 min,surrogate,12,pooled,Isoflurane level (whole session),0.8071944306333264
+20 min,surrogate,12,pooled,Isoflurane level (within maintenance),0.700237310712797
+20 min,surrogate,12,pooled,Pupil (within awake),0.5673746785486254
+20 min,surrogate,12,pooled,Pupil (within maintenance),0.4575626632074582
+20 min,surrogate,12,pooled,Running speed (within awake),0.15277239439069407
+20 min,surrogate,12,within,"Dose, inside the isoflurane
+stimulation block only",0.6147183363423542
+20 min,surrogate,12,within,"Pupil, within each
+maintenance segment",0.6508746783674639
+20 min,surrogate,12,within,"Pupil, within each
+awake segment",0.5078921544163687
+20 min,surrogate,12,within,"Running, within each
+awake segment",0.13323590876994812
+20 min,surrogate,13,pooled,Isoflurane level (whole session),0.8232249597410933
+20 min,surrogate,13,pooled,Isoflurane level (within maintenance),0.70952828824204
+20 min,surrogate,13,pooled,Pupil (within awake),0.34694521155898156
+20 min,surrogate,13,pooled,Pupil (within maintenance),0.3435338344851092
+20 min,surrogate,13,pooled,Running speed (within awake),0.21159298012693334
+20 min,surrogate,13,within,"Dose, inside the isoflurane
+stimulation block only",0.8012834981339118
+20 min,surrogate,13,within,"Pupil, within each
+maintenance segment",0.3444618017419884
+20 min,surrogate,13,within,"Pupil, within each
+awake segment",0.5269873819417292
+20 min,surrogate,13,within,"Running, within each
+awake segment",0.17052771956778953
+20 min,surrogate,14,pooled,Isoflurane level (whole session),0.7916844836127521
+20 min,surrogate,14,pooled,Isoflurane level (within maintenance),0.6910840028998138
+20 min,surrogate,14,pooled,Pupil (within awake),0.5479639694023848
+20 min,surrogate,14,pooled,Pupil (within maintenance),0.6219215350441267
+20 min,surrogate,14,pooled,Running speed (within awake),0.21082776706305534
+20 min,surrogate,14,within,"Dose, inside the isoflurane
+stimulation block only",0.7620625867915723
+20 min,surrogate,14,within,"Pupil, within each
+maintenance segment",0.44909360700613354
+20 min,surrogate,14,within,"Pupil, within each
+awake segment",0.40507952011660875
+20 min,surrogate,14,within,"Running, within each
+awake segment",0.1594458735282182
+20 min,surrogate,15,pooled,Isoflurane level (whole session),0.8177691194043759
+20 min,surrogate,15,pooled,Isoflurane level (within maintenance),0.7351608175631626
+20 min,surrogate,15,pooled,Pupil (within awake),0.5603376838912211
+20 min,surrogate,15,pooled,Pupil (within maintenance),0.6190334029147768
+20 min,surrogate,15,pooled,Running speed (within awake),0.12545908645158008
+20 min,surrogate,15,within,"Dose, inside the isoflurane
+stimulation block only",0.8179759668382786
+20 min,surrogate,15,within,"Pupil, within each
+maintenance segment",0.5304412303620731
+20 min,surrogate,15,within,"Pupil, within each
+awake segment",0.5355434818367977
+20 min,surrogate,15,within,"Running, within each
+awake segment",0.15326452226309736
+20 min,surrogate,16,pooled,Isoflurane level (whole session),0.8145989327369966
+20 min,surrogate,16,pooled,Isoflurane level (within maintenance),0.7028910193004944
+20 min,surrogate,16,pooled,Pupil (within awake),0.4594988348315493
+20 min,surrogate,16,pooled,Pupil (within maintenance),0.40527750299554655
+20 min,surrogate,16,pooled,Running speed (within awake),0.18944568898760067
+20 min,surrogate,16,within,"Dose, inside the isoflurane
+stimulation block only",0.47933524513770226
+20 min,surrogate,16,within,"Pupil, within each
+maintenance segment",0.25099597528041834
+20 min,surrogate,16,within,"Pupil, within each
+awake segment",0.41725972719808796
+20 min,surrogate,16,within,"Running, within each
+awake segment",0.16453920376635023
+20 min,surrogate,17,pooled,Isoflurane level (whole session),0.7957713130634231
+20 min,surrogate,17,pooled,Isoflurane level (within maintenance),0.7143092169476805
+20 min,surrogate,17,pooled,Pupil (within awake),0.5924746810743527
+20 min,surrogate,17,pooled,Pupil (within maintenance),0.3200825440107128
+20 min,surrogate,17,pooled,Running speed (within awake),0.14854956912920442
+20 min,surrogate,17,within,"Dose, inside the isoflurane
+stimulation block only",0.64307353012357
+20 min,surrogate,17,within,"Pupil, within each
+maintenance segment",0.21723285824767744
+20 min,surrogate,17,within,"Pupil, within each
+awake segment",0.27237638297476346
+20 min,surrogate,17,within,"Running, within each
+awake segment",0.1324827019716409
+20 min,surrogate,18,pooled,Isoflurane level (whole session),0.8009173548453554
+20 min,surrogate,18,pooled,Isoflurane level (within maintenance),0.7174988653437259
+20 min,surrogate,18,pooled,Pupil (within awake),0.5625524250937792
+20 min,surrogate,18,pooled,Pupil (within maintenance),0.6813335423737914
+20 min,surrogate,18,pooled,Running speed (within awake),0.1348523786816476
+20 min,surrogate,18,within,"Dose, inside the isoflurane
+stimulation block only",0.8449851707509842
+20 min,surrogate,18,within,"Pupil, within each
+maintenance segment",0.5533873667107663
+20 min,surrogate,18,within,"Pupil, within each
+awake segment",0.3610644098522921
+20 min,surrogate,18,within,"Running, within each
+awake segment",0.1604309503804215
+20 min,surrogate,19,pooled,Isoflurane level (whole session),0.8109038993741944
+20 min,surrogate,19,pooled,Isoflurane level (within maintenance),0.6841101930123044
+20 min,surrogate,19,pooled,Pupil (within awake),0.5572041966804655
+20 min,surrogate,19,pooled,Pupil (within maintenance),0.41995270303531196
+20 min,surrogate,19,pooled,Running speed (within awake),0.12416827098506655
+20 min,surrogate,19,within,"Dose, inside the isoflurane
+stimulation block only",0.5131244987711756
+20 min,surrogate,19,within,"Pupil, within each
+maintenance segment",0.36945193669525056
+20 min,surrogate,19,within,"Pupil, within each
+awake segment",0.6021679369498817
+20 min,surrogate,19,within,"Running, within each
+awake segment",0.19539922660367992

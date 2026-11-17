@@ -1,0 +1,7 @@
+pipeline,state window,motifs found
+strict,awake,1
+relaxed,awake,1
+strict,isoflurane,0
+relaxed,isoflurane,1
+strict,full,0
+relaxed,full,1

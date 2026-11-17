@@ -1,0 +1,56 @@
+target,window,features,|r|,null95,p
+Isoflurane level (whole session),1 min,Tracker baseline (9 motifs),0.7818844502854262,0.7016189943760524,0.004975124378109453
+Isoflurane level (whole session),1 min,"10 bands, sliding baseline",0.7754783549003695,0.697312489333332,0.004975124378109453
+Isoflurane level (whole session),2 min,Tracker baseline (9 motifs),0.7991677390982102,0.6789186659500099,0.004975124378109453
+Isoflurane level (whole session),2 min,"10 bands, sliding baseline",0.7859772435557704,0.6924256086904967,0.004975124378109453
+Isoflurane level (whole session),5 min,Tracker baseline (9 motifs),0.7985794828422973,0.6992873516742326,0.004975124378109453
+Isoflurane level (whole session),5 min,"10 bands, sliding baseline",0.7893589971774857,0.6964366998369311,0.004975124378109453
+Isoflurane level (whole session),10 min,Tracker baseline (9 motifs),0.8056904965833853,0.6879772813194843,0.004975124378109453
+Isoflurane level (whole session),10 min,"10 bands, sliding baseline",0.793082329534544,0.6926633182186647,0.004975124378109453
+Isoflurane level (whole session),20 min,Tracker baseline (9 motifs),0.8081147114692797,0.7194138413290125,0.004975124378109453
+Isoflurane level (whole session),20 min,"10 bands, sliding baseline",0.8223514686519168,0.712185355388486,0.004975124378109453
+Isoflurane level (whole session),none,"10 bands, no baseline",0.7580015289581589,0.6839051643476703,0.004975124378109453
+Isoflurane level (within maintenance),1 min,Tracker baseline (9 motifs),0.6961310206215083,0.6126535469095993,0.03980099502487562
+Isoflurane level (within maintenance),1 min,"10 bands, sliding baseline",0.6101731280431812,0.6848782373354706,0.0845771144278607
+Isoflurane level (within maintenance),2 min,Tracker baseline (9 motifs),0.7067640698123058,0.6692698562184048,0.03980099502487562
+Isoflurane level (within maintenance),2 min,"10 bands, sliding baseline",0.6237432536568764,0.6713050980351226,0.06965174129353234
+Isoflurane level (within maintenance),5 min,Tracker baseline (9 motifs),0.718555231541582,0.6938283625635014,0.04975124378109453
+Isoflurane level (within maintenance),5 min,"10 bands, sliding baseline",0.6461871093815194,0.7242233897528935,0.07960199004975124
+Isoflurane level (within maintenance),10 min,Tracker baseline (9 motifs),0.7813683741774986,0.6337133086770498,0.004975124378109453
+Isoflurane level (within maintenance),10 min,"10 bands, sliding baseline",0.6740922820955018,0.7609299030822984,0.0845771144278607
+Isoflurane level (within maintenance),20 min,Tracker baseline (9 motifs),0.7496524399653133,0.654207108566692,0.004975124378109453
+Isoflurane level (within maintenance),20 min,"10 bands, sliding baseline",0.7019288494727829,0.6788848764640935,0.04477611940298507
+Isoflurane level (within maintenance),none,"10 bands, no baseline",0.5084253181905861,0.6204492075477939,0.14427860696517414
+Pupil (within awake),1 min,Tracker baseline (9 motifs),0.5058460484545619,0.44323554911748525,0.014925373134328358
+Pupil (within awake),1 min,"10 bands, sliding baseline",0.42999486856125785,0.47042049227343286,0.13930348258706468
+Pupil (within awake),2 min,Tracker baseline (9 motifs),0.5325873220114219,0.5140605003901384,0.01990049751243781
+Pupil (within awake),2 min,"10 bands, sliding baseline",0.4671790690462443,0.49036931917093135,0.0945273631840796
+Pupil (within awake),5 min,Tracker baseline (9 motifs),0.5894444961020023,0.5830984633537263,0.04477611940298507
+Pupil (within awake),5 min,"10 bands, sliding baseline",0.5092588224621583,0.5162200479765331,0.0945273631840796
+Pupil (within awake),10 min,Tracker baseline (9 motifs),0.5699879106286743,0.617009208798446,0.11940298507462686
+Pupil (within awake),10 min,"10 bands, sliding baseline",0.44878469468128485,0.5243459071252061,0.23383084577114427
+Pupil (within awake),20 min,Tracker baseline (9 motifs),0.5771763280232726,0.4991706166508349,0.03980099502487562
+Pupil (within awake),20 min,"10 bands, sliding baseline",0.4390656246455144,0.5484817367685555,0.2935323383084577
+Pupil (within awake),none,"10 bands, no baseline",0.24248134760571383,0.32732653082569274,0.2885572139303483
+Pupil (within maintenance),1 min,Tracker baseline (9 motifs),0.6472028977903024,0.5257353667004651,0.004975124378109453
+Pupil (within maintenance),1 min,"10 bands, sliding baseline",0.680483516425582,0.5498065630476237,0.004975124378109453
+Pupil (within maintenance),2 min,Tracker baseline (9 motifs),0.6719255532687597,0.5346497610527526,0.004975124378109453
+Pupil (within maintenance),2 min,"10 bands, sliding baseline",0.686677106629438,0.526687782279455,0.004975124378109453
+Pupil (within maintenance),5 min,Tracker baseline (9 motifs),0.6690683338223001,0.5395314041614632,0.004975124378109453
+Pupil (within maintenance),5 min,"10 bands, sliding baseline",0.694441540041014,0.5254760084185037,0.004975124378109453
+Pupil (within maintenance),10 min,Tracker baseline (9 motifs),0.65127692109498,0.5565503416144344,0.004975124378109453
+Pupil (within maintenance),10 min,"10 bands, sliding baseline",0.6923493782913281,0.5755248006874314,0.004975124378109453
+Pupil (within maintenance),20 min,Tracker baseline (9 motifs),0.6376378469530929,0.5909886669812198,0.03980099502487562
+Pupil (within maintenance),20 min,"10 bands, sliding baseline",0.6596487986017787,0.5084213364906397,0.004975124378109453
+Pupil (within maintenance),none,"10 bands, no baseline",0.5820445291844333,0.46102271156278185,0.004975124378109453
+Running speed (within awake),1 min,Tracker baseline (9 motifs),0.295666853198313,0.21077452936500626,0.004975124378109453
+Running speed (within awake),1 min,"10 bands, sliding baseline",0.3058748571648463,0.2320146834807566,0.004975124378109453
+Running speed (within awake),2 min,Tracker baseline (9 motifs),0.28026368965860704,0.21802612462897156,0.004975124378109453
+Running speed (within awake),2 min,"10 bands, sliding baseline",0.3004395680386286,0.24044609397611288,0.004975124378109453
+Running speed (within awake),5 min,Tracker baseline (9 motifs),0.25644711404670323,0.2044763520141194,0.004975124378109453
+Running speed (within awake),5 min,"10 bands, sliding baseline",0.2805342722928865,0.21141781179803068,0.004975124378109453
+Running speed (within awake),10 min,Tracker baseline (9 motifs),0.23600717205250807,0.20474937647970023,0.004975124378109453
+Running speed (within awake),10 min,"10 bands, sliding baseline",0.24491730249291313,0.22190891883741282,0.024875621890547265
+Running speed (within awake),20 min,Tracker baseline (9 motifs),0.24010363337479493,0.22183585998503444,0.029850746268656716
+Running speed (within awake),20 min,"10 bands, sliding baseline",0.25821039322433914,0.22022306904449257,0.004975124378109453
+Running speed (within awake),none,"10 bands, no baseline",0.2274008983599575,0.1436262921591989,0.004975124378109453
