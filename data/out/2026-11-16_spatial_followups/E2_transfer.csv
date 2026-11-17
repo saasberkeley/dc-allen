@@ -1,0 +1,13 @@
+direction,frame,target,signals,transfer_r,within_state_r,beats_null
+awake -> isoflurane,awake units,+ minus - contrast,33,-0.006,0.158,13/33
+awake -> isoflurane,awake units,population rate,35,0.006,0.623,13/35
+awake -> isoflurane,awake units,single neurons (median),35,-0.001,0.341,
+awake -> isoflurane,within-state z,+ minus - contrast,33,0.058,0.158,12/33
+awake -> isoflurane,within-state z,population rate,35,0.029,0.623,12/35
+awake -> isoflurane,within-state z,single neurons (median),35,0.007,0.341,
+isoflurane -> awake,awake units,+ minus - contrast,33,0.11,0.708,17/33
+isoflurane -> awake,awake units,population rate,35,0.023,0.431,14/35
+isoflurane -> awake,awake units,single neurons (median),35,0.001,0.335,
+isoflurane -> awake,within-state z,+ minus - contrast,33,0.124,0.708,16/33
+isoflurane -> awake,within-state z,population rate,35,0.046,0.431,11/35
+isoflurane -> awake,within-state z,single neurons (median),35,0.004,0.335,

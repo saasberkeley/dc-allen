@@ -1,0 +1,21 @@
+group,EEG change,neural change beneath,mice,mean r,p
+discovery,shift_size,rate_change,4,-0.4037249310894421,0.029940119760479042
+discovery,shift_size,turnover,3,0.07049966167594421,0.7904191616766467
+discovery,shift_on_motif,rate_change,4,-0.3691086669634259,0.03992015968063872
+discovery,shift_on_motif,turnover,3,0.1935730601167312,0.48902195608782434
+discovery,shift_on_broadband,rate_change,4,-0.30529753060011405,0.10179640718562874
+discovery,shift_on_broadband,turnover,3,0.20069225142702846,0.5209580838323353
+discovery,separation_ratio,rate_change,4,-0.12908980423999522,0.5189620758483033
+discovery,separation_ratio,turnover,3,-0.004344781550710931,0.9940119760479041
+discovery,spread_ratio,rate_change,4,-0.2745724209395325,0.13972055888223553
+discovery,spread_ratio,turnover,3,-0.08656430935838,0.7524950099800399
+confirmation,shift_size,rate_change,3,-0.019047619047619032,0.9101796407185628
+confirmation,shift_size,turnover,3,-0.40476190476190477,0.11377245508982035
+confirmation,shift_on_motif,rate_change,3,0.031746031746031834,0.8782435129740519
+confirmation,shift_on_motif,turnover,3,-0.43214285714285705,0.10778443113772455
+confirmation,shift_on_broadband,rate_change,3,0.31190476190476196,0.1497005988023952
+confirmation,shift_on_broadband,turnover,3,0.19523809523809527,0.469061876247505
+confirmation,separation_ratio,rate_change,3,0.11111111111111105,0.5868263473053892
+confirmation,separation_ratio,turnover,3,0.29047619047619044,0.2634730538922156
+confirmation,spread_ratio,rate_change,3,-0.011904761904761882,0.9540918163672655
+confirmation,spread_ratio,turnover,3,0.5630952380952381,0.03792415169660679

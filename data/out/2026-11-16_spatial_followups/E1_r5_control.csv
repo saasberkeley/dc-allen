@@ -1,0 +1,15 @@
+state,spikes,kind,sep~corr,sep~slope
+awake,real,band PC1,0.473,-0.132
+awake,real,broadband,0.4,-0.295
+awake,real,motif,0.534,-0.134
+awake,real,random (50),0.322,-0.156
+awake,shifted (no true coupling),band PC1,0.134,-0.504
+awake,shifted (no true coupling),broadband,0.168,-0.589
+awake,shifted (no true coupling),motif,0.24,-0.497
+isoflurane,real,band PC1,0.567,0.075
+isoflurane,real,broadband,0.561,-0.052
+isoflurane,real,motif,0.5,0.152
+isoflurane,real,random (50),0.373,0.19
+isoflurane,shifted (no true coupling),band PC1,0.114,-0.318
+isoflurane,shifted (no true coupling),broadband,0.171,-0.343
+isoflurane,shifted (no true coupling),motif,0.126,-0.291

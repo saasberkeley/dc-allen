@@ -1,0 +1,16 @@
+where,measure,shared,spearman_r,p
+"probe channels, by region",shift_size,49,0.3705102040816326,0.001998001998001998
+"probe channels, by cortical layer",shift_size,6,0.6,0.0969030969030969
+"EEG electrodes, by area",shift_size,9,0.35,0.20279720279720279
+"probe channels, by region",shift_on_motif,49,0.48448979591836727,0.000999000999000999
+"probe channels, by cortical layer",shift_on_motif,6,0.7714285714285715,0.06693306693306693
+"EEG electrodes, by area",shift_on_motif,9,0.4666666666666666,0.15084915084915085
+"probe channels, by region",shift_on_broadband,49,0.4575510204081632,0.002997002997002997
+"probe channels, by cortical layer",shift_on_broadband,6,0.48571428571428577,0.17182817182817184
+"EEG electrodes, by area",shift_on_broadband,9,0.7166666666666667,0.02097902097902098
+"probe channels, by region",separation_ratio,49,0.3339795918367347,0.002997002997002997
+"probe channels, by cortical layer",separation_ratio,6,0.7714285714285715,0.07192807192807193
+"EEG electrodes, by area",separation_ratio,9,-0.16666666666666669,0.7742257742257742
+"probe channels, by region",spread_ratio,49,0.19581632653061223,0.08591408591408592
+"probe channels, by cortical layer",spread_ratio,6,0.5428571428571429,0.15184815184815184
+"EEG electrodes, by area",spread_ratio,9,0.5833333333333334,0.08291708291708291

@@ -37,6 +37,13 @@ def _blocks(trials, kind):
             for label, g in rows.groupby("behavioral_epoch")]
 
 
+def first_timestamps(nwb):
+    """Timestamps of the LFP if the session has one, else of the EEG (EEG-only sessions)."""
+    if "LFP" in nwb.acquisition:
+        return next(iter(nwb.acquisition["LFP"].electrical_series.values())).timestamps
+    return nwb.acquisition["ElectricalSeriesEEG"].timestamps
+
+
 def read_info(nwb, file: str) -> SessionInfo:
     iso = nwb.acquisition["isoflurane_level"]
     level = iso.data[:]
@@ -48,7 +55,7 @@ def read_info(nwb, file: str) -> SessionInfo:
     trials = nwb.trials.to_dataframe()
     eeg = nwb.acquisition["ElectricalSeriesEEG"]
     electrodes = eeg.electrodes.to_dataframe()
-    lfp_t = next(iter(nwb.acquisition["LFP"].electrical_series.values())).timestamps
+    lfp_t = first_timestamps(nwb)
     return SessionInfo(
         file=file,
         subject=nwb.subject.subject_id,

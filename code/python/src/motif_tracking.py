@@ -53,6 +53,9 @@ class TrackConfig:
     n_sur: int = 19          # bimodal flag at p < 0.05
     cut_at_events: bool = True
     seed: int = 0
+    z_reference: str = "awake"   # "awake": z-score with the mean / SD of awake, stimulation-free seconds; "all": every second
+    awake_gap: float = 30.0      # s before isoflurane on that still count as awake
+    stim_margin: float = 10.0    # s cut around each stimulation block when picking the reference seconds
 
 
 @dataclass
@@ -154,9 +157,29 @@ def segments_of(t, cuts):
     return np.unique(seg, return_inverse=True)[1]
 
 
-def prepare_arrays(key, info, t, env, cfg=TrackConfig(), cuts=None):
-    """Signal from envelopes already in memory (seconds x bands); cuts default to the session's events."""
-    Z = (env - env.mean(axis=0)) / env.std(axis=0, ddof=1)
+def awake_reference(t, info, cfg=TrackConfig()):
+    """Seconds that are awake (before isoflurane on, minus awake_gap) and outside every stimulation block (+ margin)."""
+    m = t < info.iso_on - cfg.awake_gap
+    for _, a, b in list(info.stim_blocks) + list(info.visual_blocks):
+        m &= ~((t >= a - cfg.stim_margin) & (t < b + cfg.stim_margin))
+    return m
+
+
+def prepare_arrays(key, info, t, env, cfg=TrackConfig(), cuts=None, reference=None):
+    """Signal from envelopes already in memory (seconds x bands); cuts default to the session's events.
+
+    Every band is z-scored once, with the mean and SD of the reference seconds, and the whole recording is expressed
+    in those units: by default (z_reference="awake") the awake, stimulation-free seconds, so values are "awake SDs
+    away from the awake mean" and comparable across mice. `reference` (boolean mask) overrides the default; with no
+    session info and no mask, every second is the reference. The residual (expression, detection, presence) does not
+    depend on this choice; baseline and the unsplit projection do."""
+    if reference is None:
+        reference = awake_reference(t, info, cfg) if (cfg.z_reference == "awake" and info is not None) \
+            else np.ones(t.size, bool)
+    if reference.sum() < 60:
+        raise ValueError(f"only {int(reference.sum())} reference seconds for z-scoring")
+    ref = env[reference]
+    Z = (env - ref.mean(axis=0)) / ref.std(axis=0, ddof=1)
     if cuts is None:
         cuts = event_cuts(info) if (cfg.cut_at_events and info is not None) else []
     seg = segments_of(t, cuts)

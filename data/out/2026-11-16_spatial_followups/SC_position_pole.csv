@@ -1,0 +1,11 @@
+,effect,effect,p,p
+group,confirmation,discovery,confirmation,discovery
+test,,,,
+awake pole + vs - ~ depth,0.0481,0.4356,0.6677,0.0005
+awake pole + vs - ~ layer,1.99,2.415,0.1554,0.089
+iso pole + vs - ~ depth,0.4189,0.3801,0.002,0.003
+iso pole + vs - ~ layer,1.9215,1.2072,0.1654,0.5577
+joined vs never ~ depth,0.0179,0.1142,0.8206,0.091
+joined vs never ~ layer,3.1545,2.731,0.001,0.0415
+left vs stayed ~ depth,-0.1555,-0.7425,0.3028,0.0005
+left vs stayed ~ layer,2.9064,0.6729,0.014,0.8781

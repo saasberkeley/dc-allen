@@ -13,6 +13,7 @@ Range, and a file is only renamed into place once its size matches the server.
 Usage (from code/python/):
     python -m src.download_dropbox_data            # download .nwb files
     python -m src.download_dropbox_data --list     # show file sizes
+    python -m src.download_dropbox_data NAME.nwb   # download only the named file(s)
 """
 
 import argparse
@@ -51,8 +52,13 @@ DATA_DIR = ROOT / "data"
 # filename -> destination subdirectory under data/
 # Note: Notebooks and MATLAB code are now version-controlled in the repo
 FILES = {
-    "688277-20230921-v001.nwb": "raw",
-    "692644-20230907-v001.nwb": "raw",
+    # Sessions no longer in the shared folder (already downloaded locally):
+    # 688277-20230921, 692644-20230907, 709401-20231213, 720762-20240221.
+    "692644-20230906-v001.nwb": "raw",
+    "703062-20231019-v001.nwb": "raw",
+    "703063-20231116-v001.nwb": "raw",
+    "703064-20231129-v001.nwb": "raw",
+    "703065-20231207-v001.nwb": "raw",
 }
 
 CHUNK_SIZE = 8 * 1024 * 1024  # 8 MiB
@@ -146,14 +152,16 @@ def download(name: str, dest_dir: Path) -> Path:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Download Allen Institute data from Dropbox")
     parser.add_argument("--list", action="store_true", help="show files and sizes, then exit")
+    parser.add_argument("names", nargs="*", help="only these files (default: all in FILES)")
     args = parser.parse_args()
+    files = {n: FILES[n] for n in args.names} if args.names else FILES
 
     if args.list:
-        for name, sub in FILES.items():
+        for name, sub in files.items():
             print(f"{fmt(remote_size(name)):>10}  data/{sub}/{name}")
         return
 
-    for name, sub in FILES.items():
+    for name, sub in files.items():
         download(name, DATA_DIR / sub)
 
 
