@@ -1,0 +1,7 @@
+name,state,cluster,% of state,linked to,best link cosine,1-4,4-8,8-12,12-30,30-60,60-100
+Shared 1,awake,0,26.7,"Shared 1·a, Shared 1·b",0.99,-0.76,-0.88,-1.0,-1.03,-1.0,-1.02
+Shared 1·a,isoflurane,0,44.7,Shared 1,0.99,-0.07,-0.11,-0.11,-0.15,-0.16,-0.15
+Shared 1·b,isoflurane,2,23.6,Shared 1,0.99,-1.18,-1.21,-1.17,-1.18,-1.15,-1.1
+Shared 2,isoflurane,1,31.7,"Shared 2·a, Shared 2·b",0.99,0.96,1.03,1.01,1.07,1.06,1.02
+Shared 2·a,awake,1,55.0,Shared 2,0.74,-0.03,0.07,0.2,0.04,0.08,0.09
+Shared 2·b,awake,2,18.3,Shared 2,0.99,1.07,0.94,0.76,1.23,1.07,1.07

@@ -1,0 +1,7 @@
+name,state,cluster,% of state,linked to,best link cosine,1-4,4-8,8-12,12-30,30-60,60-100
+Awake-only A,awake,2,26.2,-,,0.7,-0.69,0.78,0.52,0.09,-0.93
+Awake-only B,awake,1,61.0,-,,-0.31,0.28,-0.54,-0.49,-0.32,0.33
+Iso-only A,isoflurane,2,44.6,-,,0.04,0.08,0.04,0.0,-0.03,-0.02
+Iso-only B,isoflurane,0,28.8,-,,-0.91,-1.09,-1.07,-1.07,-1.09,-1.07
+Shared 1,awake,0,12.8,Shared 1,0.83,-0.06,0.15,0.61,0.88,0.97,0.34
+Shared 1,isoflurane,1,26.6,Shared 1,0.83,0.9,1.02,1.05,1.12,1.2,1.16
